@@ -22,7 +22,7 @@ Capa_Presentacion
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
-<member name="P:Capa_Presentacion.My.Resources.Resources._278">
+<member name="P:Capa_Presentacion.My.Resources.Resources.AgregarPersona">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

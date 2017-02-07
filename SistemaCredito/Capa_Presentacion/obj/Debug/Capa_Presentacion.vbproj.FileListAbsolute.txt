@@ -20,12 +20,11 @@ C:\Users\Oscar Merino\Desktop\Sistema_Algodon\Algodon_ANH\Capa_Presentacion\obj\
 C:\Users\Oscar Merino\Desktop\Sistema_Algodon\Algodon_ANH\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
 C:\Users\Oscar Merino\Desktop\Sistema_Algodon\Algodon_ANH\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
-C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
-C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
-C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Presentacion.xml
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\af-ZA\Capa_Presentacion.resources.dll
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\es-MX\Capa_Presentacion.resources.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Datos.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Entidad.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Negocio.dll
@@ -36,8 +35,15 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\b
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Negocio.pdb
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Negocio.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
-C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Clientes.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Imagen.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Prerregistro.resources
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Menu.resources
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Resources.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Prerregistro.af-ZA.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Prerregistro.es-MX.resources
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
-C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Imagen.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\af-ZA\Capa_Presentacion.resources.dll
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\es-MX\Capa_Presentacion.resources.dll
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb

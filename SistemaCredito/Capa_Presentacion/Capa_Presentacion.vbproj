@@ -110,6 +110,12 @@
     <EmbeddedResource Include="Catalogos\Imagen.resx">
       <DependentUpon>Imagen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Prerregistro.af-ZA.resx">
+      <DependentUpon>Prerregistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Prerregistro.es-MX.resx">
+      <DependentUpon>Prerregistro.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Prerregistro.resx">
       <DependentUpon>Prerregistro.vb</DependentUpon>
     </EmbeddedResource>

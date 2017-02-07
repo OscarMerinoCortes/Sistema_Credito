@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Public Class Menu
+﻿Public Class Menu
     Private Sub PrerregistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrerregistroToolStripMenuItem.Click
         Prerregistro.Show()
     End Sub
