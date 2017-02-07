@@ -1,9 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Public Class Menu
-    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
-        Clientes.Show()
+    Private Sub PrerregistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrerregistroToolStripMenuItem.Click
+        Prerregistro.Show()
     End Sub
-    Private Sub ImagenesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImagenesToolStripMenuItem.Click
-        Imagen.Show()
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Close()
     End Sub
 End Class

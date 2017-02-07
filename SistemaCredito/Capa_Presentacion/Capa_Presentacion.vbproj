@@ -72,16 +72,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Catalogos\Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogos\Clientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Catalogos\Imagen.Designer.vb">
       <DependentUpon>Imagen.vb</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\Imagen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Prerregistro.Designer.vb">
+      <DependentUpon>Prerregistro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Prerregistro.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.vb">
@@ -107,20 +107,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Catalogos\Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Imagen.resx">
       <DependentUpon>Imagen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\Prerregistro.resx">
+      <DependentUpon>Prerregistro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -149,8 +149,11 @@
       <Name>Capa_Negocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\278.jpg" />
+    <Content Include="Iconos\Pre registro.ico" />
+    <Content Include="Imagenes\AgregarPersona.png" />
+    <None Include="Resources\AgregarPersona.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
