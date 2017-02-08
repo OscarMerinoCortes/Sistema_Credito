@@ -8,5 +8,8 @@
     Public Telefono As String
     Public Correo As String
     Public Fecha As Date
+    Public IdEstado As Integer
+    Public IdTipoCultivo As Integer
     Public TablaDocumentos As DataTable
+    Public TablaDocumentosAgregados As DataTable
 End Class

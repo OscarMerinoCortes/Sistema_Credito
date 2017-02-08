@@ -1,10 +1,20 @@
 ALTER PROCEDURE sp_LlenarDocumentos 
-@TipoPersona varchar(1)
+--declare
+@TipoPersona varchar(1),--= 'M',
+@IdEstatusDocumento bit = 0,
+@IdPreregistroDetalle int = 0
 AS
 SELECT 
-	 IdTipoDocumento AS IdTipoDocumento,
-	 Descripcion AS NombreDocumento
-FROM dbo.Cre_Tipo_Documento
+	@IdPreregistroDetalle as IdPreregistroDetalle,
+	 IdTipoDocumento AS IdDocumento,
+	 Descripcion AS Documento,
+	 @IdEstatusDocumento as Estatus
+	 --TipoPersona as TipoPersona
+FROM dbo.Cre_Cat_Tipo_Documento
 WHERE IdEstado = 1
 AND   TipoPersona = @TipoPersona
-ANd   TipoPersona = 'A'
+
+
+
+
+

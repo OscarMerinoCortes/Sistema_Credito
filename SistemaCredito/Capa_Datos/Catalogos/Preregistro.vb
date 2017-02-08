@@ -7,17 +7,37 @@ Public Class Preregistro
         Dim cmdGuardar As SqlCommand
         Try
             cnn.Open()
-            cmdGuardar = New SqlCommand("PV_InsCliDet", cnn)
+            cmdGuardar = New SqlCommand("Cre_InsPreCliEnc", cnn)
             cmdGuardar.CommandType = CommandType.StoredProcedure
             cmdGuardar.Parameters.Add(New SqlParameter("@IdCliente", EntidadPreregistro1.IdCliente))
             cmdGuardar.Parameters.Add(New SqlParameter("@Foto", SqlDbType.Image)).Value = EntidadPreregistro1.Foto
             cmdGuardar.Parameters.Add(New SqlParameter("@Nombre", EntidadPreregistro1.Nombre))
+            cmdGuardar.Parameters.Add(New SqlParameter("@TipoPersona", EntidadPreregistro1.TipoPersona))
             cmdGuardar.Parameters.Add(New SqlParameter("@RFC", EntidadPreregistro1.RFC))
             cmdGuardar.Parameters.Add(New SqlParameter("@CURP", EntidadPreregistro1.CURP))
             cmdGuardar.Parameters.Add(New SqlParameter("@Telefono", EntidadPreregistro1.Telefono))
             cmdGuardar.Parameters.Add(New SqlParameter("@Correo", EntidadPreregistro1.Correo))
             cmdGuardar.Parameters.Add(New SqlParameter("@Fecha", EntidadPreregistro1.Fecha))
+            cmdGuardar.Parameters.Add(New SqlParameter("@IdTipoCultivo", EntidadPreregistro1.IdTipoCultivo))
+            cmdGuardar.Parameters.Add(New SqlParameter("@IdEstado", EntidadPreregistro1.IdEstado))
+            cmdGuardar.Parameters("@IdCliente").Direction = ParameterDirection.InputOutput
             cmdGuardar.ExecuteNonQuery()
+            EntidadPreregistro1.IdCliente = cmdGuardar.Parameters("@IdCliente").Value
+            'EntidadPreregistro1.IdCliente = cmdGuardar.Parameters(EntidadPreregistro1.IdCliente).Value
+            For Each MiTableRow As DataRow In EntidadPreregistro1.TablaDocumentosAgregados.Rows
+                cmdGuardar.CommandText = "Cre_InsPreCliDet"
+                cmdGuardar.CommandType = CommandType.StoredProcedure
+                cmdGuardar.Parameters.Clear()
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdPreregistroDetalle", MiTableRow("IdPreregistroDetalle")))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdCliente", EntidadPreregistro1.IdCliente))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdTipoDocumento", MiTableRow("IdDocumento")))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdEstatusDocumento", MiTableRow("IdEstatus")))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdEstado", EntidadPreregistro1.IdEstado))
+                'If MiTableRow("IdFormaPagoDetalle") = 0 Then
+                '    cmdGuardar.Parameters("@INIdFormaPagoDetalle").Direction = ParameterDirection.InputOutput
+                'End If
+                cmdGuardar.ExecuteNonQuery()
+            Next
         Catch ex As Exception
         Finally
             cnn.Close()

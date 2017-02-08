@@ -147,7 +147,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbTitle.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="LbNombre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -177,7 +177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbNombre.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="LbRFC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -207,7 +207,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbRFC.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="LbCURP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -237,7 +237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbCURP.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="LbTelefono.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -267,7 +267,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbTelefono.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="LbCorreo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -297,7 +297,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbCorreo.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="TBNombre.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 194</value>
@@ -318,7 +318,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBNombre.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="TBRFC.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 246</value>
@@ -339,7 +339,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBRFC.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="TBCURP.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 272</value>
@@ -360,10 +360,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBCURP.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="TBTelefono.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 298</value>
+  </data>
+  <data name="TBTelefono.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="TBTelefono.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -381,7 +384,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBTelefono.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="TBCorreo.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 324</value>
@@ -402,7 +405,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBCorreo.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="LbFecha.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -432,7 +435,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbFecha.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
+  </data>
+  <data name="TBFecha.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="TBFecha.Location" type="System.Drawing.Point, System.Drawing">
     <value>519, 70</value>
@@ -453,11 +459,35 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBFecha.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="MSPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="MSPreregistro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MSPreregistro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 24</value>
+  </data>
+  <data name="MSPreregistro.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="MSPreregistro.Text" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.Name" xml:space="preserve">
+    <value>MSPreregistro</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
   <data name="NuevoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
@@ -481,30 +511,6 @@
   </data>
   <data name="SalirToolStripMenuItem.Text" xml:space="preserve">
     <value>Salir</value>
-  </data>
-  <data name="MSPreregistro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MSPreregistro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 24</value>
-  </data>
-  <data name="MSPreregistro.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="MSPreregistro.Text" xml:space="preserve">
-    <value>MenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.Name" xml:space="preserve">
-    <value>MSPreregistro</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.ZOrder" xml:space="preserve">
-    <value>18</value>
   </data>
   <metadata name="OFDPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
@@ -567,7 +573,7 @@
     <value>True</value>
   </data>
   <data name="RBTrigo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 19</value>
+    <value>129, 19</value>
   </data>
   <data name="RBTrigo.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 17</value>
@@ -591,7 +597,7 @@
     <value>1</value>
   </data>
   <data name="GBTipoCultivo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 365</value>
+    <value>30, 377</value>
   </data>
   <data name="GBTipoCultivo.Size" type="System.Drawing.Size, System.Drawing">
     <value>631, 53</value>
@@ -612,7 +618,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBTipoCultivo.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="LBTipoPersona.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -642,7 +648,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LBTipoPersona.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="CBTipoPersona.Items" xml:space="preserve">
     <value>FISICA</value>
@@ -669,7 +675,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CBTipoPersona.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="PBFoto.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -789,13 +795,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PBFoto.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
+  </data>
+  <data name="DGDocumentos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="DGDocumentos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 425</value>
+    <value>204, 436</value>
+  </data>
+  <data name="DGDocumentos.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>40</value>
   </data>
   <data name="DGDocumentos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>631, 150</value>
+    <value>289, 127</value>
   </data>
   <data name="DGDocumentos.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -810,6 +822,66 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DGDocumentos.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LbIdEstado.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LbIdEstado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="LbIdEstado.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LbIdEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 350</value>
+  </data>
+  <data name="LbIdEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="LbIdEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="LbIdEstado.Text" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="&gt;&gt;LbIdEstado.Name" xml:space="preserve">
+    <value>LbIdEstado</value>
+  </data>
+  <data name="&gt;&gt;LbIdEstado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LbIdEstado.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LbIdEstado.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CBIdEstado.Items" xml:space="preserve">
+    <value>ACTIVO</value>
+  </data>
+  <data name="CBIdEstado.Items1" xml:space="preserve">
+    <value>INACTIVO</value>
+  </data>
+  <data name="CBIdEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 350</value>
+  </data>
+  <data name="CBIdEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="CBIdEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;CBIdEstado.Name" xml:space="preserve">
+    <value>CBIdEstado</value>
+  </data>
+  <data name="&gt;&gt;CBIdEstado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CBIdEstado.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CBIdEstado.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
