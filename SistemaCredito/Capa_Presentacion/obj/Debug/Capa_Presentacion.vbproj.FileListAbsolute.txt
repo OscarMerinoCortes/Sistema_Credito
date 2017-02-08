@@ -47,3 +47,4 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\o
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Documentos.resources

@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Documentos.Designer.vb">
+      <DependentUpon>Documentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Documentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Catalogos\Imagen.Designer.vb">
       <DependentUpon>Imagen.vb</DependentUpon>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Catalogos\Documentos.resx">
+      <DependentUpon>Documentos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\Imagen.resx">
       <DependentUpon>Imagen.vb</DependentUpon>
     </EmbeddedResource>
