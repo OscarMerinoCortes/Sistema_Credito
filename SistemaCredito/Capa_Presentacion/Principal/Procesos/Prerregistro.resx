@@ -464,30 +464,6 @@
   <metadata name="MSPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="MSPreregistro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MSPreregistro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 24</value>
-  </data>
-  <data name="MSPreregistro.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="MSPreregistro.Text" xml:space="preserve">
-    <value>MenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.Name" xml:space="preserve">
-    <value>MSPreregistro</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MSPreregistro.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
   <data name="NuevoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 20</value>
   </data>
@@ -511,6 +487,30 @@
   </data>
   <data name="SalirToolStripMenuItem.Text" xml:space="preserve">
     <value>Salir</value>
+  </data>
+  <data name="MSPreregistro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MSPreregistro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 24</value>
+  </data>
+  <data name="MSPreregistro.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="MSPreregistro.Text" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.Name" xml:space="preserve">
+    <value>MSPreregistro</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MSPreregistro.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
   <metadata name="OFDPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
@@ -801,7 +801,7 @@
     <value>NoControl</value>
   </data>
   <data name="DGDocumentos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 436</value>
+    <value>30, 436</value>
   </data>
   <data name="DGDocumentos.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>40</value>

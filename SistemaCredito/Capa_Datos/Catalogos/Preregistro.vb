@@ -23,7 +23,6 @@ Public Class Preregistro
             cmdGuardar.Parameters("@IdCliente").Direction = ParameterDirection.InputOutput
             cmdGuardar.ExecuteNonQuery()
             EntidadPreregistro1.IdCliente = cmdGuardar.Parameters("@IdCliente").Value
-            'EntidadPreregistro1.IdCliente = cmdGuardar.Parameters(EntidadPreregistro1.IdCliente).Value
             For Each MiTableRow As DataRow In EntidadPreregistro1.TablaDocumentosAgregados.Rows
                 cmdGuardar.CommandText = "Cre_InsPreCliDet"
                 cmdGuardar.CommandType = CommandType.StoredProcedure
@@ -33,9 +32,6 @@ Public Class Preregistro
                 cmdGuardar.Parameters.Add(New SqlParameter("@IdTipoDocumento", MiTableRow("IdDocumento")))
                 cmdGuardar.Parameters.Add(New SqlParameter("@IdEstatusDocumento", MiTableRow("IdEstatus")))
                 cmdGuardar.Parameters.Add(New SqlParameter("@IdEstado", EntidadPreregistro1.IdEstado))
-                'If MiTableRow("IdFormaPagoDetalle") = 0 Then
-                '    cmdGuardar.Parameters("@INIdFormaPagoDetalle").Direction = ParameterDirection.InputOutput
-                'End If
                 cmdGuardar.ExecuteNonQuery()
             Next
         Catch ex As Exception
@@ -53,6 +49,25 @@ Public Class Preregistro
             Dim cmd As New SqlCommand("sp_LlenarDocumentos", cnn)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add(New SqlClient.SqlParameter("@TipoPersona", EntidadPreregistro1.TipoPersona))
+            Dim da As New SqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            EntidadPreregistro1.TablaDocumentos = dt
+        Catch ex As Exception
+        Finally
+            cnn.Close()
+            EntidadPreregistro = EntidadPreregistro1
+        End Try
+    End Sub
+    Public Overridable Sub ConsultarClientes(ByRef EntidadPreregistro As Capa_Entidad.Preregistro)
+        Dim EntidadPreregistro1 As New Capa_Entidad.Preregistro()
+        EntidadPreregistro1 = EntidadPreregistro
+        Dim cnn As New SqlConnection(conexionPrincipal)
+        Try
+            cnn.Open()
+            Dim cmd As New SqlCommand("sp_LlenarClientes", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@Nombre", EntidadPreregistro1.Nombre))
             Dim da As New SqlDataAdapter(cmd)
             Dim dt As New DataTable
             da.Fill(dt)

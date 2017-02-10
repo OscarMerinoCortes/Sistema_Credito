@@ -3,11 +3,11 @@ Imports System.IO
 Public Class Prerregistro
     Public TipoPersona As String
     Public TablaDocumentosObtenidos As New DataTable()
+    Public TablaConsulta As New DataTable()
     Private Sub Prerregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now
         OFDPreregistro.Filter = "Todos(*.Jpg, *.Png, *.Gif, *.Tiff, *.Jpeg, *.Bmp)|*.Jpg; *.Png; *.Gif; *.Tiff; *.Jpeg; *.Bmp"
-        CBTipoPersona.SelectedText = "FISICA"
-        CBIdEstado.SelectedText = "ACTIVO"
+        CargarComboBoxs()
         ConsultarDocumentos()
         '---------------------------------------------
         TablaDocumentosObtenidos.Columns.Clear()
@@ -26,13 +26,8 @@ Public Class Prerregistro
         End Try
     End Sub
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
-        TBNombre.Text = ""
-        TBRFC.Text = ""
-        TBCURP.Text = ""
-        TBTelefono.Text = ""
-        TBCorreo.Text = ""
+        Limpiar()
     End Sub
-
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
         Dim NegocioPreregistro As New Capa_Negocio.Preregistro
@@ -66,12 +61,19 @@ Public Class Prerregistro
         End If
         EntidadPreregistro.TablaDocumentosAgregados = TablaDocumentosObtenidos
         NegocioPreregistro.Guardar(EntidadPreregistro)
+        MsgBox("Registro guardado con éxito")
+        'CargarComboBoxs()
+        Limpiar()
+        ConsultarDocumentos()
     End Sub
-
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        Dim EntidadPreregistro As New Capa_Entidad.Preregistro
+        Dim NegocioPreregistro As New Capa_Negocio.Preregistro
+        Dim ConsultaPreregistro As New ConsultaPreregistro
+        ConsultaPreregistro.ShowDialog()
 
+        TablaConsulta = EntidadPreregistro.TablaDocumentos
     End Sub
-
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
     End Sub
@@ -105,5 +107,19 @@ Public Class Prerregistro
             rengloninsertar("IdEstatus") = DGDocumentos.Rows(index).Cells("Estatus").Value
             TablaDocumentosObtenidos.Rows.Add(rengloninsertar)
         Next
+    End Sub
+    Private Sub Limpiar()
+        TBNombre.Text = ""
+        TBRFC.Text = ""
+        TBCURP.Text = ""
+        TBTelefono.Text = ""
+        TBCorreo.Text = ""
+        RBAlgodon.Checked = True
+        '--Limpiar el picturebox
+        PBFoto.Image = Nothing
+    End Sub
+    Private Sub CargarComboBoxs()
+        CBTipoPersona.SelectedText = "FISICA"
+        CBIdEstado.SelectedText = "ACTIVO"
     End Sub
 End Class
