@@ -1,5 +1,8 @@
-alter procedure sp_LlenarClientes
-@Nombre varchar(50)
+--sp_helptext sp_LlenarClientes
+---------------
+ALTER procedure sp_LlenarClientes
+--declare
+@Nombre varchar(50)-- =  'WALL'
 as
 IF @Nombre <> ''
 BEGIN
@@ -13,13 +16,13 @@ select IdCliente as IdCliente,
 	   Correo as Correo,
 	   Fecha as Fecha,
 	   IdTipoCultivo as IdTipoCultivo,
-	   IdEstado as IdEstado
-from   [dbo].[Cre_Preregistro_Cliente_Encabezado]
+	   IIF(IdEstado = 1,'ACTIVO','INACTIVO') as Estado
+from   dbo.Cre_Preregistro_Cliente_Encabezado a
 where  Nombre like '%'+@Nombre+'%'
 END  
 ELSE
 BEGIN 
-	   IdCliente as IdCliente,
+	  select IdCliente as IdCliente,
 	   Nombre as Nombre,
 	   TipoPersona as TipoPersona,
 	   Foto as Foto,
@@ -29,6 +32,6 @@ BEGIN
 	   Correo as Correo,
 	   Fecha as Fecha,
 	   IdTipoCultivo as IdTipoCultivo,
-	   IdEstado as IdEstado
+	   IIF(IdEstado = 1,'ACTIVO','INACTIVO') as Estado
 from   [dbo].[Cre_Preregistro_Cliente_Encabezado]
 END

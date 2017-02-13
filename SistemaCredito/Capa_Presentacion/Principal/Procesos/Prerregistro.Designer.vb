@@ -55,6 +55,8 @@ Partial Class Prerregistro
         Me.DGDocumentos = New System.Windows.Forms.DataGridView()
         Me.LbIdEstado = New System.Windows.Forms.Label()
         Me.CBIdEstado = New System.Windows.Forms.ComboBox()
+        Me.LbIdCliente = New System.Windows.Forms.Label()
+        Me.TBIdCliente = New System.Windows.Forms.TextBox()
         Me.MSPreregistro.SuspendLayout()
         Me.GBTipoCultivo.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -249,10 +251,23 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.CBIdEstado, "CBIdEstado")
         Me.CBIdEstado.Name = "CBIdEstado"
         '
+        'LbIdCliente
+        '
+        resources.ApplyResources(Me.LbIdCliente, "LbIdCliente")
+        Me.LbIdCliente.Name = "LbIdCliente"
+        '
+        'TBIdCliente
+        '
+        Me.TBIdCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        resources.ApplyResources(Me.TBIdCliente, "TBIdCliente")
+        Me.TBIdCliente.Name = "TBIdCliente"
+        '
         'Prerregistro
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.TBIdCliente)
+        Me.Controls.Add(Me.LbIdCliente)
         Me.Controls.Add(Me.CBIdEstado)
         Me.Controls.Add(Me.LbIdEstado)
         Me.Controls.Add(Me.DGDocumentos)
@@ -317,4 +332,6 @@ Partial Class Prerregistro
     Friend WithEvents DGDocumentos As DataGridView
     Friend WithEvents LbIdEstado As Label
     Friend WithEvents CBIdEstado As ComboBox
+    Friend WithEvents LbIdCliente As Label
+    Friend WithEvents TBIdCliente As TextBox
 End Class

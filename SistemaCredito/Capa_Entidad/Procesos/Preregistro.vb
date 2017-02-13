@@ -12,5 +12,8 @@
     Public IdTipoCultivo As Integer
     Public TablaDocumentos As DataTable
     Public TablaDocumentosAgregados As DataTable
-    Public Index As Integer
+    Public TablaDocumentosRegistrados As DataTable
+    Public TablaDatosDelCliente As DataTable
+    '----------------------------------------------PARA LOS CASES
+    Public ConsultaDocumentos As Integer
 End Class

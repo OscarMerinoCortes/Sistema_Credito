@@ -117,6 +117,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="VariablesGlobales.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Principal\Catalogos\Documentos.resx">

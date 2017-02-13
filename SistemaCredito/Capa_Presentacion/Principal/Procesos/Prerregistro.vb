@@ -1,9 +1,10 @@
-﻿Imports System.Data.SqlClient
-Imports System.IO
+﻿Imports System.IO
 Public Class Prerregistro
     Public TipoPersona As String
     Public TablaDocumentosObtenidos As New DataTable()
     Public TablaConsulta As New DataTable()
+    Public EntidadPreregistro As New Capa_Entidad.Preregistro
+    Public NegocioPreregistro As New Capa_Negocio.Preregistro
     Private Sub Prerregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now
         OFDPreregistro.Filter = "Todos(*.Jpg, *.Png, *.Gif, *.Tiff, *.Jpeg, *.Bmp)|*.Jpg; *.Png; *.Gif; *.Tiff; *.Jpeg; *.Bmp"
@@ -27,11 +28,11 @@ Public Class Prerregistro
     End Sub
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
         Limpiar()
+        ConsultarDocumentos()
     End Sub
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
         Dim NegocioPreregistro As New Capa_Negocio.Preregistro
-
         Dim arrFilename() As String = Split(Text, "\")
         Array.Reverse(arrFilename)
         Dim ms As New MemoryStream
@@ -39,6 +40,8 @@ Public Class Prerregistro
         Dim arrImage() As Byte = ms.GetBuffer
 
         AgregarDocumentosATabla()
+        IIf(TBIdCliente.Text Is String.Empty, 0, TBIdCliente.Text)
+        EntidadPreregistro.IdCliente = TBIdCliente.Text
         EntidadPreregistro.Foto = arrImage
         EntidadPreregistro.Fecha = TBFecha.Text
         EntidadPreregistro.Nombre = TBNombre.Text
@@ -61,18 +64,43 @@ Public Class Prerregistro
         End If
         EntidadPreregistro.TablaDocumentosAgregados = TablaDocumentosObtenidos
         NegocioPreregistro.Guardar(EntidadPreregistro)
-        MsgBox("Registro guardado con éxito")
+        MsgBox("Registro guardado o editado con éxito")
         'CargarComboBoxs()
         Limpiar()
         ConsultarDocumentos()
     End Sub
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
-        Dim EntidadPreregistro As New Capa_Entidad.Preregistro
-        Dim NegocioPreregistro As New Capa_Negocio.Preregistro
-        Dim ConsultaPreregistro As New ConsultaPreregistro
+        Dim index As Integer
+        Dim foto As Byte()
+        Dim tabla As New DataTable
         ConsultaPreregistro.ShowDialog()
-
-        TablaConsulta = EntidadPreregistro.TablaDocumentos
+        index = VGIndex
+        TablaConsulta = VGTablaDatosDelCliente
+        TBIdCliente.Text = TablaConsulta.Rows(index).Item("IdCliente")
+        TBNombre.Text = TablaConsulta.Rows(index).Item("Nombre")
+        CBTipoPersona.Text = TablaConsulta.Rows(index).Item("TipoPersona")
+        foto = CType(TablaConsulta.Rows(index).Item("Foto"), Byte())
+        Dim MSFoto As New MemoryStream(foto)
+        PBFoto.Image = Image.FromStream(MSFoto)
+        TBRFC.Text = TablaConsulta.Rows(index).Item("RFC")
+        TBCURP.Text = TablaConsulta.Rows(index).Item("CURP")
+        TBTelefono.Text = TablaConsulta.Rows(index).Item("Telefono")
+        TBCorreo.Text = TablaConsulta.Rows(index).Item("Correo")
+        CBIdEstado.Text = TablaConsulta.Rows(index).Item("Estado")
+        If TablaConsulta.Rows(index).Item("IdTipoCultivo") = 1 Then
+            RBAlgodon.Checked = True
+        ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 2 Then
+            RBMaiz.Checked = True
+        ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 3 Then
+            RBTrigo.Checked = True
+        End If
+        EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
+        EntidadPreregistro.ConsultaDocumentos = 2
+        NegocioPreregistro.Consultar(EntidadPreregistro)
+        tabla = EntidadPreregistro.TablaDocumentosRegistrados
+        'DGDocumentos.DataSource = Nothing
+        DGDocumentos.DataSource = tabla
+        DGDocumentos.Columns(0).Visible = False
     End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
@@ -87,6 +115,7 @@ Public Class Prerregistro
             TipoPersona = "M"
         End If
         EntidadPreregistro.TipoPersona = TipoPersona
+        EntidadPreregistro.ConsultaDocumentos = 1
         NegocioPreregistro.Consultar(EntidadPreregistro)
         TablaDocumentos2 = EntidadPreregistro.TablaDocumentos
         DGDocumentos.DataSource = TablaDocumentos2

@@ -1,4 +1,6 @@
-alter PROCEDURE Cre_InsPreCliEnc
+--sp_helptext Cre_InsPreCliEnc
+------------------
+ALTER PROCEDURE Cre_InsPreCliEnc
 --declare
 @IdCliente int output,
 @Nombre varchar(50),--= 'ab',
@@ -30,7 +32,7 @@ UPDATE SET Nombre = Source.Nombre,
 		   IdEstado = Source.IdEstado
 WHEN NOT MATCHED THEN
         INSERT (Nombre, TipoPersona, Foto, RFC, CURP, Telefono, Correo, Fecha, IdTipoCultivo, IdEstado)
-        VALUES (Source.Nombre, Source.TipoPersona, Source.Foto, Source.RFC, Source.CURP, Source.Telefono, Source.Correo, Source.Fecha, Source.IdTipoCultivo, Source.IdEstado);	
-		SET @IdCliente = SCOPE_IDENTITY()
-		RETURN @IdCliente	
+        VALUES (Source.Nombre, Source.TipoPersona, Source.Foto, Source.RFC, Source.CURP, Source.Telefono, Source.Correo, Source.Fecha, Source.IdTipoCultivo, Source.IdEstado);
+		SET @IdCliente = SCOPE_IDENTITY()				
 END
+RETURN @IdCliente		

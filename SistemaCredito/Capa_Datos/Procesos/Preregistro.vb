@@ -20,7 +20,9 @@ Public Class Preregistro
             cmdGuardar.Parameters.Add(New SqlParameter("@Fecha", EntidadPreregistro1.Fecha))
             cmdGuardar.Parameters.Add(New SqlParameter("@IdTipoCultivo", EntidadPreregistro1.IdTipoCultivo))
             cmdGuardar.Parameters.Add(New SqlParameter("@IdEstado", EntidadPreregistro1.IdEstado))
-            cmdGuardar.Parameters("@IdCliente").Direction = ParameterDirection.InputOutput
+            If EntidadPreregistro1.IdCliente = 0 Then
+                cmdGuardar.Parameters("@IdCliente").Direction = ParameterDirection.InputOutput
+            End If
             cmdGuardar.ExecuteNonQuery()
             EntidadPreregistro1.IdCliente = cmdGuardar.Parameters("@IdCliente").Value
             For Each MiTableRow As DataRow In EntidadPreregistro1.TablaDocumentosAgregados.Rows
@@ -46,13 +48,24 @@ Public Class Preregistro
         Dim cnn As New SqlConnection(conexionPrincipal)
         Try
             cnn.Open()
-            Dim cmd As New SqlCommand("sp_LlenarDocumentos", cnn)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add(New SqlClient.SqlParameter("@TipoPersona", EntidadPreregistro1.TipoPersona))
-            Dim da As New SqlDataAdapter(cmd)
-            Dim dt As New DataTable
-            da.Fill(dt)
-            EntidadPreregistro1.TablaDocumentos = dt
+            Select Case EntidadPreregistro1.ConsultaDocumentos
+                Case 1
+                    Dim cmd As New SqlCommand("sp_LlenarDocumentos", cnn)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.Add(New SqlClient.SqlParameter("@TipoPersona", EntidadPreregistro1.TipoPersona))
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    EntidadPreregistro1.TablaDocumentos = dt
+                Case 2
+                    Dim cmd As New SqlCommand("sp_LlenarDocumentosRegistrados", cnn)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.Add(New SqlClient.SqlParameter("@IdCliente", EntidadPreregistro1.IdCliente))
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    EntidadPreregistro1.TablaDocumentosRegistrados = dt
+            End Select
         Catch ex As Exception
         Finally
             cnn.Close()
@@ -71,7 +84,7 @@ Public Class Preregistro
             Dim da As New SqlDataAdapter(cmd)
             Dim dt As New DataTable
             da.Fill(dt)
-            EntidadPreregistro1.TablaDocumentos = dt
+            EntidadPreregistro1.TablaDatosDelCliente = dt
         Catch ex As Exception
         Finally
             cnn.Close()

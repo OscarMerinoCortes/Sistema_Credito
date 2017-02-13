@@ -147,7 +147,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbTitle.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="LbNombre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -156,7 +156,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 194</value>
+    <value>27, 202</value>
   </data>
   <data name="LbNombre.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 13</value>
@@ -177,7 +177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbNombre.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="LbRFC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -186,7 +186,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbRFC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 246</value>
+    <value>27, 254</value>
   </data>
   <data name="LbRFC.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -207,7 +207,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbRFC.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="LbCURP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -216,7 +216,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbCURP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 272</value>
+    <value>27, 280</value>
   </data>
   <data name="LbCURP.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
@@ -237,7 +237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbCURP.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="LbTelefono.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -246,7 +246,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 298</value>
+    <value>27, 306</value>
   </data>
   <data name="LbTelefono.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 13</value>
@@ -267,7 +267,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbTelefono.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="LbCorreo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -276,7 +276,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 324</value>
+    <value>27, 332</value>
   </data>
   <data name="LbCorreo.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 13</value>
@@ -297,10 +297,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbCorreo.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="TBNombre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 194</value>
+    <value>254, 202</value>
   </data>
   <data name="TBNombre.Size" type="System.Drawing.Size, System.Drawing">
     <value>407, 20</value>
@@ -318,10 +318,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBNombre.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="TBRFC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 246</value>
+    <value>254, 254</value>
   </data>
   <data name="TBRFC.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -339,10 +339,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBRFC.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="TBCURP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 272</value>
+    <value>254, 280</value>
   </data>
   <data name="TBCURP.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -360,10 +360,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBCURP.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="TBTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 298</value>
+    <value>254, 306</value>
   </data>
   <data name="TBTelefono.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -384,10 +384,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBTelefono.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="TBCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 324</value>
+    <value>254, 332</value>
   </data>
   <data name="TBCorreo.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -405,7 +405,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBCorreo.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="LbFecha.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -435,7 +435,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbFecha.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="TBFecha.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -459,7 +459,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBFecha.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <metadata name="MSPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -510,7 +510,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MSPreregistro.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <metadata name="OFDPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
@@ -597,7 +597,7 @@
     <value>1</value>
   </data>
   <data name="GBTipoCultivo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 377</value>
+    <value>30, 385</value>
   </data>
   <data name="GBTipoCultivo.Size" type="System.Drawing.Size, System.Drawing">
     <value>631, 53</value>
@@ -618,7 +618,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GBTipoCultivo.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="LBTipoPersona.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -627,7 +627,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LBTipoPersona.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 220</value>
+    <value>27, 228</value>
   </data>
   <data name="LBTipoPersona.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 13</value>
@@ -648,7 +648,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LBTipoPersona.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="CBTipoPersona.Items" xml:space="preserve">
     <value>FISICA</value>
@@ -657,7 +657,7 @@
     <value>MORAL</value>
   </data>
   <data name="CBTipoPersona.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 220</value>
+    <value>254, 228</value>
   </data>
   <data name="CBTipoPersona.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -675,7 +675,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CBTipoPersona.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="PBFoto.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -795,13 +795,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PBFoto.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="DGDocumentos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="DGDocumentos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 436</value>
+    <value>30, 444</value>
   </data>
   <data name="DGDocumentos.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>40</value>
@@ -822,7 +822,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DGDocumentos.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="LbIdEstado.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -834,7 +834,7 @@
     <value>NoControl</value>
   </data>
   <data name="LbIdEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 350</value>
+    <value>27, 358</value>
   </data>
   <data name="LbIdEstado.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
@@ -855,7 +855,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbIdEstado.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="CBIdEstado.Items" xml:space="preserve">
     <value>ACTIVO</value>
@@ -864,7 +864,7 @@
     <value>INACTIVO</value>
   </data>
   <data name="CBIdEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 350</value>
+    <value>254, 358</value>
   </data>
   <data name="CBIdEstado.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -882,6 +882,66 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CBIdEstado.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LbIdCliente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LbIdCliente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="LbIdCliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LbIdCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 176</value>
+  </data>
+  <data name="LbIdCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 13</value>
+  </data>
+  <data name="LbIdCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="LbIdCliente.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="LbIdCliente.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LbIdCliente.Name" xml:space="preserve">
+    <value>LbIdCliente</value>
+  </data>
+  <data name="&gt;&gt;LbIdCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LbIdCliente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LbIdCliente.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TBIdCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 176</value>
+  </data>
+  <data name="TBIdCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 20</value>
+  </data>
+  <data name="TBIdCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="TBIdCliente.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TBIdCliente.Name" xml:space="preserve">
+    <value>TBIdCliente</value>
+  </data>
+  <data name="&gt;&gt;TBIdCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBIdCliente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TBIdCliente.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
