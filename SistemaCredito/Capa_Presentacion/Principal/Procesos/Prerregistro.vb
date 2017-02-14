@@ -40,8 +40,11 @@ Public Class Prerregistro
         Dim arrImage() As Byte = ms.GetBuffer
 
         AgregarDocumentosATabla()
-        IIf(TBIdCliente.Text Is String.Empty, 0, TBIdCliente.Text)
-        EntidadPreregistro.IdCliente = TBIdCliente.Text
+        If TBIdCliente.Text Is String.Empty Then
+            EntidadPreregistro.IdCliente = 0
+        Else
+            EntidadPreregistro.IdCliente = TBIdCliente.Text
+        End If
         EntidadPreregistro.Foto = arrImage
         EntidadPreregistro.Fecha = TBFecha.Text
         EntidadPreregistro.Nombre = TBNombre.Text
@@ -135,7 +138,7 @@ Public Class Prerregistro
             rengloninsertar("IdDocumento") = DGDocumentos.Rows(index).Cells("IdDocumento").Value
             rengloninsertar("IdEstatus") = DGDocumentos.Rows(index).Cells("Estatus").Value
             TablaDocumentosObtenidos.Rows.Add(rengloninsertar)
-        Next
+        Next 
     End Sub
     Private Sub Limpiar()
         TBNombre.Text = ""
