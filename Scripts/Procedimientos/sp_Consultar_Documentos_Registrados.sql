@@ -1,4 +1,3 @@
---sp_helptext sp_LlenarDocumentos
 -------------------------------
 ALTER PROCEDURE sp_LlenarDocumentosRegistrados 
 --declare

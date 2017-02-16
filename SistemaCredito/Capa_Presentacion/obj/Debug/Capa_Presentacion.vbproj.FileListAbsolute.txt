@@ -35,7 +35,10 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\b
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Negocio.pdb
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Negocio.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Documentos.resources
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Imagen.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.ConsultaPreregistro.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.PreregistroLotes.resources
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Prerregistro.resources
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Menu.resources
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Resources.resources
@@ -47,5 +50,3 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\o
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
-C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.Documentos.resources
-C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.ConsultaPreregistro.resources

@@ -19,6 +19,7 @@ select IdCliente as IdCliente,
 	   IIF(IdEstado = 1,'ACTIVO','INACTIVO') as Estado
 from   dbo.Cre_Preregistro_Cliente_Encabezado a
 where  Nombre like '%'+@Nombre+'%'
+and a.IdEstado =1
 END  
 ELSE
 BEGIN 
@@ -33,5 +34,6 @@ BEGIN
 	   Fecha as Fecha,
 	   IdTipoCultivo as IdTipoCultivo,
 	   IIF(IdEstado = 1,'ACTIVO','INACTIVO') as Estado
-from   [dbo].[Cre_Preregistro_Cliente_Encabezado]
+from   [dbo].[Cre_Preregistro_Cliente_Encabezado] a
+where  a.IdEstado =1
 END

@@ -90,6 +90,12 @@
     <Compile Include="Principal\Consultas\ConsultaPreregistro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Principal\Procesos\PreregistroLotes.Designer.vb">
+      <DependentUpon>PreregistroLotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Procesos\PreregistroLotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\Procesos\Prerregistro.Designer.vb">
       <DependentUpon>Prerregistro.vb</DependentUpon>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Consultas\ConsultaPreregistro.resx">
       <DependentUpon>ConsultaPreregistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Procesos\PreregistroLotes.resx">
+      <DependentUpon>PreregistroLotes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Procesos\Prerregistro.af-ZA.resx">
       <DependentUpon>Prerregistro.vb</DependentUpon>

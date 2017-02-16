@@ -138,7 +138,7 @@ Public Class Prerregistro
             rengloninsertar("IdDocumento") = DGDocumentos.Rows(index).Cells("IdDocumento").Value
             rengloninsertar("IdEstatus") = DGDocumentos.Rows(index).Cells("Estatus").Value
             TablaDocumentosObtenidos.Rows.Add(rengloninsertar)
-        Next 
+        Next
     End Sub
     Private Sub Limpiar()
         TBNombre.Text = ""

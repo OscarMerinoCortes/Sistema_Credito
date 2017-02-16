@@ -25,15 +25,17 @@ Partial Class Menu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.CatálogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PrerregistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreregistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreregistroLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatálogosToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatálogosToolStripMenuItem, Me.ProcesoToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1578, 24)
@@ -42,16 +44,16 @@ Partial Class Menu
         '
         'CatálogosToolStripMenuItem
         '
-        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrerregistroToolStripMenuItem, Me.DocumentosToolStripMenuItem})
+        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentosToolStripMenuItem})
         Me.CatálogosToolStripMenuItem.Name = "CatálogosToolStripMenuItem"
-        Me.CatálogosToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.CatálogosToolStripMenuItem.Text = "Catalogo"
+        Me.CatálogosToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
+        Me.CatálogosToolStripMenuItem.Text = "Catalogos"
         '
-        'PrerregistroToolStripMenuItem
+        'DocumentosToolStripMenuItem
         '
-        Me.PrerregistroToolStripMenuItem.Name = "PrerregistroToolStripMenuItem"
-        Me.PrerregistroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PrerregistroToolStripMenuItem.Text = "Prerregistro"
+        Me.DocumentosToolStripMenuItem.Name = "DocumentosToolStripMenuItem"
+        Me.DocumentosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DocumentosToolStripMenuItem.Text = "Documentos"
         '
         'SalirToolStripMenuItem
         '
@@ -59,11 +61,24 @@ Partial Class Menu
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
-        'DocumentosToolStripMenuItem
+        'ProcesoToolStripMenuItem
         '
-        Me.DocumentosToolStripMenuItem.Name = "DocumentosToolStripMenuItem"
-        Me.DocumentosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DocumentosToolStripMenuItem.Text = "Documentos"
+        Me.ProcesoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreregistroToolStripMenuItem, Me.PreregistroLotesToolStripMenuItem})
+        Me.ProcesoToolStripMenuItem.Name = "ProcesoToolStripMenuItem"
+        Me.ProcesoToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.ProcesoToolStripMenuItem.Text = "Procesos"
+        '
+        'PreregistroToolStripMenuItem
+        '
+        Me.PreregistroToolStripMenuItem.Name = "PreregistroToolStripMenuItem"
+        Me.PreregistroToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.PreregistroToolStripMenuItem.Text = "Preregistro productores"
+        '
+        'PreregistroLotesToolStripMenuItem
+        '
+        Me.PreregistroLotesToolStripMenuItem.Name = "PreregistroLotesToolStripMenuItem"
+        Me.PreregistroLotesToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.PreregistroLotesToolStripMenuItem.Text = "Preregistro lotes"
         '
         'Menu
         '
@@ -85,7 +100,9 @@ Partial Class Menu
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents CatálogosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PrerregistroToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DocumentosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProcesoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PreregistroToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PreregistroLotesToolStripMenuItem As ToolStripMenuItem
 End Class
