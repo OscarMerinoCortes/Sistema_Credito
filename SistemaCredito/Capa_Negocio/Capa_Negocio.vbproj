@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Documentos.vb" />
     <Compile Include="Procesos\PreregistroLotes.vb" />
     <Compile Include="Procesos\Preregistro.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -110,9 +111,7 @@
       <Name>Capa_Entidad</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Catalogos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

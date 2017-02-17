@@ -1,6 +1,8 @@
 ﻿Public Class Documentos
+    Public TablaDocumentos2 As New DataTable
     Private Sub Documentos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarCombos()
+        ConsultarDocumentos()
     End Sub
     Private Sub llenarCombos()
         Dim dt As DataTable = New DataTable("Tabla")
@@ -11,12 +13,12 @@
         Dim dr As DataRow
 
         dr = dt.NewRow()
-        dr("IdDocumento") = "0"
+        dr("IdDocumento") = 0
         dr("Descripcion") = "INACTIVO"
         dt.Rows.Add(dr)
 
         dr = dt.NewRow()
-        dr("IdDocumento") = "1"
+        dr("IdDocumento") = 1
         dr("Descripcion") = "ACTIVO"
         dt.Rows.Add(dr)
 
@@ -60,11 +62,36 @@
         CBTipoPersona.SelectedIndex = -1
 
     End Sub
-
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
-
+        Dim EntidadDocumentos As New Capa_Entidad.Documentos
+        Dim NegocioDocumentos As New Capa_Negocio.Documentos
+        If TBNombreDocumento.Text = "" Or CBTipoPersona.SelectedValue = Nothing Or CBEstatusDocumento.SelectedValue = Nothing Then
+            MsgBox("Verifica campos vacios", 0, "Aviso")
+            Exit Sub
+        End If
+        If TBIdDocumento.Text Is String.Empty Then
+            EntidadDocumentos.IdTipoDocumento = 0
+        Else
+            EntidadDocumentos.IdTipoDocumento = TBIdDocumento.Text
+        End If
+        EntidadDocumentos.Descripcion = DGDocumentos.Rows(0).Cells("Descripcion").Value
+        EntidadDocumentos.TipoPersona = DGDocumentos.Rows(0).Cells("TipoPersona").Value
+        EntidadDocumentos.IdEstado = DGDocumentos.Rows(0).Cells("IdEstado").Value
+        NegocioDocumentos.Guardar(EntidadDocumentos)
+        MsgBox("Registro guardado o editado con éxito")
+        'CargarComboBoxs()
+        'Limpiar()
+        'ConsultarDocumentos()
     End Sub
+    Private Sub ConsultarDocumentos()
+        Dim EntidadDocumentos As New Capa_Entidad.Documentos
+        Dim NegocioDocumentos As New Capa_Negocio.Documentos
 
+        NegocioDocumentos.Consultar(EntidadDocumentos)
+        TablaDocumentos2 = EntidadDocumentos.TablaDocumentosRegistrados
+        DGDocumentos.DataSource = TablaDocumentos2
+        'DGDocumentos.Columns(0).Visible = False
+    End Sub
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
 
     End Sub

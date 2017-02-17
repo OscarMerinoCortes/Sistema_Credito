@@ -33,7 +33,11 @@ Partial Class Documentos
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CBEstatusDocumento = New System.Windows.Forms.ComboBox()
+        Me.DGDocumentos = New System.Windows.Forms.DataGridView()
+        Me.TBIdDocumento = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.MSDocumentos.SuspendLayout()
+        CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -123,22 +127,54 @@ Partial Class Documentos
         Me.CBEstatusDocumento.Size = New System.Drawing.Size(136, 21)
         Me.CBEstatusDocumento.TabIndex = 2
         '
+        'DGDocumentos
+        '
+        Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGDocumentos.Location = New System.Drawing.Point(13, 180)
+        Me.DGDocumentos.Name = "DGDocumentos"
+        Me.DGDocumentos.RowHeadersVisible = False
+        Me.DGDocumentos.Size = New System.Drawing.Size(388, 209)
+        Me.DGDocumentos.TabIndex = 17
+        '
+        'TBIdDocumento
+        '
+        Me.TBIdDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TBIdDocumento.Enabled = False
+        Me.TBIdDocumento.Location = New System.Drawing.Point(174, 40)
+        Me.TBIdDocumento.Name = "TBIdDocumento"
+        Me.TBIdDocumento.Size = New System.Drawing.Size(80, 20)
+        Me.TBIdDocumento.TabIndex = 1
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(10, 43)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(20, 13)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "ID"
+        '
         'Documentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(653, 425)
+        Me.Controls.Add(Me.DGDocumentos)
         Me.Controls.Add(Me.MSDocumentos)
         Me.Controls.Add(Me.CBEstatusDocumento)
         Me.Controls.Add(Me.CBTipoPersona)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TBIdDocumento)
         Me.Controls.Add(Me.TBNombreDocumento)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Documentos"
         Me.Text = "Documentos"
         Me.MSDocumentos.ResumeLayout(False)
         Me.MSDocumentos.PerformLayout()
+        CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -155,4 +191,7 @@ Partial Class Documentos
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
     Friend WithEvents CBEstatusDocumento As ComboBox
+    Friend WithEvents DGDocumentos As DataGridView
+    Friend WithEvents TBIdDocumento As TextBox
+    Friend WithEvents Label4 As Label
 End Class
