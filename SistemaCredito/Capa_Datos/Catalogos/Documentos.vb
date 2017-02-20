@@ -30,7 +30,7 @@ Public Class Documentos
         Dim cnn As New SqlConnection(conexionPrincipal)
         Try
             cnn.Open()
-            Dim cmd As New SqlCommand("Cre_LlenarCatalogoDocumentos", cnn)
+            Dim cmd As New SqlCommand("sp_LlenarAltaDocumentos", cnn)
             cmd.CommandType = CommandType.StoredProcedure
             Dim da As New SqlDataAdapter(cmd)
             Dim dt As New DataTable

@@ -22,6 +22,7 @@ Partial Class Documentos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Documentos))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TBNombreDocumento = New System.Windows.Forms.TextBox()
@@ -29,13 +30,12 @@ Partial Class Documentos
         Me.MSDocumentos = New System.Windows.Forms.MenuStrip()
         Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CBEstatusDocumento = New System.Windows.Forms.ComboBox()
-        Me.DGDocumentos = New System.Windows.Forms.DataGridView()
         Me.TBIdDocumento = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.DGDocumentos = New System.Windows.Forms.DataGridView()
         Me.MSDocumentos.SuspendLayout()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -78,11 +78,11 @@ Partial Class Documentos
         '
         'MSDocumentos
         '
-        Me.MSDocumentos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.GuardarToolStripMenuItem, Me.ConsultarToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MSDocumentos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.GuardarToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MSDocumentos.Location = New System.Drawing.Point(0, 0)
         Me.MSDocumentos.Name = "MSDocumentos"
-        Me.MSDocumentos.Size = New System.Drawing.Size(653, 24)
-        Me.MSDocumentos.TabIndex = 16
+        Me.MSDocumentos.Size = New System.Drawing.Size(445, 24)
+        Me.MSDocumentos.TabIndex = 4
         Me.MSDocumentos.Text = "MenuStrip1"
         '
         'NuevoToolStripMenuItem
@@ -96,12 +96,6 @@ Partial Class Documentos
         Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
         Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.GuardarToolStripMenuItem.Text = "Guardar"
-        '
-        'ConsultarToolStripMenuItem
-        '
-        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'SalirToolStripMenuItem
         '
@@ -125,16 +119,7 @@ Partial Class Documentos
         Me.CBEstatusDocumento.Location = New System.Drawing.Point(174, 118)
         Me.CBEstatusDocumento.Name = "CBEstatusDocumento"
         Me.CBEstatusDocumento.Size = New System.Drawing.Size(136, 21)
-        Me.CBEstatusDocumento.TabIndex = 2
-        '
-        'DGDocumentos
-        '
-        Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGDocumentos.Location = New System.Drawing.Point(13, 180)
-        Me.DGDocumentos.Name = "DGDocumentos"
-        Me.DGDocumentos.RowHeadersVisible = False
-        Me.DGDocumentos.Size = New System.Drawing.Size(388, 209)
-        Me.DGDocumentos.TabIndex = 17
+        Me.CBEstatusDocumento.TabIndex = 3
         '
         'TBIdDocumento
         '
@@ -143,7 +128,7 @@ Partial Class Documentos
         Me.TBIdDocumento.Location = New System.Drawing.Point(174, 40)
         Me.TBIdDocumento.Name = "TBIdDocumento"
         Me.TBIdDocumento.Size = New System.Drawing.Size(80, 20)
-        Me.TBIdDocumento.TabIndex = 1
+        Me.TBIdDocumento.TabIndex = 0
         '
         'Label4
         '
@@ -155,11 +140,31 @@ Partial Class Documentos
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "ID"
         '
+        'DGDocumentos
+        '
+        Me.DGDocumentos.AllowUserToAddRows = False
+        Me.DGDocumentos.AllowUserToDeleteRows = False
+        Me.DGDocumentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGDocumentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.DGDocumentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        Me.DGDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGDocumentos.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.DGDocumentos.Location = New System.Drawing.Point(13, 184)
+        Me.DGDocumentos.MultiSelect = False
+        Me.DGDocumentos.Name = "DGDocumentos"
+        Me.DGDocumentos.ReadOnly = True
+        Me.DGDocumentos.RowHeadersVisible = False
+        Me.DGDocumentos.RowHeadersWidth = 40
+        Me.DGDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGDocumentos.Size = New System.Drawing.Size(370, 151)
+        Me.DGDocumentos.TabIndex = 18
+        '
         'Documentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(653, 425)
+        Me.ClientSize = New System.Drawing.Size(445, 360)
         Me.Controls.Add(Me.DGDocumentos)
         Me.Controls.Add(Me.MSDocumentos)
         Me.Controls.Add(Me.CBEstatusDocumento)
@@ -170,8 +175,9 @@ Partial Class Documentos
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Documentos"
-        Me.Text = "Documentos"
+        Me.Text = "Alta de Documentos"
         Me.MSDocumentos.ResumeLayout(False)
         Me.MSDocumentos.PerformLayout()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).EndInit()
@@ -187,11 +193,10 @@ Partial Class Documentos
     Friend WithEvents MSDocumentos As MenuStrip
     Friend WithEvents NuevoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GuardarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
     Friend WithEvents CBEstatusDocumento As ComboBox
-    Friend WithEvents DGDocumentos As DataGridView
     Friend WithEvents TBIdDocumento As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents DGDocumentos As DataGridView
 End Class
