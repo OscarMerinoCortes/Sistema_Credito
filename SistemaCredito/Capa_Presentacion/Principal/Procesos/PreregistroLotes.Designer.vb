@@ -42,6 +42,8 @@ Partial Class PreregistroLotes
         Me.TBFecha = New System.Windows.Forms.TextBox()
         Me.DGRegistroLotes = New System.Windows.Forms.DataGridView()
         Me.DGDocumentosPropietario = New System.Windows.Forms.DataGridView()
+        Me.LbEstado = New System.Windows.Forms.Label()
+        Me.CBIdEstado = New System.Windows.Forms.ComboBox()
         Me.MSPreregistroLotes.SuspendLayout()
         CType(Me.DGRegistroLotes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGDocumentosPropietario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -197,8 +199,9 @@ Partial Class PreregistroLotes
         Me.DGRegistroLotes.AllowUserToAddRows = False
         Me.DGRegistroLotes.AllowUserToDeleteRows = False
         Me.DGRegistroLotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGRegistroLotes.Location = New System.Drawing.Point(15, 185)
+        Me.DGRegistroLotes.Location = New System.Drawing.Point(15, 244)
         Me.DGRegistroLotes.Name = "DGRegistroLotes"
+        Me.DGRegistroLotes.RowHeadersVisible = False
         Me.DGRegistroLotes.Size = New System.Drawing.Size(657, 150)
         Me.DGRegistroLotes.TabIndex = 30
         '
@@ -207,17 +210,39 @@ Partial Class PreregistroLotes
         Me.DGDocumentosPropietario.AllowUserToAddRows = False
         Me.DGDocumentosPropietario.AllowUserToDeleteRows = False
         Me.DGDocumentosPropietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGDocumentosPropietario.Location = New System.Drawing.Point(15, 354)
+        Me.DGDocumentosPropietario.Location = New System.Drawing.Point(15, 400)
         Me.DGDocumentosPropietario.MultiSelect = False
         Me.DGDocumentosPropietario.Name = "DGDocumentosPropietario"
+        Me.DGDocumentosPropietario.RowHeadersVisible = False
         Me.DGDocumentosPropietario.Size = New System.Drawing.Size(345, 258)
         Me.DGDocumentosPropietario.TabIndex = 31
+        '
+        'LbEstado
+        '
+        Me.LbEstado.AutoSize = True
+        Me.LbEstado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LbEstado.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LbEstado.Location = New System.Drawing.Point(12, 174)
+        Me.LbEstado.Name = "LbEstado"
+        Me.LbEstado.Size = New System.Drawing.Size(46, 13)
+        Me.LbEstado.TabIndex = 32
+        Me.LbEstado.Text = "Estado"
+        '
+        'CBIdEstado
+        '
+        Me.CBIdEstado.FormattingEnabled = True
+        Me.CBIdEstado.Location = New System.Drawing.Point(216, 174)
+        Me.CBIdEstado.Name = "CBIdEstado"
+        Me.CBIdEstado.Size = New System.Drawing.Size(121, 21)
+        Me.CBIdEstado.TabIndex = 33
         '
         'PreregistroLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 762)
+        Me.Controls.Add(Me.CBIdEstado)
+        Me.Controls.Add(Me.LbEstado)
         Me.Controls.Add(Me.DGDocumentosPropietario)
         Me.Controls.Add(Me.DGRegistroLotes)
         Me.Controls.Add(Me.TBFecha)
@@ -272,4 +297,6 @@ Partial Class PreregistroLotes
     Friend WithEvents FolioAserca As DataGridViewTextBoxColumn
     Friend WithEvents Predio As DataGridViewTextBoxColumn
     Friend WithEvents DGDocumentosPropietario As DataGridView
+    Friend WithEvents LbEstado As Label
+    Friend WithEvents CBIdEstado As ComboBox
 End Class
