@@ -199,6 +199,7 @@ Partial Class PreregistroLotes
         Me.DGRegistroLotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGRegistroLotes.Location = New System.Drawing.Point(15, 185)
         Me.DGRegistroLotes.Name = "DGRegistroLotes"
+        Me.DGRegistroLotes.RowHeadersVisible = False
         Me.DGRegistroLotes.Size = New System.Drawing.Size(657, 150)
         Me.DGRegistroLotes.TabIndex = 30
         '
@@ -210,6 +211,7 @@ Partial Class PreregistroLotes
         Me.DGDocumentosPropietario.Location = New System.Drawing.Point(15, 354)
         Me.DGDocumentosPropietario.MultiSelect = False
         Me.DGDocumentosPropietario.Name = "DGDocumentosPropietario"
+        Me.DGDocumentosPropietario.RowHeadersVisible = False
         Me.DGDocumentosPropietario.Size = New System.Drawing.Size(345, 258)
         Me.DGDocumentosPropietario.TabIndex = 31
         '
