@@ -6,4 +6,8 @@
     'Modulo ConsultaDocumentos----------------------------
     Public VGTablaDatosDocumentos As DataTable
     Public VGIndexDoc As Integer
+
+    'Modulo Consultar PreregistroLote--------------------------
+    Public VGTabla As DataTable
+    Public VGIndexConsultar As Integer
 End Module

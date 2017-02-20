@@ -14,6 +14,8 @@
     Public IdEstado As Integer
     '--------------------------------------------------
     Public TablaDocumentosPropietario As DataTable
+    Public TablaDocumentosPropietarioGuardar As DataTable
+    Public TablaPreregistroLotes As DataTable
     '----------------------------------------------PARA LOS CASES
-    Public ConsultaDocumentosPropietario As Integer
+    Public ConsultaDocumentosPreregistroLotes As Integer
 End Class

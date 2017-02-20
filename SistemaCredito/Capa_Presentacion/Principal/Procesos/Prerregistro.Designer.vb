@@ -45,10 +45,6 @@ Partial Class Prerregistro
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OFDPreregistro = New System.Windows.Forms.OpenFileDialog()
-        Me.RBAlgodon = New System.Windows.Forms.RadioButton()
-        Me.RBMaiz = New System.Windows.Forms.RadioButton()
-        Me.RBTrigo = New System.Windows.Forms.RadioButton()
-        Me.GBTipoCultivo = New System.Windows.Forms.GroupBox()
         Me.LBTipoPersona = New System.Windows.Forms.Label()
         Me.CBTipoPersona = New System.Windows.Forms.ComboBox()
         Me.PBFoto = New System.Windows.Forms.PictureBox()
@@ -57,8 +53,13 @@ Partial Class Prerregistro
         Me.CBIdEstado = New System.Windows.Forms.ComboBox()
         Me.LbIdCliente = New System.Windows.Forms.Label()
         Me.TBIdCliente = New System.Windows.Forms.TextBox()
+        Me.CBIdTipoCultivo = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LbRepresentante = New System.Windows.Forms.Label()
+        Me.TBRepresentanteLegal = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TBDomicilio = New System.Windows.Forms.TextBox()
         Me.MSPreregistro.SuspendLayout()
-        Me.GBTipoCultivo.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -161,35 +162,6 @@ Partial Class Prerregistro
         '
         Me.OFDPreregistro.FileName = "OFDPreregistro"
         '
-        'RBAlgodon
-        '
-        resources.ApplyResources(Me.RBAlgodon, "RBAlgodon")
-        Me.RBAlgodon.Checked = True
-        Me.RBAlgodon.Name = "RBAlgodon"
-        Me.RBAlgodon.TabStop = True
-        Me.RBAlgodon.UseVisualStyleBackColor = True
-        '
-        'RBMaiz
-        '
-        resources.ApplyResources(Me.RBMaiz, "RBMaiz")
-        Me.RBMaiz.Name = "RBMaiz"
-        Me.RBMaiz.UseVisualStyleBackColor = True
-        '
-        'RBTrigo
-        '
-        resources.ApplyResources(Me.RBTrigo, "RBTrigo")
-        Me.RBTrigo.Name = "RBTrigo"
-        Me.RBTrigo.UseVisualStyleBackColor = True
-        '
-        'GBTipoCultivo
-        '
-        Me.GBTipoCultivo.Controls.Add(Me.RBAlgodon)
-        Me.GBTipoCultivo.Controls.Add(Me.RBTrigo)
-        Me.GBTipoCultivo.Controls.Add(Me.RBMaiz)
-        resources.ApplyResources(Me.GBTipoCultivo, "GBTipoCultivo")
-        Me.GBTipoCultivo.Name = "GBTipoCultivo"
-        Me.GBTipoCultivo.TabStop = False
-        '
         'LBTipoPersona
         '
         resources.ApplyResources(Me.LBTipoPersona, "LBTipoPersona")
@@ -262,10 +234,49 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.TBIdCliente, "TBIdCliente")
         Me.TBIdCliente.Name = "TBIdCliente"
         '
+        'CBIdTipoCultivo
+        '
+        Me.CBIdTipoCultivo.FormattingEnabled = True
+        resources.ApplyResources(Me.CBIdTipoCultivo, "CBIdTipoCultivo")
+        Me.CBIdTipoCultivo.Name = "CBIdTipoCultivo"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
+        'LbRepresentante
+        '
+        resources.ApplyResources(Me.LbRepresentante, "LbRepresentante")
+        Me.LbRepresentante.Name = "LbRepresentante"
+        '
+        'TBRepresentanteLegal
+        '
+        Me.TBRepresentanteLegal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        resources.ApplyResources(Me.TBRepresentanteLegal, "TBRepresentanteLegal")
+        Me.TBRepresentanteLegal.Name = "TBRepresentanteLegal"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
+        '
+        'TBDomicilio
+        '
+        Me.TBDomicilio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        resources.ApplyResources(Me.TBDomicilio, "TBDomicilio")
+        Me.TBDomicilio.Name = "TBDomicilio"
+        '
         'Prerregistro
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.TBDomicilio)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TBRepresentanteLegal)
+        Me.Controls.Add(Me.LbRepresentante)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.CBIdTipoCultivo)
         Me.Controls.Add(Me.TBIdCliente)
         Me.Controls.Add(Me.LbIdCliente)
         Me.Controls.Add(Me.CBIdEstado)
@@ -273,7 +284,6 @@ Partial Class Prerregistro
         Me.Controls.Add(Me.DGDocumentos)
         Me.Controls.Add(Me.CBTipoPersona)
         Me.Controls.Add(Me.LBTipoPersona)
-        Me.Controls.Add(Me.GBTipoCultivo)
         Me.Controls.Add(Me.TBFecha)
         Me.Controls.Add(Me.LbFecha)
         Me.Controls.Add(Me.TBCorreo)
@@ -294,8 +304,6 @@ Partial Class Prerregistro
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.MSPreregistro.ResumeLayout(False)
         Me.MSPreregistro.PerformLayout()
-        Me.GBTipoCultivo.ResumeLayout(False)
-        Me.GBTipoCultivo.PerformLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -323,10 +331,6 @@ Partial Class Prerregistro
     Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OFDPreregistro As OpenFileDialog
-    Friend WithEvents RBAlgodon As RadioButton
-    Friend WithEvents RBMaiz As RadioButton
-    Friend WithEvents RBTrigo As RadioButton
-    Friend WithEvents GBTipoCultivo As GroupBox
     Friend WithEvents LBTipoPersona As Label
     Friend WithEvents CBTipoPersona As ComboBox
     Friend WithEvents DGDocumentos As DataGridView
@@ -334,4 +338,10 @@ Partial Class Prerregistro
     Friend WithEvents CBIdEstado As ComboBox
     Friend WithEvents LbIdCliente As Label
     Friend WithEvents TBIdCliente As TextBox
+    Friend WithEvents CBIdTipoCultivo As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LbRepresentante As Label
+    Friend WithEvents TBRepresentanteLegal As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TBDomicilio As TextBox
 End Class

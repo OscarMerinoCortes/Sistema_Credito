@@ -27,17 +27,17 @@ Public Class PreregistroLotes
             End If
             cmdGuardar.ExecuteNonQuery()
             EntidadPreregistroLotes1.IdPreregistroLote = cmdGuardar.Parameters("@IdPreregistroLote").Value
-            'For Each MiTableRow As DataRow In EntidadPreregistroLotes1.TablaDocumentosPropietario.Rows
-            '    cmdGuardar.CommandText = "Cre_InsPreCliDet"
-            '    cmdGuardar.CommandType = CommandType.StoredProcedure
-            '    cmdGuardar.Parameters.Clear()
-            '    cmdGuardar.Parameters.Add(New SqlParameter("@IdPreregistroDetalle", MiTableRow("IdPreregistroDetalle")))
-            '    cmdGuardar.Parameters.Add(New SqlParameter("@IdCliente", EntidadPreregistro1.IdCliente))
-            '    cmdGuardar.Parameters.Add(New SqlParameter("@IdTipoDocumento", MiTableRow("IdDocumento")))
-            '    cmdGuardar.Parameters.Add(New SqlParameter("@IdEstatusDocumento", MiTableRow("IdEstatus")))
-            '    cmdGuardar.Parameters.Add(New SqlParameter("@IdEstado", EntidadPreregistro1.IdEstado))
-            '    cmdGuardar.ExecuteNonQuery()
-            'Next
+            For Each MiTableRow As DataRow In EntidadPreregistroLotes1.TablaDocumentosPropietarioGuardar.Rows
+                cmdGuardar.CommandText = "Cre_InsPreLotDet"
+                cmdGuardar.CommandType = CommandType.StoredProcedure
+                cmdGuardar.Parameters.Clear()
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdPreregistroLoteDetalle", MiTableRow("IdPreregistroDetalle")))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdPreregistroLote", EntidadPreregistroLotes1.IdPreregistroLote))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdTipoDocumento", MiTableRow("IdDocumento")))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdEstatusDocumento", MiTableRow("IdEstatus")))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdEstado", EntidadPreregistroLotes1.IdEstado))
+                cmdGuardar.ExecuteNonQuery()
+            Next
         Catch ex As Exception
         Finally
             cnn.Close()
@@ -50,7 +50,7 @@ Public Class PreregistroLotes
         Dim cnn As New SqlConnection(conexionPrincipal)
         Try
             cnn.Open()
-            Select Case EntidadPreregistroLotes1.ConsultaDocumentosPropietario
+            Select Case EntidadPreregistroLotes1.ConsultaDocumentosPreregistroLotes
                 Case 1
                     Dim cmd As New SqlCommand("sp_LlenarDocumentosPropietario", cnn)
                     cmd.CommandType = CommandType.StoredProcedure
@@ -59,13 +59,13 @@ Public Class PreregistroLotes
                     da.Fill(dt)
                     EntidadPreregistroLotes1.TablaDocumentosPropietario = dt
                 Case 2
-                    'Dim cmd As New SqlCommand("sp_LlenarDocumentosRegistrados", cnn)
-                    'cmd.CommandType = CommandType.StoredProcedure
-                    'cmd.Parameters.Add(New SqlClient.SqlParameter("@IdCliente", EntidadPreregistro1.IdCliente))
-                    'Dim da As New SqlDataAdapter(cmd)
-                    'Dim dt As New DataTable
-                    'da.Fill(dt)
-                    'EntidadPreregistro1.TablaDocumentosRegistrados = dt
+                    Dim cmd As New SqlCommand("sp_LlenarDocumentosRegistradosLotes", cnn)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.Add(New SqlClient.SqlParameter("@IdPreregistroLote", EntidadPreregistroLotes1.IdPreregistroLote))
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    EntidadPreregistroLotes1.TablaDocumentosPropietario = dt
             End Select
         Catch ex As Exception
         Finally
@@ -73,23 +73,23 @@ Public Class PreregistroLotes
             EntidadPreregistroLotes = EntidadPreregistroLotes1
         End Try
     End Sub
-    'Public Overridable Sub ConsultarClientes(ByRef EntidadPreregistro As Capa_Entidad.Preregistro)
-    '    Dim EntidadPreregistro1 As New Capa_Entidad.Preregistro()
-    '    EntidadPreregistro1 = EntidadPreregistro
-    '    Dim cnn As New SqlConnection(conexionPrincipal)
-    '    Try
-    '        cnn.Open()
-    '        Dim cmd As New SqlCommand("sp_LlenarClientes", cnn)
-    '        cmd.CommandType = CommandType.StoredProcedure
-    '        cmd.Parameters.Add(New SqlClient.SqlParameter("@Nombre", EntidadPreregistro1.Nombre))
-    '        Dim da As New SqlDataAdapter(cmd)
-    '        Dim dt As New DataTable
-    '        da.Fill(dt)
-    '        EntidadPreregistro1.TablaDatosDelCliente = dt
-    '    Catch ex As Exception
-    '    Finally
-    '        cnn.Close()
-    '        EntidadPreregistro = EntidadPreregistro1
-    '    End Try
-    'End Sub
+    Public Overridable Sub ConsultarPreregistroLotes(ByRef EntidadPreregistroLotes As Capa_Entidad.PreregistroLotes)
+        Dim EntidadPreregistroLotes1 As New Capa_Entidad.PreregistroLotes()
+        EntidadPreregistroLotes1 = EntidadPreregistroLotes
+        Dim cnn As New SqlConnection(conexionPrincipal)
+        Try
+            cnn.Open()
+            Dim cmd As New SqlCommand("sp_LlenarPreregistroLotes", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@Nombre", EntidadPreregistroLotes1.Nombre))
+            Dim da As New SqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            EntidadPreregistroLotes1.TablaPreregistroLotes = dt
+        Catch ex As Exception
+        Finally
+            cnn.Close()
+            EntidadPreregistroLotes = EntidadPreregistroLotes1
+        End Try
+    End Sub
 End Class

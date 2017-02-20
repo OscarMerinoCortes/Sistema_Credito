@@ -147,7 +147,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbTitle.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>26</value>
   </data>
   <data name="LbNombre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -159,13 +159,13 @@
     <value>27, 202</value>
   </data>
   <data name="LbNombre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 13</value>
+    <value>140, 13</value>
   </data>
   <data name="LbNombre.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="LbNombre.Text" xml:space="preserve">
-    <value>Nombre (Persona fisica o moral)</value>
+    <value>Nombre ó Razon Social</value>
   </data>
   <data name="&gt;&gt;LbNombre.Name" xml:space="preserve">
     <value>LbNombre</value>
@@ -177,7 +177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbNombre.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>24</value>
   </data>
   <data name="LbRFC.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -186,7 +186,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbRFC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 254</value>
+    <value>27, 280</value>
   </data>
   <data name="LbRFC.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -207,7 +207,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbRFC.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>23</value>
   </data>
   <data name="LbCURP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -216,7 +216,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbCURP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 280</value>
+    <value>27, 306</value>
   </data>
   <data name="LbCURP.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
@@ -237,7 +237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbCURP.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>22</value>
   </data>
   <data name="LbTelefono.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -246,7 +246,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 306</value>
+    <value>27, 358</value>
   </data>
   <data name="LbTelefono.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 13</value>
@@ -267,7 +267,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbTelefono.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>21</value>
   </data>
   <data name="LbCorreo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -276,7 +276,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="LbCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 332</value>
+    <value>27, 384</value>
   </data>
   <data name="LbCorreo.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 13</value>
@@ -297,7 +297,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbCorreo.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>20</value>
   </data>
   <data name="TBNombre.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 202</value>
@@ -318,10 +318,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBNombre.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>19</value>
   </data>
   <data name="TBRFC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 254</value>
+    <value>254, 280</value>
   </data>
   <data name="TBRFC.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -339,10 +339,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBRFC.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>18</value>
   </data>
   <data name="TBCURP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 280</value>
+    <value>254, 306</value>
   </data>
   <data name="TBCURP.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -360,10 +360,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBCURP.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>17</value>
   </data>
   <data name="TBTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 306</value>
+    <value>254, 358</value>
   </data>
   <data name="TBTelefono.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -384,10 +384,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBTelefono.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>16</value>
   </data>
   <data name="TBCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 332</value>
+    <value>254, 384</value>
   </data>
   <data name="TBCorreo.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
@@ -405,7 +405,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBCorreo.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>15</value>
   </data>
   <data name="LbFecha.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -435,7 +435,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbFecha.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>14</value>
   </data>
   <data name="TBFecha.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -459,7 +459,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBFecha.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>13</value>
   </data>
   <metadata name="MSPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -510,116 +510,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MSPreregistro.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>27</value>
   </data>
   <metadata name="OFDPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
   </metadata>
-  <data name="RBAlgodon.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RBAlgodon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="RBAlgodon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
-  </data>
-  <data name="RBAlgodon.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="RBAlgodon.Text" xml:space="preserve">
-    <value>Algodon</value>
-  </data>
-  <data name="&gt;&gt;RBAlgodon.Name" xml:space="preserve">
-    <value>RBAlgodon</value>
-  </data>
-  <data name="&gt;&gt;RBAlgodon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RBAlgodon.Parent" xml:space="preserve">
-    <value>GBTipoCultivo</value>
-  </data>
-  <data name="&gt;&gt;RBAlgodon.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RBMaiz.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RBMaiz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 19</value>
-  </data>
-  <data name="RBMaiz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
-  </data>
-  <data name="RBMaiz.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="RBMaiz.Text" xml:space="preserve">
-    <value>Maiz</value>
-  </data>
-  <data name="&gt;&gt;RBMaiz.Name" xml:space="preserve">
-    <value>RBMaiz</value>
-  </data>
-  <data name="&gt;&gt;RBMaiz.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RBMaiz.Parent" xml:space="preserve">
-    <value>GBTipoCultivo</value>
-  </data>
-  <data name="&gt;&gt;RBMaiz.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RBTrigo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RBTrigo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 19</value>
-  </data>
-  <data name="RBTrigo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
-  </data>
-  <data name="RBTrigo.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="RBTrigo.Text" xml:space="preserve">
-    <value>Trigo</value>
-  </data>
-  <data name="&gt;&gt;RBTrigo.Name" xml:space="preserve">
-    <value>RBTrigo</value>
-  </data>
-  <data name="&gt;&gt;RBTrigo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RBTrigo.Parent" xml:space="preserve">
-    <value>GBTipoCultivo</value>
-  </data>
-  <data name="&gt;&gt;RBTrigo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GBTipoCultivo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 385</value>
-  </data>
-  <data name="GBTipoCultivo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>631, 53</value>
-  </data>
-  <data name="GBTipoCultivo.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="GBTipoCultivo.Text" xml:space="preserve">
-    <value>Tipo de cultivo</value>
-  </data>
-  <data name="&gt;&gt;GBTipoCultivo.Name" xml:space="preserve">
-    <value>GBTipoCultivo</value>
-  </data>
-  <data name="&gt;&gt;GBTipoCultivo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GBTipoCultivo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GBTipoCultivo.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="LBTipoPersona.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -648,7 +543,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LBTipoPersona.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="CBTipoPersona.Items" xml:space="preserve">
     <value>FISICA</value>
@@ -675,7 +570,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CBTipoPersona.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="PBFoto.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -794,13 +689,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PBFoto.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>25</value>
   </data>
   <data name="DGDocumentos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="DGDocumentos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 444</value>
+    <value>27, 506</value>
   </data>
   <data name="DGDocumentos.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>40</value>
@@ -821,7 +716,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DGDocumentos.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="LbIdEstado.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -833,7 +728,7 @@
     <value>NoControl</value>
   </data>
   <data name="LbIdEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 358</value>
+    <value>27, 410</value>
   </data>
   <data name="LbIdEstado.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 13</value>
@@ -854,7 +749,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbIdEstado.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="CBIdEstado.Items" xml:space="preserve">
     <value>ACTIVO</value>
@@ -863,7 +758,7 @@
     <value>INACTIVO</value>
   </data>
   <data name="CBIdEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 358</value>
+    <value>254, 410</value>
   </data>
   <data name="CBIdEstado.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -881,7 +776,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;CBIdEstado.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="LbIdCliente.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -917,7 +812,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LbIdCliente.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="TBIdCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>254, 176</value>
@@ -941,6 +836,175 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TBIdCliente.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CBIdTipoCultivo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 479</value>
+  </data>
+  <data name="CBIdTipoCultivo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="CBIdTipoCultivo.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;CBIdTipoCultivo.Name" xml:space="preserve">
+    <value>CBIdTipoCultivo</value>
+  </data>
+  <data name="&gt;&gt;CBIdTipoCultivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CBIdTipoCultivo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CBIdTipoCultivo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 463</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Tipo de cultivo
+</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LbRepresentante.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LbRepresentante.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="LbRepresentante.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LbRepresentante.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 255</value>
+  </data>
+  <data name="LbRepresentante.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
+  </data>
+  <data name="LbRepresentante.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="LbRepresentante.Text" xml:space="preserve">
+    <value>Representante legal</value>
+  </data>
+  <data name="LbRepresentante.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LbRepresentante.Name" xml:space="preserve">
+    <value>LbRepresentante</value>
+  </data>
+  <data name="&gt;&gt;LbRepresentante.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LbRepresentante.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LbRepresentante.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TBRepresentanteLegal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 255</value>
+  </data>
+  <data name="TBRepresentanteLegal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 20</value>
+  </data>
+  <data name="TBRepresentanteLegal.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="TBRepresentanteLegal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TBRepresentanteLegal.Name" xml:space="preserve">
+    <value>TBRepresentanteLegal</value>
+  </data>
+  <data name="&gt;&gt;TBRepresentanteLegal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBRepresentanteLegal.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TBRepresentanteLegal.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 332</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Domicilio</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TBDomicilio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>254, 332</value>
+  </data>
+  <data name="TBDomicilio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="TBDomicilio.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;TBDomicilio.Name" xml:space="preserve">
+    <value>TBDomicilio</value>
+  </data>
+  <data name="&gt;&gt;TBDomicilio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBDomicilio.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TBDomicilio.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

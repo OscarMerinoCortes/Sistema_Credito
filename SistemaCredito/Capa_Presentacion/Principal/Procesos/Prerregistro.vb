@@ -53,13 +53,13 @@ Public Class Prerregistro
         EntidadPreregistro.CURP = TBCURP.Text
         EntidadPreregistro.Telefono = TBTelefono.Text
         EntidadPreregistro.Correo = TBCorreo.Text
-        If RBAlgodon.Checked = True Then
-            EntidadPreregistro.IdTipoCultivo = 1
-        ElseIf RBMaiz.Checked = True Then
-            EntidadPreregistro.IdTipoCultivo = 2
-        ElseIf RBTrigo.Checked = True Then
-            EntidadPreregistro.IdTipoCultivo = 3
-        End If
+        'If RBAlgodon.Checked = True Then
+        '    EntidadPreregistro.IdTipoCultivo = 1
+        'ElseIf RBMaiz.Checked = True Then
+        '    EntidadPreregistro.IdTipoCultivo = 2
+        'ElseIf RBTrigo.Checked = True Then
+        '    EntidadPreregistro.IdTipoCultivo = 3
+        'End If
         If CBIdEstado.Text = "ACTIVO" Then
             EntidadPreregistro.IdEstado = 1
         Else
@@ -90,13 +90,13 @@ Public Class Prerregistro
         TBTelefono.Text = TablaConsulta.Rows(index).Item("Telefono")
         TBCorreo.Text = TablaConsulta.Rows(index).Item("Correo")
         CBIdEstado.Text = TablaConsulta.Rows(index).Item("Estado")
-        If TablaConsulta.Rows(index).Item("IdTipoCultivo") = 1 Then
-            RBAlgodon.Checked = True
-        ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 2 Then
-            RBMaiz.Checked = True
-        ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 3 Then
-            RBTrigo.Checked = True
-        End If
+        'If TablaConsulta.Rows(index).Item("IdTipoCultivo") = 1 Then
+        '    RBAlgodon.Checked = True
+        'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 2 Then
+        '    RBMaiz.Checked = True
+        'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 3 Then
+        '    RBTrigo.Checked = True
+        'End If
         EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
         EntidadPreregistro.ConsultaDocumentos = 2
         NegocioPreregistro.Consultar(EntidadPreregistro)
@@ -114,8 +114,12 @@ Public Class Prerregistro
         Dim TablaDocumentos2 As New DataTable
         If CBTipoPersona.Text = "FISICA" Then
             TipoPersona = "F"
+            LbRepresentante.Visible = False
+            TBRepresentanteLegal.Visible = False
         Else
             TipoPersona = "M"
+            LbRepresentante.Visible = True
+            TBRepresentanteLegal.Visible = True
         End If
         EntidadPreregistro.TipoPersona = TipoPersona
         EntidadPreregistro.ConsultaDocumentos = 1
@@ -146,7 +150,7 @@ Public Class Prerregistro
         TBCURP.Text = ""
         TBTelefono.Text = ""
         TBCorreo.Text = ""
-        RBAlgodon.Checked = True
+        'RBAlgodon.Checked = True
         '--Limpiar el picturebox
         PBFoto.Image = Nothing
     End Sub

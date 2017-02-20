@@ -71,15 +71,41 @@
         EntidadPreregistroLotes.FolioAserca = DGRegistroLotes.Rows(0).Cells("FolioAserca").Value
         EntidadPreregistroLotes.Predio = DGRegistroLotes.Rows(0).Cells("Predio").Value
         EntidadPreregistroLotes.IdEstado = CBIdEstado.SelectedValue
+        EntidadPreregistroLotes.TablaDocumentosPropietarioGuardar = TablaDocumentosPropietario
         NegocioPreregistroLotes.Guardar(EntidadPreregistroLotes)
         MsgBox("Registro guardado o editado con éxito")
-        'CargarComboBoxs()
         Limpiar()
-        'ConsultarDocumentos()
+        AgregarColumnaVacia()
+        ConsultarDocumentosPropietario()
     End Sub
-
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        Dim EntidadPreregistroLotes As New Capa_Entidad.PreregistroLotes
+        Dim NegocioPreregistroLotes As New Capa_Negocio.PreregistroLotes
+        Dim index As Integer
+        Dim tabla As New DataTable
+        ConsultaPreregistroLote.ShowDialog()
+        index = VGIndex
+        tabla = VGTabla
+        TBIdPreregistroLotes.Text = tabla.Rows(index).Item("IdPreregistroLote")
+        TBNombre.Text = tabla.Rows(index).Item("NombrePropietario")
+        TBRFC.Text = tabla.Rows(index).Item("RFC")
+        TBCURP.Text = tabla.Rows(index).Item("CURP")
+        CBIdEstado.Text = tabla.Rows(index).Item("Estado")
+        DGRegistroLotes.Rows(0).Cells("Lote").Value = tabla.Rows(index).Item("Lote")
+        DGRegistroLotes.Rows(0).Cells("Colonia").Value = tabla.Rows(index).Item("Colonia")
+        DGRegistroLotes.Rows(0).Cells("SuperficieTotal").Value = tabla.Rows(index).Item("SuperficieTotal")
+        DGRegistroLotes.Rows(0).Cells("SuperficieSembrar").Value = tabla.Rows(index).Item("SuperficieSembrar")
+        DGRegistroLotes.Rows(0).Cells("SuperficieRestante").Value = tabla.Rows(index).Item("SuperficieRestante")
+        DGRegistroLotes.Rows(0).Cells("FolioAserca").Value = tabla.Rows(index).Item("FolioAserca")
+        DGRegistroLotes.Rows(0).Cells("Predio").Value = tabla.Rows(index).Item("Predio")
 
+        EntidadPreregistroLotes.IdPreregistroLote = TBIdPreregistroLotes.Text
+        EntidadPreregistroLotes.ConsultaDocumentosPreregistroLotes = 2
+        NegocioPreregistroLotes.Consultar(EntidadPreregistroLotes)
+        tabla = EntidadPreregistroLotes.TablaDocumentosPropietario
+        'DGDocumentos.DataSource = Nothing
+        DGDocumentosPropietario.DataSource = tabla
+        DGDocumentosPropietario.Columns(0).Visible = False
     End Sub
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
@@ -109,7 +135,7 @@
         Dim EntidadPreregistroLotes As New Capa_Entidad.PreregistroLotes
         Dim NegocioPreregistroLotes As New Capa_Negocio.PreregistroLotes
         Dim Tabla As New DataTable
-        EntidadPreregistroLotes.ConsultaDocumentosPropietario = 1
+        EntidadPreregistroLotes.ConsultaDocumentosPreregistroLotes = 1
         NegocioPreregistroLotes.Consultar(EntidadPreregistroLotes)
         Tabla = EntidadPreregistroLotes.TablaDocumentosPropietario
         DGDocumentosPropietario.DataSource = Tabla
