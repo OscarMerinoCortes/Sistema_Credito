@@ -4,6 +4,7 @@
     Public TablaDocumentosPropietario As New DataTable()
     Private Sub PreregistroLotes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now.Date.ToString("dd/MM/yyyy")
+        LlenarCombos()
         '-------------------------------------------------TABLA VACIA
         TablaVacia.Columns.Clear()
         TablaVacia.Columns.Add(New DataColumn("Lote", Type.GetType("System.String")))
@@ -54,21 +55,22 @@
         End If
         AgregarDocumentosATabla()
         If TBIdPreregistroLotes.Text Is String.Empty Then
-            EntidadPreregistroLotes.IdPreregistroLotes = 0
+            EntidadPreregistroLotes.IdPreregistroLote = 0
         Else
-            EntidadPreregistroLotes.IdPreregistroLotes = TBIdPreregistroLotes.Text
+            EntidadPreregistroLotes.IdPreregistroLote = TBIdPreregistroLotes.Text
         End If
         EntidadPreregistroLotes.Fecha = TBFecha.Text
         EntidadPreregistroLotes.Nombre = TBNombre.Text
         EntidadPreregistroLotes.RFC = TBRFC.Text
         EntidadPreregistroLotes.CURP = TBCURP.Text
         EntidadPreregistroLotes.Lote = DGRegistroLotes.Rows(0).Cells("Lote").Value
-        EntidadPreregistroLotes.Lote = DGRegistroLotes.Rows(0).Cells("Colonia").Value
-        EntidadPreregistroLotes.Lote = DGRegistroLotes.Rows(0).Cells("SuperficieTotal").Value
-        EntidadPreregistroLotes.Lote = DGRegistroLotes.Rows(0).Cells("SuperficieSembrar").Value
-        EntidadPreregistroLotes.Lote = DGRegistroLotes.Rows(0).Cells("SuperficieRestante").Value
-        EntidadPreregistroLotes.Lote = DGRegistroLotes.Rows(0).Cells("FolioAserca").Value
-        EntidadPreregistroLotes.Lote = DGRegistroLotes.Rows(0).Cells("Predio").Value
+        EntidadPreregistroLotes.Colonia = DGRegistroLotes.Rows(0).Cells("Colonia").Value
+        EntidadPreregistroLotes.SuperficieTotal = DGRegistroLotes.Rows(0).Cells("SuperficieTotal").Value
+        EntidadPreregistroLotes.SuperficieSembrar = DGRegistroLotes.Rows(0).Cells("SuperficieSembrar").Value
+        EntidadPreregistroLotes.SuperficieRestante = DGRegistroLotes.Rows(0).Cells("SuperficieRestante").Value
+        EntidadPreregistroLotes.FolioAserca = DGRegistroLotes.Rows(0).Cells("FolioAserca").Value
+        EntidadPreregistroLotes.Predio = DGRegistroLotes.Rows(0).Cells("Predio").Value
+        EntidadPreregistroLotes.IdEstado = CBIdEstado.SelectedValue
         NegocioPreregistroLotes.Guardar(EntidadPreregistroLotes)
         MsgBox("Registro guardado o editado con éxito")
         'CargarComboBoxs()
@@ -107,12 +109,6 @@
         Dim EntidadPreregistroLotes As New Capa_Entidad.PreregistroLotes
         Dim NegocioPreregistroLotes As New Capa_Negocio.PreregistroLotes
         Dim Tabla As New DataTable
-        'If CBTipoPersona.Text = "FISICA" Then
-        '    TipoPersona = "F"
-        'Else
-        '    TipoPersona = "M"
-        'End If
-        'EntidadPreregistro.TipoPersona = TipoPersona
         EntidadPreregistroLotes.ConsultaDocumentosPropietario = 1
         NegocioPreregistroLotes.Consultar(EntidadPreregistroLotes)
         Tabla = EntidadPreregistroLotes.TablaDocumentosPropietario
@@ -145,5 +141,23 @@
         ElseIf DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = True Then
             DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = False
         End If
+    End Sub
+    Private Sub LlenarCombos()
+        Dim dt As DataTable = New DataTable("Tabla")
+        dt.Columns.Add("IdDocumento")
+        dt.Columns.Add("Descripcion")
+        Dim dr As DataRow
+        dr = dt.NewRow()
+        dr("IdDocumento") = "2"
+        dr("Descripcion") = "INACTIVO"
+        dt.Rows.Add(dr)
+        dr = dt.NewRow()
+        dr("IdDocumento") = "1"
+        dr("Descripcion") = "ACTIVO"
+        dt.Rows.Add(dr)
+        CBIdEstado.DataSource = dt
+        CBIdEstado.ValueMember = "IdDocumento"
+        CBIdEstado.DisplayMember = "Descripcion"
+        CBIdEstado.SelectedIndex = 1
     End Sub
 End Class

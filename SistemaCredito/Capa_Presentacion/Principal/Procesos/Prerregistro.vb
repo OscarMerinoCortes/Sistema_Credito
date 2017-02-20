@@ -154,4 +154,14 @@ Public Class Prerregistro
         CBTipoPersona.SelectedText = "FISICA"
         CBIdEstado.SelectedText = "ACTIVO"
     End Sub
+
+    Private Sub DGDocumentos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGDocumentos.CellContentClick
+        Dim i As Integer
+        i = DGDocumentos.CurrentRow.Index
+        If DGDocumentos.Rows(i).Cells("Estatus").Value = False Then
+            DGDocumentos.Rows(i).Cells("Estatus").Value = True
+        ElseIf DGDocumentos.Rows(i).Cells("Estatus").Value = True Then
+            DGDocumentos.Rows(i).Cells("Estatus").Value = False
+        End If
+    End Sub
 End Class
