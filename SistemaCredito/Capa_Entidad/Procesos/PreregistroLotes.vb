@@ -1,5 +1,5 @@
 ﻿Public Class PreregistroLotes
-    Public IdPreregistroLotes As Integer
+    Public IdPreregistroLote As Integer
     Public Nombre As String
     Public CURP As String
     Public RFC As String
@@ -11,6 +11,7 @@
     Public SuperficieRestante As Double
     Public FolioAserca As String
     Public Predio As String
+    Public IdEstado As Integer
     '--------------------------------------------------
     Public TablaDocumentosPropietario As DataTable
     '----------------------------------------------PARA LOS CASES
