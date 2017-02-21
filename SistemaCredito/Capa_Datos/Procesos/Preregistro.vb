@@ -65,6 +65,13 @@ Public Class Preregistro
                     Dim dt As New DataTable
                     da.Fill(dt)
                     EntidadPreregistro1.TablaDocumentosRegistrados = dt
+                Case 3 '---------------------------------------------------------------------LLENAR COMBOBOX DE TIPOS DE CULTIVO---------------------
+                    Dim cmd As New SqlCommand("sp_LlenarCultivo", cnn)
+                    cmd.CommandType = CommandType.StoredProcedure              
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    EntidadPreregistro1.TablaDocumentosRegistrados = dt
             End Select
         Catch ex As Exception
         Finally
