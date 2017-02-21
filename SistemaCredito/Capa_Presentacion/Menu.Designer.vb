@@ -30,6 +30,7 @@ Partial Class Menu
         Me.PreregistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreregistroLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AsignacionDeLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,7 +58,7 @@ Partial Class Menu
         '
         'ProcesoToolStripMenuItem
         '
-        Me.ProcesoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreregistroToolStripMenuItem, Me.PreregistroLotesToolStripMenuItem})
+        Me.ProcesoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreregistroToolStripMenuItem, Me.PreregistroLotesToolStripMenuItem, Me.AsignacionDeLotesToolStripMenuItem})
         Me.ProcesoToolStripMenuItem.Name = "ProcesoToolStripMenuItem"
         Me.ProcesoToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.ProcesoToolStripMenuItem.Text = "Procesos"
@@ -79,6 +80,12 @@ Partial Class Menu
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem.Text = "Salir"
+        '
+        'AsignacionDeLotesToolStripMenuItem
+        '
+        Me.AsignacionDeLotesToolStripMenuItem.Name = "AsignacionDeLotesToolStripMenuItem"
+        Me.AsignacionDeLotesToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.AsignacionDeLotesToolStripMenuItem.Text = "Asignacion de Lotes"
         '
         'Menu
         '
@@ -105,4 +112,5 @@ Partial Class Menu
     Friend WithEvents ProcesoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreregistroToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PreregistroLotesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AsignacionDeLotesToolStripMenuItem As ToolStripMenuItem
 End Class
