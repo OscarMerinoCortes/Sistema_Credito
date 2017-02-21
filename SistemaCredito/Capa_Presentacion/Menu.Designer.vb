@@ -26,10 +26,10 @@ Partial Class Menu
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.CatálogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreregistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreregistroLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,14 +52,8 @@ Partial Class Menu
         'DocumentosToolStripMenuItem
         '
         Me.DocumentosToolStripMenuItem.Name = "DocumentosToolStripMenuItem"
-        Me.DocumentosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DocumentosToolStripMenuItem.Text = "Documentos"
-        '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
-        Me.SalirToolStripMenuItem.Text = "Salir"
+        Me.DocumentosToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.DocumentosToolStripMenuItem.Text = "Alta de Documentos"
         '
         'ProcesoToolStripMenuItem
         '
@@ -79,6 +73,12 @@ Partial Class Menu
         Me.PreregistroLotesToolStripMenuItem.Name = "PreregistroLotesToolStripMenuItem"
         Me.PreregistroLotesToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
         Me.PreregistroLotesToolStripMenuItem.Text = "Preregistro lotes"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'Menu
         '

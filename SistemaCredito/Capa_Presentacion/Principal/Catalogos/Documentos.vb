@@ -2,7 +2,18 @@
     Public TablaDocumentos2 As New DataTable
     Private Sub Documentos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarCombos()
+        LimpiarCampos()
         ConsultarDocumentos()
+        PropiedadesDGDocumentos()
+    End Sub
+    Private Sub LimpiarCampos()
+        TBIdDocumento.Text = ""
+        TBNombreDocumento.Text = ""
+        CBTipoPersona.SelectedIndex = -1
+        CBTipoPersona.Text = ""
+        CBEstatusDocumento.SelectedIndex = -1
+        CBEstatusDocumento.Text = ""
+        DGDocumentos.DataSource = Nothing
     End Sub
     Private Sub llenarCombos()
         Dim dt As DataTable = New DataTable("Tabla")
@@ -57,10 +68,9 @@
     End Sub
 
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
-        TBNombreDocumento.Text = ""
-        CBEstatusDocumento.SelectedIndex = -1
-        CBTipoPersona.SelectedIndex = -1
-
+        LimpiarCampos()
+        ConsultarDocumentos()
+        PropiedadesDGDocumentos()
     End Sub
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadDocumentos As New Capa_Entidad.Documentos
@@ -74,14 +84,16 @@
         Else
             EntidadDocumentos.IdTipoDocumento = TBIdDocumento.Text
         End If
-        EntidadDocumentos.Descripcion = DGDocumentos.Rows(0).Cells("Descripcion").Value
-        EntidadDocumentos.TipoPersona = DGDocumentos.Rows(0).Cells("TipoPersona").Value
-        EntidadDocumentos.IdEstado = DGDocumentos.Rows(0).Cells("IdEstado").Value
+        EntidadDocumentos.Descripcion = TBNombreDocumento.Text
+        EntidadDocumentos.TipoPersona = CBTipoPersona.SelectedValue
+        EntidadDocumentos.IdEstado = CBEstatusDocumento.SelectedValue
         NegocioDocumentos.Guardar(EntidadDocumentos)
+        ConsultarDocumentos()
+        PropiedadesDGDocumentos()
         MsgBox("Registro guardado o editado con éxito")
-        'CargarComboBoxs()
-        'Limpiar()
-        'ConsultarDocumentos()
+        LimpiarCampos()
+        ConsultarDocumentos()
+        PropiedadesDGDocumentos()
     End Sub
     Private Sub ConsultarDocumentos()
         Dim EntidadDocumentos As New Capa_Entidad.Documentos
@@ -90,12 +102,34 @@
         NegocioDocumentos.Consultar(EntidadDocumentos)
         TablaDocumentos2 = EntidadDocumentos.TablaDocumentosRegistrados
         DGDocumentos.DataSource = TablaDocumentos2
-        'DGDocumentos.Columns(0).Visible = False
     End Sub
-    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
-
+    Private Sub PropiedadesDGDocumentos()
+        DGDocumentos.Columns("id").Visible = False
     End Sub
-
+    Private Sub DGDocumentos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGDocumentos.CellDoubleClick
+        If DGDocumentos.RowCount = 0 Then
+            MessageBox.Show("No hay datos para seleccionar.")
+        ElseIf DGDocumentos.CurrentRow IsNot Nothing Then
+            Dim index As Integer
+            index = DGDocumentos.CurrentRow.Index
+            TBIdDocumento.Text = TablaDocumentos2.Rows(index).Item("id")
+            TBNombreDocumento.Text = TablaDocumentos2.Rows(index).Item("descripcion")
+            Select Case TablaDocumentos2.Rows(index).Item("tipo persona")
+                Case "MORAL"
+                    CBTipoPersona.SelectedValue = "M"
+                Case "FISICA"
+                    CBTipoPersona.SelectedValue = "F"
+                Case "AMBOS"
+                    CBTipoPersona.SelectedValue = "A"
+            End Select
+            Select Case TablaDocumentos2.Rows(index).Item("estatus")
+                Case "ACTIVO"
+                    CBEstatusDocumento.SelectedValue = 1
+                Case "INACTIVO"
+                    CBEstatusDocumento.SelectedValue = 0
+            End Select
+        End If
+    End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Me.Close()
     End Sub
