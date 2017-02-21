@@ -53,13 +53,7 @@ Public Class Prerregistro
         EntidadPreregistro.CURP = TBCURP.Text
         EntidadPreregistro.Telefono = TBTelefono.Text
         EntidadPreregistro.Correo = TBCorreo.Text
-        'If RBAlgodon.Checked = True Then
-        '    EntidadPreregistro.IdTipoCultivo = 1
-        'ElseIf RBMaiz.Checked = True Then
-        '    EntidadPreregistro.IdTipoCultivo = 2
-        'ElseIf RBTrigo.Checked = True Then
-        '    EntidadPreregistro.IdTipoCultivo = 3
-        'End If
+        EntidadPreregistro.IdTipoCultivo = CBIdTipoCultivo.SelectedValue
         If CBIdEstado.Text = "ACTIVO" Then
             EntidadPreregistro.IdEstado = 1
         Else
@@ -97,6 +91,7 @@ Public Class Prerregistro
         'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 3 Then
         '    RBTrigo.Checked = True
         'End If
+        CBIdTipoCultivo.SelectedValue = TablaConsulta.Rows(index).Item("IdTipoCultivo")
         EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
         EntidadPreregistro.ConsultaDocumentos = 2
         NegocioPreregistro.Consultar(EntidadPreregistro)
@@ -155,8 +150,18 @@ Public Class Prerregistro
         PBFoto.Image = Nothing
     End Sub
     Private Sub CargarComboBoxs()
+        Dim tabla As New DataTable()
         CBTipoPersona.SelectedText = "FISICA"
         CBIdEstado.SelectedText = "ACTIVO"
+        '---------
+        Dim EntidadPreregistro As New Capa_Entidad.Preregistro
+        Dim NegocioPreregistro As New Capa_Negocio.Preregistro
+        EntidadPreregistro.ConsultaDocumentos = 3
+        NegocioPreregistro.Consultar(EntidadPreregistro)
+        tabla = EntidadPreregistro.TablaDocumentosRegistrados
+        CBIdTipoCultivo.DataSource = tabla
+        CBIdTipoCultivo.DisplayMember = "Cultivo"
+        CBIdTipoCultivo.ValueMember = "Id"
     End Sub
 
     Private Sub DGDocumentos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGDocumentos.CellContentClick
