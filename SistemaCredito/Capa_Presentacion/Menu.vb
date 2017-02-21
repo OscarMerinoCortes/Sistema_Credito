@@ -17,4 +17,8 @@
     Private Sub PreregistroLotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreregistroLotesToolStripMenuItem.Click
         PreregistroLotes.Show()
     End Sub
+
+    Private Sub AsignacionDeLotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AsignacionDeLotesToolStripMenuItem.Click
+        AsignacionLotes.Show()
+    End Sub
 End Class
