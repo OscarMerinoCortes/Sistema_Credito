@@ -89,7 +89,7 @@ Public Class Preregistro
             cnn.Open()
             Dim cmd As New SqlCommand("sp_LlenarClientes", cnn)
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add(New SqlClient.SqlParameter("@Nombre", EntidadPreregistro1.Nombre))
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@Nombre", IIf(EntidadPreregistro1.Nombre = Nothing, "", EntidadPreregistro1.Nombre)))
             Dim da As New SqlDataAdapter(cmd)
             Dim dt As New DataTable
             da.Fill(dt)

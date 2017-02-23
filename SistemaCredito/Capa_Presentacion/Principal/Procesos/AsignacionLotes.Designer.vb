@@ -23,13 +23,13 @@ Partial Class AsignacionLotes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AsignacionLotes))
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CBClientes = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MSDocumentos = New System.Windows.Forms.MenuStrip()
         Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CBCultivos = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,13 +41,13 @@ Partial Class AsignacionLotes
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'CBClientes
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(192, 86)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(240, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.CBClientes.FormattingEnabled = True
+        Me.CBClientes.Location = New System.Drawing.Point(192, 86)
+        Me.CBClientes.Name = "CBClientes"
+        Me.CBClientes.Size = New System.Drawing.Size(240, 21)
+        Me.CBClientes.TabIndex = 0
         '
         'DataGridView1
         '
@@ -90,17 +90,17 @@ Partial Class AsignacionLotes
         Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.GuardarToolStripMenuItem.Text = "Guardar"
         '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
-        Me.SalirToolStripMenuItem.Text = "Salir"
-        '
         'ConsultarToolStripMenuItem
         '
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
         Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'Label1
         '
@@ -172,7 +172,7 @@ Partial Class AsignacionLotes
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MSDocumentos)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.CBClientes)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AsignacionLotes"
         Me.Text = "AsignacionLotes"
@@ -185,7 +185,7 @@ Partial Class AsignacionLotes
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CBClientes As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents MSDocumentos As MenuStrip
     Friend WithEvents NuevoToolStripMenuItem As ToolStripMenuItem
