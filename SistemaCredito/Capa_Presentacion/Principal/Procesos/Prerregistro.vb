@@ -48,9 +48,11 @@ Public Class Prerregistro
         EntidadPreregistro.Foto = arrImage
         EntidadPreregistro.Fecha = TBFecha.Text
         EntidadPreregistro.Nombre = TBNombre.Text
+        EntidadPreregistro.RepresentanteLegal = TBRepresentanteLegal.Text
         EntidadPreregistro.TipoPersona = CBTipoPersona.Text
         EntidadPreregistro.RFC = TBRFC.Text
         EntidadPreregistro.CURP = TBCURP.Text
+        EntidadPreregistro.Domicilio = TBDomicilio.Text
         EntidadPreregistro.Telefono = TBTelefono.Text
         EntidadPreregistro.Correo = TBCorreo.Text
         EntidadPreregistro.IdTipoCultivo = CBIdTipoCultivo.SelectedValue
@@ -62,7 +64,6 @@ Public Class Prerregistro
         EntidadPreregistro.TablaDocumentosAgregados = TablaDocumentosObtenidos
         NegocioPreregistro.Guardar(EntidadPreregistro)
         MsgBox("Registro guardado o editado con éxito")
-        'CargarComboBoxs()
         Limpiar()
         ConsultarDocumentos()
     End Sub
@@ -73,30 +74,27 @@ Public Class Prerregistro
         ConsultaPreregistro.ShowDialog()
         index = VGIndex
         TablaConsulta = VGTablaDatosDelCliente
+        If TablaConsulta Is Nothing Then
+            Exit Sub
+        End If
         TBIdCliente.Text = TablaConsulta.Rows(index).Item("IdCliente")
         TBNombre.Text = TablaConsulta.Rows(index).Item("Nombre")
+        TBRepresentanteLegal.Text = TablaConsulta.Rows(index).Item("RepresentanteLegal")
         CBTipoPersona.Text = TablaConsulta.Rows(index).Item("TipoPersona")
         foto = CType(TablaConsulta.Rows(index).Item("Foto"), Byte())
         Dim MSFoto As New MemoryStream(foto)
         PBFoto.Image = Image.FromStream(MSFoto)
         TBRFC.Text = TablaConsulta.Rows(index).Item("RFC")
         TBCURP.Text = TablaConsulta.Rows(index).Item("CURP")
+        TBDomicilio.Text = TablaConsulta.Rows(index).Item("Domicilio")
         TBTelefono.Text = TablaConsulta.Rows(index).Item("Telefono")
         TBCorreo.Text = TablaConsulta.Rows(index).Item("Correo")
         CBIdEstado.Text = TablaConsulta.Rows(index).Item("Estado")
-        'If TablaConsulta.Rows(index).Item("IdTipoCultivo") = 1 Then
-        '    RBAlgodon.Checked = True
-        'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 2 Then
-        '    RBMaiz.Checked = True
-        'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 3 Then
-        '    RBTrigo.Checked = True
-        'End If
         CBIdTipoCultivo.SelectedValue = TablaConsulta.Rows(index).Item("IdTipoCultivo")
         EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
         EntidadPreregistro.ConsultaDocumentos = 2
         NegocioPreregistro.Consultar(EntidadPreregistro)
         tabla = EntidadPreregistro.TablaDocumentosRegistrados
-        'DGDocumentos.DataSource = Nothing
         DGDocumentos.DataSource = tabla
         DGDocumentos.Columns(0).Visible = False
     End Sub
@@ -140,13 +138,14 @@ Public Class Prerregistro
         Next
     End Sub
     Private Sub Limpiar()
+        TBIdCliente.Text = ""
         TBNombre.Text = ""
         TBRFC.Text = ""
+        TBRepresentanteLegal.Text = ""
         TBCURP.Text = ""
+        TBDomicilio.Text = ""
         TBTelefono.Text = ""
         TBCorreo.Text = ""
-        'RBAlgodon.Checked = True
-        '--Limpiar el picturebox
         PBFoto.Image = Nothing
     End Sub
     Private Sub CargarComboBoxs()

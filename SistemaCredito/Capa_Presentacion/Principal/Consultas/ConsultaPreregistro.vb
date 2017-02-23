@@ -17,14 +17,15 @@
         Consultar()
     End Sub
     Private Sub FormatoDelDataGridView()
-        DGConsultaPreregistro.Columns(0).Visible = False
-        DGConsultaPreregistro.Columns(3).Visible = False
-        DGConsultaPreregistro.Columns(4).Visible = False
-        DGConsultaPreregistro.Columns(5).Visible = False
-        DGConsultaPreregistro.Columns(9).Visible = False
-        DGConsultaPreregistro.Columns(10).Visible = False
-        DGConsultaPreregistro.Columns(2).HeaderText = "Tipo de persona"
-        DGConsultaPreregistro.Columns(2).Width = 150
+        DGConsultaPreregistro.Columns(0).Visible = False '--Id
+        DGConsultaPreregistro.Columns(2).Visible = False '--Representante Legal
+        DGConsultaPreregistro.Columns(4).Visible = False '---Foto
+        DGConsultaPreregistro.Columns(5).Visible = False '---RFC
+        DGConsultaPreregistro.Columns(6).Visible = False '---CURP
+        DGConsultaPreregistro.Columns(11).Visible = False '--Estado
+        DGConsultaPreregistro.Columns(12).Visible = False '--IdTipoCultivo    
+        DGConsultaPreregistro.Columns(3).HeaderText = "Tipo de persona"
+        DGConsultaPreregistro.Columns(3).Width = 150
         DGConsultaPreregistro.Columns(1).Width = 200
     End Sub
     Private Sub DGConsultaPreregistro_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGConsultaPreregistro.CellDoubleClick

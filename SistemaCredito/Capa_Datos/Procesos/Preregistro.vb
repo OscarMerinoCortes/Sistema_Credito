@@ -12,8 +12,10 @@ Public Class Preregistro
             cmdGuardar.Parameters.Add(New SqlParameter("@IdCliente", EntidadPreregistro1.IdCliente))
             cmdGuardar.Parameters.Add(New SqlParameter("@Foto", SqlDbType.Image)).Value = EntidadPreregistro1.Foto
             cmdGuardar.Parameters.Add(New SqlParameter("@Nombre", EntidadPreregistro1.Nombre))
+            cmdGuardar.Parameters.Add(New SqlParameter("@RepresentanteLegal", EntidadPreregistro1.RepresentanteLegal))
             cmdGuardar.Parameters.Add(New SqlParameter("@TipoPersona", EntidadPreregistro1.TipoPersona))
             cmdGuardar.Parameters.Add(New SqlParameter("@RFC", EntidadPreregistro1.RFC))
+            cmdGuardar.Parameters.Add(New SqlParameter("@Domicilio", EntidadPreregistro1.Domicilio))
             cmdGuardar.Parameters.Add(New SqlParameter("@CURP", EntidadPreregistro1.CURP))
             cmdGuardar.Parameters.Add(New SqlParameter("@Telefono", EntidadPreregistro1.Telefono))
             cmdGuardar.Parameters.Add(New SqlParameter("@Correo", EntidadPreregistro1.Correo))

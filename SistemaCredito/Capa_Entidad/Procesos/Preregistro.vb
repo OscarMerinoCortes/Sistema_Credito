@@ -3,8 +3,10 @@
     Public TipoPersona As String
     Public Foto() As Byte
     Public Nombre As String
+    Public RepresentanteLegal As String
     Public RFC As String
     Public CURP As String
+    Public Domicilio As String
     Public Telefono As String
     Public Correo As String
     Public Fecha As Date
