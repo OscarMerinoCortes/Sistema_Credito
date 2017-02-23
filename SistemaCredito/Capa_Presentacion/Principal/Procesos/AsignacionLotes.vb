@@ -21,7 +21,12 @@
         CBClientes.ValueMember = "IdCliente"
 
     End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ConsultaLotesParaAsignacion.Show()
+    End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
     End Sub
+
+
 End Class

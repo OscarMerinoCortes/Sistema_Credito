@@ -86,26 +86,28 @@
         ConsultaPreregistroLote.ShowDialog()
         index = VGIndex
         tabla = VGTabla
-        TBIdPreregistroLotes.Text = tabla.Rows(index).Item("IdPreregistroLote")
-        TBNombre.Text = tabla.Rows(index).Item("NombrePropietario")
-        TBRFC.Text = tabla.Rows(index).Item("RFC")
-        TBCURP.Text = tabla.Rows(index).Item("CURP")
-        CBIdEstado.Text = tabla.Rows(index).Item("Estado")
-        DGRegistroLotes.Rows(0).Cells("Lote").Value = tabla.Rows(index).Item("Lote")
-        DGRegistroLotes.Rows(0).Cells("Colonia").Value = tabla.Rows(index).Item("Colonia")
-        DGRegistroLotes.Rows(0).Cells("SuperficieTotal").Value = tabla.Rows(index).Item("SuperficieTotal")
-        DGRegistroLotes.Rows(0).Cells("SuperficieSembrar").Value = tabla.Rows(index).Item("SuperficieSembrar")
-        DGRegistroLotes.Rows(0).Cells("SuperficieRestante").Value = tabla.Rows(index).Item("SuperficieRestante")
-        DGRegistroLotes.Rows(0).Cells("FolioAserca").Value = tabla.Rows(index).Item("FolioAserca")
-        DGRegistroLotes.Rows(0).Cells("Predio").Value = tabla.Rows(index).Item("Predio")
+        If index > 0 Then
+            TBIdPreregistroLotes.Text = tabla.Rows(index).Item("IdPreregistroLote")
+            TBNombre.Text = tabla.Rows(index).Item("NombrePropietario")
+            TBRFC.Text = tabla.Rows(index).Item("RFC")
+            TBCURP.Text = tabla.Rows(index).Item("CURP")
+            CBIdEstado.Text = tabla.Rows(index).Item("Estado")
+            DGRegistroLotes.Rows(0).Cells("Lote").Value = tabla.Rows(index).Item("Lote")
+            DGRegistroLotes.Rows(0).Cells("Colonia").Value = tabla.Rows(index).Item("Colonia")
+            DGRegistroLotes.Rows(0).Cells("SuperficieTotal").Value = tabla.Rows(index).Item("SuperficieTotal")
+            DGRegistroLotes.Rows(0).Cells("SuperficieSembrar").Value = tabla.Rows(index).Item("SuperficieSembrar")
+            DGRegistroLotes.Rows(0).Cells("SuperficieRestante").Value = tabla.Rows(index).Item("SuperficieRestante")
+            DGRegistroLotes.Rows(0).Cells("FolioAserca").Value = tabla.Rows(index).Item("FolioAserca")
+            DGRegistroLotes.Rows(0).Cells("Predio").Value = tabla.Rows(index).Item("Predio")
 
-        EntidadPreregistroLotes.IdPreregistroLote = TBIdPreregistroLotes.Text
-        EntidadPreregistroLotes.ConsultaDocumentosPreregistroLotes = 2
-        NegocioPreregistroLotes.Consultar(EntidadPreregistroLotes)
-        tabla = EntidadPreregistroLotes.TablaDocumentosPropietario
-        'DGDocumentos.DataSource = Nothing
-        DGDocumentosPropietario.DataSource = tabla
-        DGDocumentosPropietario.Columns(0).Visible = False
+            EntidadPreregistroLotes.IdPreregistroLote = TBIdPreregistroLotes.Text
+            EntidadPreregistroLotes.ConsultaDocumentosPreregistroLotes = 2
+            NegocioPreregistroLotes.Consultar(EntidadPreregistroLotes)
+            tabla = EntidadPreregistroLotes.TablaDocumentosPropietario
+            'DGDocumentos.DataSource = Nothing
+            DGDocumentosPropietario.DataSource = tabla
+            DGDocumentosPropietario.Columns(0).Visible = False
+        End If
     End Sub
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
