@@ -25,3 +25,4 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Entidad\obj\De
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.vbprojResolveAssemblyReference.cache
