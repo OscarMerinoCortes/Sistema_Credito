@@ -5,6 +5,8 @@ Public Class Prerregistro
     Public TablaConsulta As New DataTable()
     Public EntidadPreregistro As New Capa_Entidad.Preregistro
     Public NegocioPreregistro As New Capa_Negocio.Preregistro
+    '--------------------------------------------------------Persona Morales
+    Public TablaSocios As New DataTable
     Private Sub Prerregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now
         OFDPreregistro.Filter = "Todos(*.Jpg, *.Png, *.Gif, *.Tiff, *.Jpeg, *.Bmp)|*.Jpg; *.Png; *.Gif; *.Tiff; *.Jpeg; *.Bmp"
@@ -15,6 +17,11 @@ Public Class Prerregistro
         TablaDocumentosObtenidos.Columns.Add(New DataColumn("IdPreregistroDetalle", Type.GetType("System.Int32")))
         TablaDocumentosObtenidos.Columns.Add(New DataColumn("IdDocumento", Type.GetType("System.Int32")))
         TablaDocumentosObtenidos.Columns.Add(New DataColumn("IdEstatus", Type.GetType("System.Boolean")))
+        '---------------------------------------------------------------
+        TablaSocios.Columns.Clear()
+        TablaSocios.Columns.Add(New DataColumn("IdPreregistroDetalle", Type.GetType("System.Int32")))
+        TablaSocios.Columns.Add(New DataColumn("IdDocumento", Type.GetType("System.Int32")))
+        TablaSocios.Columns.Add(New DataColumn("IdEstatus", Type.GetType("System.Boolean")))
     End Sub
     Private Sub PBFoto_Click(sender As Object, e As EventArgs) Handles PBFoto.Click
         Try
@@ -40,6 +47,7 @@ Public Class Prerregistro
         Dim arrImage() As Byte = ms.GetBuffer
 
         AgregarDocumentosATabla()
+        AgregarSocios()
         If TBIdCliente.Text Is String.Empty Then
             EntidadPreregistro.IdCliente = 0
         Else
@@ -48,14 +56,12 @@ Public Class Prerregistro
         EntidadPreregistro.Foto = arrImage
         EntidadPreregistro.Fecha = TBFecha.Text
         EntidadPreregistro.Nombre = TBNombre.Text
-        EntidadPreregistro.RepresentanteLegal = TBRepresentanteLegal.Text
         EntidadPreregistro.TipoPersona = CBTipoPersona.Text
         EntidadPreregistro.RFC = TBRFC.Text
         EntidadPreregistro.CURP = TBCURP.Text
         EntidadPreregistro.Domicilio = TBDomicilio.Text
         EntidadPreregistro.Telefono = TBTelefono.Text
         EntidadPreregistro.Correo = TBCorreo.Text
-        EntidadPreregistro.IdTipoCultivo = CBIdTipoCultivo.SelectedValue
         If CBIdEstado.Text = "ACTIVO" Then
             EntidadPreregistro.IdEstado = 1
         Else
@@ -79,7 +85,6 @@ Public Class Prerregistro
         End If
         TBIdCliente.Text = TablaConsulta.Rows(index).Item("IdCliente")
         TBNombre.Text = TablaConsulta.Rows(index).Item("Nombre")
-        TBRepresentanteLegal.Text = TablaConsulta.Rows(index).Item("RepresentanteLegal")
         CBTipoPersona.Text = TablaConsulta.Rows(index).Item("TipoPersona")
         foto = CType(TablaConsulta.Rows(index).Item("Foto"), Byte())
         Dim MSFoto As New MemoryStream(foto)
@@ -90,7 +95,6 @@ Public Class Prerregistro
         TBTelefono.Text = TablaConsulta.Rows(index).Item("Telefono")
         TBCorreo.Text = TablaConsulta.Rows(index).Item("Correo")
         CBIdEstado.Text = TablaConsulta.Rows(index).Item("Estado")
-        CBIdTipoCultivo.SelectedValue = TablaConsulta.Rows(index).Item("IdTipoCultivo")
         EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
         EntidadPreregistro.ConsultaDocumentos = 2
         NegocioPreregistro.Consultar(EntidadPreregistro)
@@ -107,12 +111,10 @@ Public Class Prerregistro
         Dim TablaDocumentos2 As New DataTable
         If CBTipoPersona.Text = "FISICA" Then
             TipoPersona = "F"
-            LbRepresentante.Visible = False
-            TBRepresentanteLegal.Visible = False
+            DesHabilitarCamposAdicionales()
         Else
             TipoPersona = "M"
-            LbRepresentante.Visible = True
-            TBRepresentanteLegal.Visible = True
+            HabilitarCamposAdicionales()
         End If
         EntidadPreregistro.TipoPersona = TipoPersona
         EntidadPreregistro.ConsultaDocumentos = 1
@@ -141,7 +143,6 @@ Public Class Prerregistro
         TBIdCliente.Text = ""
         TBNombre.Text = ""
         TBRFC.Text = ""
-        TBRepresentanteLegal.Text = ""
         TBCURP.Text = ""
         TBDomicilio.Text = ""
         TBTelefono.Text = ""
@@ -158,12 +159,45 @@ Public Class Prerregistro
         EntidadPreregistro.ConsultaDocumentos = 3
         NegocioPreregistro.Consultar(EntidadPreregistro)
         tabla = EntidadPreregistro.TablaDocumentosRegistrados
-        CBIdTipoCultivo.DataSource = tabla
-        CBIdTipoCultivo.DisplayMember = "Cultivo"
-        CBIdTipoCultivo.ValueMember = "Id"
     End Sub
 
     Private Sub DGDocumentos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGDocumentos.CellContentClick
+        Dim i As Integer
+        i = DGDocumentos.CurrentRow.Index
+        If DGDocumentos.Rows(i).Cells("Estatus").Value = False Then
+            DGDocumentos.Rows(i).Cells("Estatus").Value = True
+        ElseIf DGDocumentos.Rows(i).Cells("Estatus").Value = True Then
+            DGDocumentos.Rows(i).Cells("Estatus").Value = False
+        End If
+    End Sub
+    Private Sub HabilitarCamposAdicionales()
+        CBPresidente.Enabled = True
+        CBSecretario.Enabled = True
+        CBRL.Enabled = True
+        CBTesorero.Enabled = True
+        GBSocios.Enabled = True
+    End Sub
+    Private Sub DesHabilitarCamposAdicionales()
+        CBPresidente.Enabled = False
+        CBSecretario.Enabled = False
+        CBRL.Enabled = False
+        CBTesorero.Enabled = False
+        GBSocios.Enabled = False
+    End Sub
+    Private Sub AgregarSocios()
+        Dim index As Integer
+        Dim rengloninsertar As DataRow
+        TablaSocios.Clear()
+        For Each row As DataGridViewRow In DGSocios.Rows
+            index = Convert.ToUInt64(row.Index)
+            rengloninsertar = TablaSocios.NewRow()
+            rengloninsertar("IdPreregistroDetalle") = DGSocios.Rows(index).Cells("IdPreregistroDetalle").Value
+            rengloninsertar("IdDocumento") = DGSocios.Rows(index).Cells("IdDocumento").Value
+            rengloninsertar("IdEstatus") = DGSocios.Rows(index).Cells("Estatus").Value
+            TablaDocumentosObtenidos.Rows.Add(rengloninsertar)
+        Next
+    End Sub
+    Private Sub DGSocios_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGSocios.CellContentClick
         Dim i As Integer
         i = DGDocumentos.CurrentRow.Index
         If DGDocumentos.Rows(i).Cells("Estatus").Value = False Then

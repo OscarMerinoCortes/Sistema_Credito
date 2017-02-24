@@ -34,3 +34,15 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Datos\obj\Debu
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\bin\Debug\Capa_Datos.xml
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\bin\Debug\Capa_Entidad.xml
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.Resources.resources
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.vbproj.GenerateResource.Cache
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.xml
+C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.pdb

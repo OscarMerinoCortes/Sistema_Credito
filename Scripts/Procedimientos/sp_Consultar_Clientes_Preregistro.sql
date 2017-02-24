@@ -7,8 +7,7 @@ as
 IF @Nombre <> ''
 BEGIN
 select IdCliente as IdCliente,
-	   Nombre as Nombre,
-	   RepresentanteLegal as RepresentanteLegal,
+	   Nombre as Nombre,	  
 	   TipoPersona as TipoPersona,
 	   Foto as Foto,
 	   RFC as RFC,
@@ -16,8 +15,7 @@ select IdCliente as IdCliente,
 	   Domicilio as Domicilio,
 	   Telefono as Telefono,
 	   Correo as Correo,
-	   Fecha as Fecha,
-	   IdTipoCultivo as IdTipoCultivo,
+	   Fecha as Fecha,	  
 	   IIF(IdEstado = 1,'ACTIVO','INACTIVO') as Estado
 from   dbo.Cre_Preregistro_Cliente_Encabezado a
 where  Nombre like '%'+@Nombre+'%'
@@ -26,8 +24,7 @@ END
 ELSE
 BEGIN 
 	  select IdCliente as IdCliente,
-	   Nombre as Nombre,
-	   RepresentanteLegal as RepresentanteLegal,
+	   Nombre as Nombre,	  
 	   TipoPersona as TipoPersona,
 	   Foto as Foto,
 	   RFC as RFC,
@@ -35,8 +32,7 @@ BEGIN
 	   Domicilio as Domicilio,
 	   Telefono as Telefono,
 	   Correo as Correo,
-	   Fecha as Fecha,
-	   IdTipoCultivo as IdTipoCultivo,
+	   Fecha as Fecha,	  
 	   IIF(IdEstado = 1,'ACTIVO','INACTIVO') as Estado
 from   [dbo].[Cre_Preregistro_Cliente_Encabezado] a
 where  a.IdEstado =1

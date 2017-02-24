@@ -11,7 +11,12 @@
     Public Correo As String
     Public Fecha As Date
     Public IdEstado As Integer
-    Public IdTipoCultivo As Integer
+    '----------------------------------------------SOCIOS PARA PERSONAS MORALES
+    Public IdPresidente As Integer
+    Public IdSecretario As Integer
+    Public IdRepresentantreLegal As Integer
+    Public IdTesorero As Integer
+    '------------------------------------------------------------
     Public TablaDocumentos As DataTable
     Public TablaDocumentosAgregados As DataTable
     Public TablaDocumentosRegistrados As DataTable

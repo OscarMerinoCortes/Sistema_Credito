@@ -53,15 +53,32 @@ Partial Class Prerregistro
         Me.CBIdEstado = New System.Windows.Forms.ComboBox()
         Me.LbIdCliente = New System.Windows.Forms.Label()
         Me.TBIdCliente = New System.Windows.Forms.TextBox()
-        Me.CBIdTipoCultivo = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LbRepresentante = New System.Windows.Forms.Label()
-        Me.TBRepresentanteLegal = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TBDomicilio = New System.Windows.Forms.TextBox()
+        Me.TCRegistro = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TPDatos = New System.Windows.Forms.TabPage()
+        Me.GBSocios = New System.Windows.Forms.GroupBox()
+        Me.DGSocios = New System.Windows.Forms.DataGridView()
+        Me.LbTesorero = New System.Windows.Forms.Label()
+        Me.LbRepLegal = New System.Windows.Forms.Label()
+        Me.LbSecretario = New System.Windows.Forms.Label()
+        Me.LbPresidente = New System.Windows.Forms.Label()
+        Me.CBTesorero = New System.Windows.Forms.ComboBox()
+        Me.CBRL = New System.Windows.Forms.ComboBox()
+        Me.CBSecretario = New System.Windows.Forms.ComboBox()
+        Me.CBPresidente = New System.Windows.Forms.ComboBox()
+        Me.GBDatosConyugue = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.LbEstadoCivil = New System.Windows.Forms.Label()
         Me.MSPreregistro.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TCRegistro.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TPDatos.SuspendLayout()
+        Me.GBSocios.SuspendLayout()
+        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LbTitle
@@ -234,28 +251,6 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.TBIdCliente, "TBIdCliente")
         Me.TBIdCliente.Name = "TBIdCliente"
         '
-        'CBIdTipoCultivo
-        '
-        Me.CBIdTipoCultivo.FormattingEnabled = True
-        resources.ApplyResources(Me.CBIdTipoCultivo, "CBIdTipoCultivo")
-        Me.CBIdTipoCultivo.Name = "CBIdTipoCultivo"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
-        '
-        'LbRepresentante
-        '
-        resources.ApplyResources(Me.LbRepresentante, "LbRepresentante")
-        Me.LbRepresentante.Name = "LbRepresentante"
-        '
-        'TBRepresentanteLegal
-        '
-        Me.TBRepresentanteLegal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        resources.ApplyResources(Me.TBRepresentanteLegal, "TBRepresentanteLegal")
-        Me.TBRepresentanteLegal.Name = "TBRepresentanteLegal"
-        '
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
@@ -267,35 +262,138 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.TBDomicilio, "TBDomicilio")
         Me.TBDomicilio.Name = "TBDomicilio"
         '
+        'TCRegistro
+        '
+        Me.TCRegistro.Controls.Add(Me.TabPage1)
+        Me.TCRegistro.Controls.Add(Me.TPDatos)
+        resources.ApplyResources(Me.TCRegistro, "TCRegistro")
+        Me.TCRegistro.Name = "TCRegistro"
+        Me.TCRegistro.SelectedIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.LbEstadoCivil)
+        Me.TabPage1.Controls.Add(Me.ComboBox1)
+        Me.TabPage1.Controls.Add(Me.GBDatosConyugue)
+        Me.TabPage1.Controls.Add(Me.DGDocumentos)
+        Me.TabPage1.Controls.Add(Me.TBDomicilio)
+        Me.TabPage1.Controls.Add(Me.LbNombre)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.LbRFC)
+        Me.TabPage1.Controls.Add(Me.LbCURP)
+        Me.TabPage1.Controls.Add(Me.LbTelefono)
+        Me.TabPage1.Controls.Add(Me.TBIdCliente)
+        Me.TabPage1.Controls.Add(Me.LbCorreo)
+        Me.TabPage1.Controls.Add(Me.LbIdCliente)
+        Me.TabPage1.Controls.Add(Me.TBNombre)
+        Me.TabPage1.Controls.Add(Me.CBIdEstado)
+        Me.TabPage1.Controls.Add(Me.TBRFC)
+        Me.TabPage1.Controls.Add(Me.LbIdEstado)
+        Me.TabPage1.Controls.Add(Me.TBCURP)
+        Me.TabPage1.Controls.Add(Me.TBTelefono)
+        Me.TabPage1.Controls.Add(Me.CBTipoPersona)
+        Me.TabPage1.Controls.Add(Me.TBCorreo)
+        Me.TabPage1.Controls.Add(Me.LBTipoPersona)
+        resources.ApplyResources(Me.TabPage1, "TabPage1")
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TPDatos
+        '
+        Me.TPDatos.Controls.Add(Me.GBSocios)
+        Me.TPDatos.Controls.Add(Me.LbTesorero)
+        Me.TPDatos.Controls.Add(Me.LbRepLegal)
+        Me.TPDatos.Controls.Add(Me.LbSecretario)
+        Me.TPDatos.Controls.Add(Me.LbPresidente)
+        Me.TPDatos.Controls.Add(Me.CBTesorero)
+        Me.TPDatos.Controls.Add(Me.CBRL)
+        Me.TPDatos.Controls.Add(Me.CBSecretario)
+        Me.TPDatos.Controls.Add(Me.CBPresidente)
+        resources.ApplyResources(Me.TPDatos, "TPDatos")
+        Me.TPDatos.Name = "TPDatos"
+        Me.TPDatos.UseVisualStyleBackColor = True
+        '
+        'GBSocios
+        '
+        Me.GBSocios.Controls.Add(Me.DGSocios)
+        resources.ApplyResources(Me.GBSocios, "GBSocios")
+        Me.GBSocios.Name = "GBSocios"
+        Me.GBSocios.TabStop = False
+        '
+        'DGSocios
+        '
+        Me.DGSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        resources.ApplyResources(Me.DGSocios, "DGSocios")
+        Me.DGSocios.Name = "DGSocios"
+        '
+        'LbTesorero
+        '
+        resources.ApplyResources(Me.LbTesorero, "LbTesorero")
+        Me.LbTesorero.Name = "LbTesorero"
+        '
+        'LbRepLegal
+        '
+        resources.ApplyResources(Me.LbRepLegal, "LbRepLegal")
+        Me.LbRepLegal.Name = "LbRepLegal"
+        '
+        'LbSecretario
+        '
+        resources.ApplyResources(Me.LbSecretario, "LbSecretario")
+        Me.LbSecretario.Name = "LbSecretario"
+        '
+        'LbPresidente
+        '
+        resources.ApplyResources(Me.LbPresidente, "LbPresidente")
+        Me.LbPresidente.Name = "LbPresidente"
+        '
+        'CBTesorero
+        '
+        resources.ApplyResources(Me.CBTesorero, "CBTesorero")
+        Me.CBTesorero.FormattingEnabled = True
+        Me.CBTesorero.Name = "CBTesorero"
+        '
+        'CBRL
+        '
+        resources.ApplyResources(Me.CBRL, "CBRL")
+        Me.CBRL.FormattingEnabled = True
+        Me.CBRL.Name = "CBRL"
+        '
+        'CBSecretario
+        '
+        resources.ApplyResources(Me.CBSecretario, "CBSecretario")
+        Me.CBSecretario.FormattingEnabled = True
+        Me.CBSecretario.Name = "CBSecretario"
+        '
+        'CBPresidente
+        '
+        resources.ApplyResources(Me.CBPresidente, "CBPresidente")
+        Me.CBPresidente.FormattingEnabled = True
+        Me.CBPresidente.Name = "CBPresidente"
+        '
+        'GBDatosConyugue
+        '
+        resources.ApplyResources(Me.GBDatosConyugue, "GBDatosConyugue")
+        Me.GBDatosConyugue.Name = "GBDatosConyugue"
+        Me.GBDatosConyugue.TabStop = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
+        Me.ComboBox1.Name = "ComboBox1"
+        '
+        'LbEstadoCivil
+        '
+        resources.ApplyResources(Me.LbEstadoCivil, "LbEstadoCivil")
+        Me.LbEstadoCivil.Name = "LbEstadoCivil"
+        '
         'Prerregistro
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.TBDomicilio)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TBRepresentanteLegal)
-        Me.Controls.Add(Me.LbRepresentante)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.CBIdTipoCultivo)
-        Me.Controls.Add(Me.TBIdCliente)
-        Me.Controls.Add(Me.LbIdCliente)
-        Me.Controls.Add(Me.CBIdEstado)
-        Me.Controls.Add(Me.LbIdEstado)
-        Me.Controls.Add(Me.DGDocumentos)
-        Me.Controls.Add(Me.CBTipoPersona)
-        Me.Controls.Add(Me.LBTipoPersona)
+        Me.Controls.Add(Me.TCRegistro)
         Me.Controls.Add(Me.TBFecha)
         Me.Controls.Add(Me.LbFecha)
-        Me.Controls.Add(Me.TBCorreo)
-        Me.Controls.Add(Me.TBTelefono)
-        Me.Controls.Add(Me.TBCURP)
-        Me.Controls.Add(Me.TBRFC)
-        Me.Controls.Add(Me.TBNombre)
-        Me.Controls.Add(Me.LbCorreo)
-        Me.Controls.Add(Me.LbTelefono)
-        Me.Controls.Add(Me.LbCURP)
-        Me.Controls.Add(Me.LbRFC)
-        Me.Controls.Add(Me.LbNombre)
         Me.Controls.Add(Me.PBFoto)
         Me.Controls.Add(Me.LbTitle)
         Me.Controls.Add(Me.MSPreregistro)
@@ -306,6 +404,13 @@ Partial Class Prerregistro
         Me.MSPreregistro.PerformLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TCRegistro.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        Me.TPDatos.ResumeLayout(False)
+        Me.TPDatos.PerformLayout()
+        Me.GBSocios.ResumeLayout(False)
+        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -338,10 +443,22 @@ Partial Class Prerregistro
     Friend WithEvents CBIdEstado As ComboBox
     Friend WithEvents LbIdCliente As Label
     Friend WithEvents TBIdCliente As TextBox
-    Friend WithEvents CBIdTipoCultivo As ComboBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents LbRepresentante As Label
-    Friend WithEvents TBRepresentanteLegal As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TBDomicilio As TextBox
+    Friend WithEvents TCRegistro As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TPDatos As TabPage
+    Friend WithEvents GBSocios As GroupBox
+    Friend WithEvents DGSocios As DataGridView
+    Friend WithEvents LbTesorero As Label
+    Friend WithEvents LbRepLegal As Label
+    Friend WithEvents LbSecretario As Label
+    Friend WithEvents LbPresidente As Label
+    Friend WithEvents CBTesorero As ComboBox
+    Friend WithEvents CBRL As ComboBox
+    Friend WithEvents CBSecretario As ComboBox
+    Friend WithEvents CBPresidente As ComboBox
+    Friend WithEvents LbEstadoCivil As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents GBDatosConyugue As GroupBox
 End Class

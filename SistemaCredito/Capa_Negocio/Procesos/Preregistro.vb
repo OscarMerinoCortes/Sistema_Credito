@@ -9,7 +9,7 @@
         Dim EntidadPreregistro1 As New Capa_Entidad.Preregistro()
         Dim DatosPreregistro As New Capa_Datos.Preregistro()
         EntidadPreregistro1 = EntidadPreregistro
-        DatosPreregistro.ConsultarDocumentos(EntidadPreregistro)
+        DatosPreregistro.Consultar(EntidadPreregistro)
     End Sub
     Public Overridable Sub ConsultarClientes(ByRef EntidadPreregistro As Capa_Entidad.Preregistro)
         Dim EntidadPreregistro1 As New Capa_Entidad.Preregistro()
