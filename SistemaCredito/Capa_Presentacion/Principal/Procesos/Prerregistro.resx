@@ -464,30 +464,6 @@
   <metadata name="MSPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="NuevoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="NuevoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Nuevo</value>
-  </data>
-  <data name="GuardarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="GuardarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Guardar</value>
-  </data>
-  <data name="ConsultarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
-  </data>
-  <data name="ConsultarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Consultar</value>
-  </data>
-  <data name="SalirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
-  </data>
-  <data name="SalirToolStripMenuItem.Text" xml:space="preserve">
-    <value>Salir</value>
-  </data>
   <data name="MSPreregistro.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -511,6 +487,30 @@
   </data>
   <data name="&gt;&gt;MSPreregistro.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="NuevoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="NuevoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="GuardarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="GuardarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ConsultarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="ConsultarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Consultar</value>
+  </data>
+  <data name="SalirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="SalirToolStripMenuItem.Text" xml:space="preserve">
+    <value>Salir</value>
   </data>
   <metadata name="OFDPreregistro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
@@ -544,12 +544,6 @@
   </data>
   <data name="&gt;&gt;LBTipoPersona.ZOrder" xml:space="preserve">
     <value>21</value>
-  </data>
-  <data name="CBTipoPersona.Items" xml:space="preserve">
-    <value>FISICA</value>
-  </data>
-  <data name="CBTipoPersona.Items1" xml:space="preserve">
-    <value>MORAL</value>
   </data>
   <data name="CBTipoPersona.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 74</value>
@@ -892,27 +886,6 @@
   <data name="&gt;&gt;TBDomicilio.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="LbEstadoCivil.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LbEstadoCivil.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="LbEstadoCivil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LbEstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 259</value>
-  </data>
-  <data name="LbEstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
-  </data>
-  <data name="LbEstadoCivil.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="LbEstadoCivil.Text" xml:space="preserve">
-    <value>Estado Civil</value>
-  </data>
   <data name="&gt;&gt;LbEstadoCivil.Name" xml:space="preserve">
     <value>LbEstadoCivil</value>
   </data>
@@ -925,38 +898,17 @@
   <data name="&gt;&gt;LbEstadoCivil.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ComboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 259</value>
+  <data name="&gt;&gt;CBEstadoCivil.Name" xml:space="preserve">
+    <value>CBEstadoCivil</value>
   </data>
-  <data name="ComboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 21</value>
-  </data>
-  <data name="ComboBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;ComboBox1.Name" xml:space="preserve">
-    <value>ComboBox1</value>
-  </data>
-  <data name="&gt;&gt;ComboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;CBEstadoCivil.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CBEstadoCivil.Parent" xml:space="preserve">
     <value>TabPage1</value>
   </data>
-  <data name="&gt;&gt;ComboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CBEstadoCivil.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="GBDatosConyugue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 302</value>
-  </data>
-  <data name="GBDatosConyugue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 100</value>
-  </data>
-  <data name="GBDatosConyugue.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="GBDatosConyugue.Text" xml:space="preserve">
-    <value>Datos del conyugue</value>
   </data>
   <data name="&gt;&gt;GBDatosConyugue.Name" xml:space="preserve">
     <value>GBDatosConyugue</value>
@@ -997,11 +949,59 @@
   <data name="&gt;&gt;TabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="DGAgregados.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="DGAgregados.Location" type="System.Drawing.Point, System.Drawing">
+    <value>393, 20</value>
+  </data>
+  <data name="DGAgregados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 240</value>
+  </data>
+  <data name="DGAgregados.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;DGAgregados.Name" xml:space="preserve">
+    <value>DGAgregados</value>
+  </data>
+  <data name="&gt;&gt;DGAgregados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DGAgregados.Parent" xml:space="preserve">
+    <value>GBSocios</value>
+  </data>
+  <data name="&gt;&gt;DGAgregados.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtAgregar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 91</value>
+  </data>
+  <data name="BtAgregar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="BtAgregar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BtAgregar.Text" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="&gt;&gt;BtAgregar.Name" xml:space="preserve">
+    <value>BtAgregar</value>
+  </data>
+  <data name="&gt;&gt;BtAgregar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtAgregar.Parent" xml:space="preserve">
+    <value>GBSocios</value>
+  </data>
+  <data name="&gt;&gt;BtAgregar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="DGSocios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 20</value>
+    <value>16, 20</value>
   </data>
   <data name="DGSocios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>659, 243</value>
+    <value>290, 240</value>
   </data>
   <data name="DGSocios.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1016,7 +1016,7 @@
     <value>GBSocios</value>
   </data>
   <data name="&gt;&gt;DGSocios.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="GBSocios.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1025,7 +1025,7 @@
     <value>30, 155</value>
   </data>
   <data name="GBSocios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>672, 269</value>
+    <value>703, 370</value>
   </data>
   <data name="GBSocios.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1256,7 +1256,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="TPDatos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>751, 548</value>
+    <value>751, 572</value>
   </data>
   <data name="TPDatos.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1297,6 +1297,321 @@
   <data name="&gt;&gt;TCRegistro.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="LbEstadoCivil.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LbEstadoCivil.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="LbEstadoCivil.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LbEstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 259</value>
+  </data>
+  <data name="LbEstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="LbEstadoCivil.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="LbEstadoCivil.Text" xml:space="preserve">
+    <value>Estado Civil</value>
+  </data>
+  <data name="&gt;&gt;LbEstadoCivil.Name" xml:space="preserve">
+    <value>LbEstadoCivil</value>
+  </data>
+  <data name="&gt;&gt;LbEstadoCivil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LbEstadoCivil.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;LbEstadoCivil.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CBEstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 259</value>
+  </data>
+  <data name="CBEstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 21</value>
+  </data>
+  <data name="CBEstadoCivil.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;CBEstadoCivil.Name" xml:space="preserve">
+    <value>CBEstadoCivil</value>
+  </data>
+  <data name="&gt;&gt;CBEstadoCivil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CBEstadoCivil.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;CBEstadoCivil.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.Name" xml:space="preserve">
+    <value>TBCURPConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.Name" xml:space="preserve">
+    <value>TBRFCConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.Name" xml:space="preserve">
+    <value>TBCredencialConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GBDatosConyugue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 286</value>
+  </data>
+  <data name="GBDatosConyugue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>719, 116</value>
+  </data>
+  <data name="GBDatosConyugue.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="GBDatosConyugue.Text" xml:space="preserve">
+    <value>Datos del conyugue</value>
+  </data>
+  <data name="GBDatosConyugue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GBDatosConyugue.Name" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;GBDatosConyugue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBDatosConyugue.Parent" xml:space="preserve">
+    <value>TabPage1</value>
+  </data>
+  <data name="&gt;&gt;GBDatosConyugue.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 55</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>RFC</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 81</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 13</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>CURP</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 29</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 13</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Credencial del Elector</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TBCredencialConyugue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 29</value>
+  </data>
+  <data name="TBCredencialConyugue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="TBCredencialConyugue.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.Name" xml:space="preserve">
+    <value>TBCredencialConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCredencialConyugue.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TBRFCConyugue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 55</value>
+  </data>
+  <data name="TBRFCConyugue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="TBRFCConyugue.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.Name" xml:space="preserve">
+    <value>TBRFCConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBRFCConyugue.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TBCURPConyugue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 81</value>
+  </data>
+  <data name="TBCURPConyugue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="TBCURPConyugue.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.Name" xml:space="preserve">
+    <value>TBCURPConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.Parent" xml:space="preserve">
+    <value>GBDatosConyugue</value>
+  </data>
+  <data name="&gt;&gt;TBCURPConyugue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1304,7 +1619,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>881, 786</value>
+    <value>881, 849</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

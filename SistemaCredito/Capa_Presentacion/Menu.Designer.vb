@@ -30,8 +30,8 @@ Partial Class Menu
         Me.PreregistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreregistroLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AsignacionDeLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContratosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,32 +67,32 @@ Partial Class Menu
         'PreregistroToolStripMenuItem
         '
         Me.PreregistroToolStripMenuItem.Name = "PreregistroToolStripMenuItem"
-        Me.PreregistroToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
-        Me.PreregistroToolStripMenuItem.Text = "Preregistro productores"
+        Me.PreregistroToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.PreregistroToolStripMenuItem.Text = "Preregistro de Productores"
         '
         'PreregistroLotesToolStripMenuItem
         '
         Me.PreregistroLotesToolStripMenuItem.Name = "PreregistroLotesToolStripMenuItem"
-        Me.PreregistroLotesToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
-        Me.PreregistroLotesToolStripMenuItem.Text = "Preregistro lotes"
+        Me.PreregistroLotesToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.PreregistroLotesToolStripMenuItem.Text = "Preregistro de Lotes"
         '
         'AsignacionDeLotesToolStripMenuItem
         '
         Me.AsignacionDeLotesToolStripMenuItem.Name = "AsignacionDeLotesToolStripMenuItem"
-        Me.AsignacionDeLotesToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.AsignacionDeLotesToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.AsignacionDeLotesToolStripMenuItem.Text = "Asignacion de Lotes"
+        '
+        'ContratosToolStripMenuItem
+        '
+        Me.ContratosToolStripMenuItem.Name = "ContratosToolStripMenuItem"
+        Me.ContratosToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.ContratosToolStripMenuItem.Text = "Contratos"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem.Text = "Salir"
-        '
-        'ContratosToolStripMenuItem
-        '
-        Me.ContratosToolStripMenuItem.Name = "ContratosToolStripMenuItem"
-        Me.ContratosToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
-        Me.ContratosToolStripMenuItem.Text = "Contratos"
         '
         'Menu
         '

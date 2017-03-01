@@ -17,15 +17,20 @@
         Consultar()
     End Sub
     Private Sub FormatoDelDataGridView()
-        DGConsultaPreregistro.Columns(0).Visible = False '--Id
-        DGConsultaPreregistro.Columns(2).Visible = False '--Representante Legal
-        DGConsultaPreregistro.Columns(4).Visible = False '---Foto
-        DGConsultaPreregistro.Columns(5).Visible = False '---RFC
-        DGConsultaPreregistro.Columns(6).Visible = False '---CURP
-        DGConsultaPreregistro.Columns(11).Visible = False '--Estado
-        DGConsultaPreregistro.Columns(12).Visible = False '--IdTipoCultivo    
-        DGConsultaPreregistro.Columns(3).HeaderText = "Tipo de persona"
-        DGConsultaPreregistro.Columns(3).Width = 150
+        DGConsultaPreregistro.Columns(0).Visible = False '--Id        
+        DGConsultaPreregistro.Columns(3).Visible = False '---Foto
+        DGConsultaPreregistro.Columns(4).Visible = False '---RFC
+        DGConsultaPreregistro.Columns(5).Visible = False '---CURP
+        DGConsultaPreregistro.Columns(6).Visible = False '---Domicilio      
+        'DGConsultaPreregistro.Columns(9).Visible = False '--Fecha
+        DGConsultaPreregistro.Columns(10).Visible = False '--EstadoCivil
+        DGConsultaPreregistro.Columns(11).Visible = False '--CredencialConyugue  
+        DGConsultaPreregistro.Columns(12).Visible = False '--RfcConyugue  
+        DGConsultaPreregistro.Columns(13).Visible = False '--CurpConyugue 
+        DGConsultaPreregistro.Columns(14).Visible = False '--Estado
+
+        DGConsultaPreregistro.Columns(2).HeaderText = "Tipo de persona"
+        DGConsultaPreregistro.Columns(2).Width = 150
         DGConsultaPreregistro.Columns(1).Width = 200
     End Sub
     Private Sub DGConsultaPreregistro_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGConsultaPreregistro.CellDoubleClick
