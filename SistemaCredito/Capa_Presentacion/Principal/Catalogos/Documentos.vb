@@ -24,7 +24,7 @@
         Dim dr As DataRow
 
         dr = dt.NewRow()
-        dr("IdDocumento") = 0
+        dr("IdDocumento") = 2
         dr("Descripcion") = "INACTIVO"
         dt.Rows.Add(dr)
 

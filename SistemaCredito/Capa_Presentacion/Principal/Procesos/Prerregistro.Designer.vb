@@ -23,9 +23,9 @@ Partial Class Prerregistro
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Prerregistro))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbTitle = New System.Windows.Forms.Label()
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.LbRFC = New System.Windows.Forms.Label()
@@ -53,15 +53,42 @@ Partial Class Prerregistro
         Me.CBIdEstado = New System.Windows.Forms.ComboBox()
         Me.LbIdCliente = New System.Windows.Forms.Label()
         Me.TBIdCliente = New System.Windows.Forms.TextBox()
-        Me.CBIdTipoCultivo = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LbRepresentante = New System.Windows.Forms.Label()
-        Me.TBRepresentanteLegal = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TBDomicilio = New System.Windows.Forms.TextBox()
+        Me.TCRegistro = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.LbEstadoCivil = New System.Windows.Forms.Label()
+        Me.CBEstadoCivil = New System.Windows.Forms.ComboBox()
+        Me.GBDatosConyugue = New System.Windows.Forms.GroupBox()
+        Me.TPDatos = New System.Windows.Forms.TabPage()
+        Me.GBSocios = New System.Windows.Forms.GroupBox()
+        Me.DGSocios = New System.Windows.Forms.DataGridView()
+        Me.LbTesorero = New System.Windows.Forms.Label()
+        Me.LbRepLegal = New System.Windows.Forms.Label()
+        Me.LbSecretario = New System.Windows.Forms.Label()
+        Me.LbPresidente = New System.Windows.Forms.Label()
+        Me.CBTesorero = New System.Windows.Forms.ComboBox()
+        Me.CBRL = New System.Windows.Forms.ComboBox()
+        Me.CBSecretario = New System.Windows.Forms.ComboBox()
+        Me.CBPresidente = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TBCredencialConyugue = New System.Windows.Forms.TextBox()
+        Me.TBRFCConyugue = New System.Windows.Forms.TextBox()
+        Me.TBCURPConyugue = New System.Windows.Forms.TextBox()
+        Me.BtAgregar = New System.Windows.Forms.Button()
+        Me.DGAgregados = New System.Windows.Forms.DataGridView()
         Me.MSPreregistro.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TCRegistro.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.GBDatosConyugue.SuspendLayout()
+        Me.TPDatos.SuspendLayout()
+        Me.GBSocios.SuspendLayout()
+        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGAgregados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LbTitle
@@ -170,7 +197,6 @@ Partial Class Prerregistro
         'CBTipoPersona
         '
         Me.CBTipoPersona.FormattingEnabled = True
-        Me.CBTipoPersona.Items.AddRange(New Object() {resources.GetString("CBTipoPersona.Items"), resources.GetString("CBTipoPersona.Items1")})
         resources.ApplyResources(Me.CBTipoPersona, "CBTipoPersona")
         Me.CBTipoPersona.Name = "CBTipoPersona"
         '
@@ -187,28 +213,28 @@ Partial Class Prerregistro
         Me.DGDocumentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DGDocumentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DGDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         resources.ApplyResources(Me.DGDocumentos, "DGDocumentos")
         Me.DGDocumentos.Name = "DGDocumentos"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.DGDocumentos.RowHeadersVisible = False
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle21
         Me.DGDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
         'LbIdEstado
@@ -234,28 +260,6 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.TBIdCliente, "TBIdCliente")
         Me.TBIdCliente.Name = "TBIdCliente"
         '
-        'CBIdTipoCultivo
-        '
-        Me.CBIdTipoCultivo.FormattingEnabled = True
-        resources.ApplyResources(Me.CBIdTipoCultivo, "CBIdTipoCultivo")
-        Me.CBIdTipoCultivo.Name = "CBIdTipoCultivo"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
-        '
-        'LbRepresentante
-        '
-        resources.ApplyResources(Me.LbRepresentante, "LbRepresentante")
-        Me.LbRepresentante.Name = "LbRepresentante"
-        '
-        'TBRepresentanteLegal
-        '
-        Me.TBRepresentanteLegal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        resources.ApplyResources(Me.TBRepresentanteLegal, "TBRepresentanteLegal")
-        Me.TBRepresentanteLegal.Name = "TBRepresentanteLegal"
-        '
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
@@ -267,35 +271,190 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.TBDomicilio, "TBDomicilio")
         Me.TBDomicilio.Name = "TBDomicilio"
         '
+        'TCRegistro
+        '
+        Me.TCRegistro.Controls.Add(Me.TabPage1)
+        Me.TCRegistro.Controls.Add(Me.TPDatos)
+        resources.ApplyResources(Me.TCRegistro, "TCRegistro")
+        Me.TCRegistro.Name = "TCRegistro"
+        Me.TCRegistro.SelectedIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.LbEstadoCivil)
+        Me.TabPage1.Controls.Add(Me.CBEstadoCivil)
+        Me.TabPage1.Controls.Add(Me.GBDatosConyugue)
+        Me.TabPage1.Controls.Add(Me.DGDocumentos)
+        Me.TabPage1.Controls.Add(Me.TBDomicilio)
+        Me.TabPage1.Controls.Add(Me.LbNombre)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.LbRFC)
+        Me.TabPage1.Controls.Add(Me.LbCURP)
+        Me.TabPage1.Controls.Add(Me.LbTelefono)
+        Me.TabPage1.Controls.Add(Me.TBIdCliente)
+        Me.TabPage1.Controls.Add(Me.LbCorreo)
+        Me.TabPage1.Controls.Add(Me.LbIdCliente)
+        Me.TabPage1.Controls.Add(Me.TBNombre)
+        Me.TabPage1.Controls.Add(Me.CBIdEstado)
+        Me.TabPage1.Controls.Add(Me.TBRFC)
+        Me.TabPage1.Controls.Add(Me.LbIdEstado)
+        Me.TabPage1.Controls.Add(Me.TBCURP)
+        Me.TabPage1.Controls.Add(Me.TBTelefono)
+        Me.TabPage1.Controls.Add(Me.CBTipoPersona)
+        Me.TabPage1.Controls.Add(Me.TBCorreo)
+        Me.TabPage1.Controls.Add(Me.LBTipoPersona)
+        resources.ApplyResources(Me.TabPage1, "TabPage1")
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'LbEstadoCivil
+        '
+        resources.ApplyResources(Me.LbEstadoCivil, "LbEstadoCivil")
+        Me.LbEstadoCivil.Name = "LbEstadoCivil"
+        '
+        'CBEstadoCivil
+        '
+        Me.CBEstadoCivil.FormattingEnabled = True
+        resources.ApplyResources(Me.CBEstadoCivil, "CBEstadoCivil")
+        Me.CBEstadoCivil.Name = "CBEstadoCivil"
+        '
+        'GBDatosConyugue
+        '
+        Me.GBDatosConyugue.Controls.Add(Me.TBCURPConyugue)
+        Me.GBDatosConyugue.Controls.Add(Me.TBRFCConyugue)
+        Me.GBDatosConyugue.Controls.Add(Me.TBCredencialConyugue)
+        Me.GBDatosConyugue.Controls.Add(Me.Label4)
+        Me.GBDatosConyugue.Controls.Add(Me.Label3)
+        Me.GBDatosConyugue.Controls.Add(Me.Label1)
+        resources.ApplyResources(Me.GBDatosConyugue, "GBDatosConyugue")
+        Me.GBDatosConyugue.Name = "GBDatosConyugue"
+        Me.GBDatosConyugue.TabStop = False
+        '
+        'TPDatos
+        '
+        Me.TPDatos.Controls.Add(Me.GBSocios)
+        Me.TPDatos.Controls.Add(Me.LbTesorero)
+        Me.TPDatos.Controls.Add(Me.LbRepLegal)
+        Me.TPDatos.Controls.Add(Me.LbSecretario)
+        Me.TPDatos.Controls.Add(Me.LbPresidente)
+        Me.TPDatos.Controls.Add(Me.CBTesorero)
+        Me.TPDatos.Controls.Add(Me.CBRL)
+        Me.TPDatos.Controls.Add(Me.CBSecretario)
+        Me.TPDatos.Controls.Add(Me.CBPresidente)
+        resources.ApplyResources(Me.TPDatos, "TPDatos")
+        Me.TPDatos.Name = "TPDatos"
+        Me.TPDatos.UseVisualStyleBackColor = True
+        '
+        'GBSocios
+        '
+        Me.GBSocios.Controls.Add(Me.DGAgregados)
+        Me.GBSocios.Controls.Add(Me.BtAgregar)
+        Me.GBSocios.Controls.Add(Me.DGSocios)
+        resources.ApplyResources(Me.GBSocios, "GBSocios")
+        Me.GBSocios.Name = "GBSocios"
+        Me.GBSocios.TabStop = False
+        '
+        'DGSocios
+        '
+        Me.DGSocios.AllowUserToAddRows = False
+        Me.DGSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        resources.ApplyResources(Me.DGSocios, "DGSocios")
+        Me.DGSocios.Name = "DGSocios"
+        '
+        'LbTesorero
+        '
+        resources.ApplyResources(Me.LbTesorero, "LbTesorero")
+        Me.LbTesorero.Name = "LbTesorero"
+        '
+        'LbRepLegal
+        '
+        resources.ApplyResources(Me.LbRepLegal, "LbRepLegal")
+        Me.LbRepLegal.Name = "LbRepLegal"
+        '
+        'LbSecretario
+        '
+        resources.ApplyResources(Me.LbSecretario, "LbSecretario")
+        Me.LbSecretario.Name = "LbSecretario"
+        '
+        'LbPresidente
+        '
+        resources.ApplyResources(Me.LbPresidente, "LbPresidente")
+        Me.LbPresidente.Name = "LbPresidente"
+        '
+        'CBTesorero
+        '
+        resources.ApplyResources(Me.CBTesorero, "CBTesorero")
+        Me.CBTesorero.FormattingEnabled = True
+        Me.CBTesorero.Name = "CBTesorero"
+        '
+        'CBRL
+        '
+        resources.ApplyResources(Me.CBRL, "CBRL")
+        Me.CBRL.FormattingEnabled = True
+        Me.CBRL.Name = "CBRL"
+        '
+        'CBSecretario
+        '
+        resources.ApplyResources(Me.CBSecretario, "CBSecretario")
+        Me.CBSecretario.FormattingEnabled = True
+        Me.CBSecretario.Name = "CBSecretario"
+        '
+        'CBPresidente
+        '
+        resources.ApplyResources(Me.CBPresidente, "CBPresidente")
+        Me.CBPresidente.FormattingEnabled = True
+        Me.CBPresidente.Name = "CBPresidente"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'TBCredencialConyugue
+        '
+        resources.ApplyResources(Me.TBCredencialConyugue, "TBCredencialConyugue")
+        Me.TBCredencialConyugue.Name = "TBCredencialConyugue"
+        '
+        'TBRFCConyugue
+        '
+        resources.ApplyResources(Me.TBRFCConyugue, "TBRFCConyugue")
+        Me.TBRFCConyugue.Name = "TBRFCConyugue"
+        '
+        'TBCURPConyugue
+        '
+        resources.ApplyResources(Me.TBCURPConyugue, "TBCURPConyugue")
+        Me.TBCURPConyugue.Name = "TBCURPConyugue"
+        '
+        'BtAgregar
+        '
+        resources.ApplyResources(Me.BtAgregar, "BtAgregar")
+        Me.BtAgregar.Name = "BtAgregar"
+        Me.BtAgregar.UseVisualStyleBackColor = True
+        '
+        'DGAgregados
+        '
+        Me.DGAgregados.AllowUserToAddRows = False
+        Me.DGAgregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        resources.ApplyResources(Me.DGAgregados, "DGAgregados")
+        Me.DGAgregados.Name = "DGAgregados"
+        '
         'Prerregistro
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.TBDomicilio)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TBRepresentanteLegal)
-        Me.Controls.Add(Me.LbRepresentante)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.CBIdTipoCultivo)
-        Me.Controls.Add(Me.TBIdCliente)
-        Me.Controls.Add(Me.LbIdCliente)
-        Me.Controls.Add(Me.CBIdEstado)
-        Me.Controls.Add(Me.LbIdEstado)
-        Me.Controls.Add(Me.DGDocumentos)
-        Me.Controls.Add(Me.CBTipoPersona)
-        Me.Controls.Add(Me.LBTipoPersona)
+        Me.Controls.Add(Me.TCRegistro)
         Me.Controls.Add(Me.TBFecha)
         Me.Controls.Add(Me.LbFecha)
-        Me.Controls.Add(Me.TBCorreo)
-        Me.Controls.Add(Me.TBTelefono)
-        Me.Controls.Add(Me.TBCURP)
-        Me.Controls.Add(Me.TBRFC)
-        Me.Controls.Add(Me.TBNombre)
-        Me.Controls.Add(Me.LbCorreo)
-        Me.Controls.Add(Me.LbTelefono)
-        Me.Controls.Add(Me.LbCURP)
-        Me.Controls.Add(Me.LbRFC)
-        Me.Controls.Add(Me.LbNombre)
         Me.Controls.Add(Me.PBFoto)
         Me.Controls.Add(Me.LbTitle)
         Me.Controls.Add(Me.MSPreregistro)
@@ -306,6 +465,16 @@ Partial Class Prerregistro
         Me.MSPreregistro.PerformLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TCRegistro.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        Me.GBDatosConyugue.ResumeLayout(False)
+        Me.GBDatosConyugue.PerformLayout()
+        Me.TPDatos.ResumeLayout(False)
+        Me.TPDatos.PerformLayout()
+        Me.GBSocios.ResumeLayout(False)
+        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGAgregados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -338,10 +507,30 @@ Partial Class Prerregistro
     Friend WithEvents CBIdEstado As ComboBox
     Friend WithEvents LbIdCliente As Label
     Friend WithEvents TBIdCliente As TextBox
-    Friend WithEvents CBIdTipoCultivo As ComboBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents LbRepresentante As Label
-    Friend WithEvents TBRepresentanteLegal As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TBDomicilio As TextBox
+    Friend WithEvents TCRegistro As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TPDatos As TabPage
+    Friend WithEvents GBSocios As GroupBox
+    Friend WithEvents DGSocios As DataGridView
+    Friend WithEvents LbTesorero As Label
+    Friend WithEvents LbRepLegal As Label
+    Friend WithEvents LbSecretario As Label
+    Friend WithEvents LbPresidente As Label
+    Friend WithEvents CBTesorero As ComboBox
+    Friend WithEvents CBRL As ComboBox
+    Friend WithEvents CBSecretario As ComboBox
+    Friend WithEvents CBPresidente As ComboBox
+    Friend WithEvents LbEstadoCivil As Label
+    Friend WithEvents CBEstadoCivil As ComboBox
+    Friend WithEvents GBDatosConyugue As GroupBox
+    Friend WithEvents TBCURPConyugue As TextBox
+    Friend WithEvents TBRFCConyugue As TextBox
+    Friend WithEvents TBCredencialConyugue As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents DGAgregados As DataGridView
+    Friend WithEvents BtAgregar As Button
 End Class
