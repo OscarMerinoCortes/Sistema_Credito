@@ -98,7 +98,7 @@ Partial Class Contrato
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 44)
+        Me.Label1.Location = New System.Drawing.Point(12, 79)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(144, 13)
         Me.Label1.TabIndex = 1
@@ -108,7 +108,7 @@ Partial Class Contrato
         '
         Me.L.AutoSize = True
         Me.L.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L.Location = New System.Drawing.Point(12, 70)
+        Me.L.Location = New System.Drawing.Point(12, 105)
         Me.L.Name = "L"
         Me.L.Size = New System.Drawing.Size(65, 13)
         Me.L.TabIndex = 3
@@ -116,14 +116,14 @@ Partial Class Contrato
         '
         'TBNomRS
         '
-        Me.TBNomRS.Location = New System.Drawing.Point(162, 41)
+        Me.TBNomRS.Location = New System.Drawing.Point(162, 76)
         Me.TBNomRS.Name = "TBNomRS"
         Me.TBNomRS.Size = New System.Drawing.Size(360, 20)
         Me.TBNomRS.TabIndex = 4
         '
         'TBDomicilio
         '
-        Me.TBDomicilio.Location = New System.Drawing.Point(83, 67)
+        Me.TBDomicilio.Location = New System.Drawing.Point(83, 102)
         Me.TBDomicilio.Name = "TBDomicilio"
         Me.TBDomicilio.Size = New System.Drawing.Size(439, 20)
         Me.TBDomicilio.TabIndex = 6
@@ -146,9 +146,9 @@ Partial Class Contrato
         Me.PanelContrato.Controls.Add(Me.Label5)
         Me.PanelContrato.Controls.Add(Me.Label4)
         Me.PanelContrato.Controls.Add(Me.DateTimePicker1)
-        Me.PanelContrato.Location = New System.Drawing.Point(12, 139)
+        Me.PanelContrato.Location = New System.Drawing.Point(12, 169)
         Me.PanelContrato.Name = "PanelContrato"
-        Me.PanelContrato.Size = New System.Drawing.Size(740, 396)
+        Me.PanelContrato.Size = New System.Drawing.Size(740, 366)
         Me.PanelContrato.TabIndex = 7
         '
         'Button1
@@ -300,7 +300,7 @@ Partial Class Contrato
         Me.PBFoto.BackgroundImage = CType(resources.GetObject("PBFoto.BackgroundImage"), System.Drawing.Image)
         Me.PBFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PBFoto.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PBFoto.Location = New System.Drawing.Point(604, 33)
+        Me.PBFoto.Location = New System.Drawing.Point(604, 53)
         Me.PBFoto.Name = "PBFoto"
         Me.PBFoto.Size = New System.Drawing.Size(100, 100)
         Me.PBFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -309,7 +309,7 @@ Partial Class Contrato
         '
         'TBIdCliente
         '
-        Me.TBIdCliente.Location = New System.Drawing.Point(37, 21)
+        Me.TBIdCliente.Location = New System.Drawing.Point(37, 56)
         Me.TBIdCliente.Name = "TBIdCliente"
         Me.TBIdCliente.Size = New System.Drawing.Size(100, 20)
         Me.TBIdCliente.TabIndex = 9
@@ -318,7 +318,7 @@ Partial Class Contrato
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(12, 24)
+        Me.Label11.Location = New System.Drawing.Point(12, 59)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(20, 13)
         Me.Label11.TabIndex = 10
@@ -326,7 +326,7 @@ Partial Class Contrato
         '
         'TBRepresentanteL
         '
-        Me.TBRepresentanteL.Location = New System.Drawing.Point(162, 98)
+        Me.TBRepresentanteL.Location = New System.Drawing.Point(162, 133)
         Me.TBRepresentanteL.Name = "TBRepresentanteL"
         Me.TBRepresentanteL.Size = New System.Drawing.Size(360, 20)
         Me.TBRepresentanteL.TabIndex = 15
@@ -336,7 +336,7 @@ Partial Class Contrato
         '
         Me.LbRepresentanteL.AutoSize = True
         Me.LbRepresentanteL.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbRepresentanteL.Location = New System.Drawing.Point(12, 101)
+        Me.LbRepresentanteL.Location = New System.Drawing.Point(12, 136)
         Me.LbRepresentanteL.Name = "LbRepresentanteL"
         Me.LbRepresentanteL.Size = New System.Drawing.Size(136, 13)
         Me.LbRepresentanteL.TabIndex = 14
@@ -347,7 +347,7 @@ Partial Class Contrato
         '
         Me.CBTipoPersona.FormattingEnabled = True
         Me.CBTipoPersona.Items.AddRange(New Object() {"FISICA", "MORAL"})
-        Me.CBTipoPersona.Location = New System.Drawing.Point(401, 12)
+        Me.CBTipoPersona.Location = New System.Drawing.Point(401, 47)
         Me.CBTipoPersona.Name = "CBTipoPersona"
         Me.CBTipoPersona.Size = New System.Drawing.Size(121, 21)
         Me.CBTipoPersona.TabIndex = 22

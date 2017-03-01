@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 
-
 Public Class Contrato
 
     Public TipoPersona As String
@@ -18,34 +17,35 @@ Public Class Contrato
         Dim tabla As New DataTable
         ConsultaPreregistro.ShowDialog()
         index = VGIndex
-        TablaConsulta = VGTablaDatosDelCliente
-        TBIdCliente.Text = TablaConsulta.Rows(index).Item("IdCliente")
-        TBNomRS.Text = TablaConsulta.Rows(index).Item("Nombre")
-        CBTipoPersona.Text = TablaConsulta.Rows(index).Item("TipoPersona")
-        TBRepresentanteL.Text = TablaConsulta.Rows(index).Item("RepresentanteLegal")
-        TBDomicilio.Text = TablaConsulta.Rows(index).Item("Domicilio")
-        foto = CType(TablaConsulta.Rows(index).Item("Foto"), Byte())
-        Dim MSFoto As New MemoryStream(foto)
-        PBFoto.Image = Image.FromStream(MSFoto)
-        'TBRepreLe.Text = TablaConsulta.Rows(index).Item("RepresentanteLegal")
-        'TBDomicilio.Text = TablaConsulta.Rows(index).Item("Domicilio")
+        If index > 0 Then
+            TablaConsulta = VGTablaDatosDelCliente
+            TBIdCliente.Text = TablaConsulta.Rows(index).Item("IdCliente")
+            TBNomRS.Text = TablaConsulta.Rows(index).Item("Nombre")
+            CBTipoPersona.Text = TablaConsulta.Rows(index).Item("TipoPersona")
+            TBRepresentanteL.Text = TablaConsulta.Rows(index).Item("RepresentanteLegal")
+            TBDomicilio.Text = TablaConsulta.Rows(index).Item("Domicilio")
+            foto = CType(TablaConsulta.Rows(index).Item("Foto"), Byte())
+            Dim MSFoto As New MemoryStream(foto)
+            PBFoto.Image = Image.FromStream(MSFoto)
+            'TBRepreLe.Text = TablaConsulta.Rows(index).Item("RepresentanteLegal")
+            'TBDomicilio.Text = TablaConsulta.Rows(index).Item("Domicilio")
 
-        'If TablaConsulta.Rows(index).Item("IdTipoCultivo") = 1 Then
-        '    RBAlgodon.Checked = True
-        'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 2 Then
-        '    RBMaiz.Checked = True
-        'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 3 Then
-        '    RBTrigo.Checked = True
-        'End If
-        EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
-        EntidadPreregistro.ConsultaDocumentos = 2
-        NegocioPreregistro.Consultar(EntidadPreregistro)
-        tabla = EntidadPreregistro.TablaDocumentosRegistrados
-        'DGDocumentos.DataSource = Nothing
-        ConsultarDocumentos()
-        PanelContrato.Visible = True
+            'If TablaConsulta.Rows(index).Item("IdTipoCultivo") = 1 Then
+            '    RBAlgodon.Checked = True
+            'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 2 Then
+            '    RBMaiz.Checked = True
+            'ElseIf TablaConsulta.Rows(index).Item("IdTipoCultivo") = 3 Then
+            '    RBTrigo.Checked = True
+            'End If
+            EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
+            EntidadPreregistro.ConsultaDocumentos = 2
+            NegocioPreregistro.Consultar(EntidadPreregistro)
+            tabla = EntidadPreregistro.TablaDocumentosRegistrados
+            'DGDocumentos.DataSource = Nothing
+            ConsultarDocumentos()
+            PanelContrato.Visible = True
 
-
+        End If
 
     End Sub
     Private Sub ConsultarDocumentos()
@@ -73,5 +73,9 @@ Public Class Contrato
             RichTextBox1.Text = Letras(TBCantidad.Text)
 
         End If
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Close()
     End Sub
 End Class

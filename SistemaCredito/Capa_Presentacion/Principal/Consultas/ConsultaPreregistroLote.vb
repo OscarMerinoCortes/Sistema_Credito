@@ -9,7 +9,7 @@
     Private Sub Consultar()
         Dim EntidadPreregistroLote As New Capa_Entidad.PreregistroLotes
         Dim NegocioPreregistroLote As New Capa_Negocio.PreregistroLotes
-        EntidadPreregistroLote.Nombre = TBNombre.Text
+        EntidadPreregistroLote.NombreLote = TBNombre.Text
         NegocioPreregistroLote.ConsultarPreregistroLotes(EntidadPreregistroLote)
         TablaPreregistroLote = EntidadPreregistroLote.TablaPreregistroLotes
         DGConsultaPreregistroLote.DataSource = TablaPreregistroLote

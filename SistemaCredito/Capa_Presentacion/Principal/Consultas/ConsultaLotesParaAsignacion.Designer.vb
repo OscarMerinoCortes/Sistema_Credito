@@ -30,6 +30,8 @@ Partial Class ConsultaLotesParaAsignacion
         Me.BTNBuscar = New System.Windows.Forms.Button()
         Me.TBNombre = New System.Windows.Forms.TextBox()
         Me.LbNombre = New System.Windows.Forms.Label()
+        Me.BTCancelar = New System.Windows.Forms.Button()
+        Me.BTSeleccionar = New System.Windows.Forms.Button()
         CType(Me.DGConsultaSeleccionLote, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,11 +95,31 @@ Partial Class ConsultaLotesParaAsignacion
         Me.LbNombre.TabIndex = 12
         Me.LbNombre.Text = "Nombre"
         '
+        'BTCancelar
+        '
+        Me.BTCancelar.Location = New System.Drawing.Point(430, 352)
+        Me.BTCancelar.Name = "BTCancelar"
+        Me.BTCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.BTCancelar.TabIndex = 16
+        Me.BTCancelar.Text = "Cancelar"
+        Me.BTCancelar.UseVisualStyleBackColor = True
+        '
+        'BTSeleccionar
+        '
+        Me.BTSeleccionar.Location = New System.Drawing.Point(547, 353)
+        Me.BTSeleccionar.Name = "BTSeleccionar"
+        Me.BTSeleccionar.Size = New System.Drawing.Size(75, 23)
+        Me.BTSeleccionar.TabIndex = 16
+        Me.BTSeleccionar.Text = "Seleccionar"
+        Me.BTSeleccionar.UseVisualStyleBackColor = True
+        '
         'ConsultaLotesParaAsignacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(636, 359)
+        Me.ClientSize = New System.Drawing.Size(636, 395)
+        Me.Controls.Add(Me.BTSeleccionar)
+        Me.Controls.Add(Me.BTCancelar)
         Me.Controls.Add(Me.DGConsultaSeleccionLote)
         Me.Controls.Add(Me.BTNBuscar)
         Me.Controls.Add(Me.TBNombre)
@@ -115,4 +137,6 @@ Partial Class ConsultaLotesParaAsignacion
     Friend WithEvents BTNBuscar As Button
     Friend WithEvents TBNombre As TextBox
     Friend WithEvents LbNombre As Label
+    Friend WithEvents BTCancelar As Button
+    Friend WithEvents BTSeleccionar As Button
 End Class

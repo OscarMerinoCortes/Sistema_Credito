@@ -2,9 +2,9 @@
     Public TablaCultivos As DataTable
     Public TablaClientes As DataTable
     Private Sub AsignacionLotes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LlenaComboCultivos()
+        LlenaCombo()
     End Sub
-    Private Sub LlenaComboCultivos()
+    Private Sub LlenaCombo()
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
         Dim NegocioPreregistro As New Capa_Negocio.Preregistro
         EntidadPreregistro.ConsultaDocumentos = 3

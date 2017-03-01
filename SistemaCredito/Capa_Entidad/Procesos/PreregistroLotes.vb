@@ -1,16 +1,26 @@
 ﻿Public Class PreregistroLotes
     Public IdPreregistroLote As Integer
-    Public Nombre As String
-    Public CURP As String
-    Public RFC As String
-    Public Fecha As Date
-    Public Lote As String
-    Public Colonia As String
+    Public NombreLote As String
+    Public IdColonia As Integer
+    Public IdPropietario As Integer
+    Public FolioLote As String
     Public SuperficieTotal As Double
     Public SuperficieSembrar As Double
     Public SuperficieRestante As Double
-    Public FolioAserca As String
-    Public Predio As String
+    Public volumen As Double
+    Public LatitudGrados As Double
+    Public LatitudHoras As Double
+    Public LatitudMinutos As Double
+    Public LongitudHoras As Double
+    Public LongitudGrados As Double
+    Public LongitudMinutos As Double
+    Public FolioRPP As Integer
+    Public LibroRPP As Integer
+    Public NumeroRPP As Integer
+    Public FechaRPP As Date
+    Public TituloAgua As String
+    Public RegimenHidrico As String
+    Public FechaTituloAgua As Date
     Public IdEstado As Integer
     '--------------------------------------------------
     Public TablaDocumentosPropietario As DataTable
