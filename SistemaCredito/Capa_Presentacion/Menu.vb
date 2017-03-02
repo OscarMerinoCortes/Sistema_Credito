@@ -25,4 +25,8 @@
     Private Sub ContratosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContratosToolStripMenuItem.Click
         Contrato.Show()
     End Sub
+
+    Private Sub UbicacionDeDocumentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UbicacionDeDocumentosToolStripMenuItem.Click
+        UbicacionDocumentos.Show()
+    End Sub
 End Class

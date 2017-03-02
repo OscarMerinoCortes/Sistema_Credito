@@ -31,13 +31,15 @@ Partial Class Menu
         Me.PreregistroLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AsignacionDeLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContratosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UtileriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UbicacionDeDocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatálogosToolStripMenuItem, Me.ProcesoToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatálogosToolStripMenuItem, Me.ProcesoToolStripMenuItem, Me.UtileriasToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1578, 24)
@@ -88,6 +90,20 @@ Partial Class Menu
         Me.ContratosToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.ContratosToolStripMenuItem.Text = "Contratos"
         '
+        'UtileriasToolStripMenuItem
+        '
+        Me.UtileriasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UbicacionDeDocumentosToolStripMenuItem})
+        Me.UtileriasToolStripMenuItem.Name = "UtileriasToolStripMenuItem"
+        Me.UtileriasToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.UtileriasToolStripMenuItem.Text = "Utilerias"
+        '
+        'UbicacionDeDocumentosToolStripMenuItem
+        '
+        Me.UbicacionDeDocumentosToolStripMenuItem.Image = CType(resources.GetObject("UbicacionDeDocumentosToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.UbicacionDeDocumentosToolStripMenuItem.Name = "UbicacionDeDocumentosToolStripMenuItem"
+        Me.UbicacionDeDocumentosToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
+        Me.UbicacionDeDocumentosToolStripMenuItem.Text = "Ubicacion de Documentos"
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
@@ -121,4 +137,6 @@ Partial Class Menu
     Friend WithEvents PreregistroLotesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AsignacionDeLotesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContratosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UtileriasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UbicacionDeDocumentosToolStripMenuItem As ToolStripMenuItem
 End Class

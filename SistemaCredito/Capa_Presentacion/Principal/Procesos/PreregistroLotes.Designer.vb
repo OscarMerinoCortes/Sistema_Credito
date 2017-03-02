@@ -80,6 +80,7 @@ Partial Class PreregistroLotes
         Me.TBNoLote = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DGDocumentosPropietario = New System.Windows.Forms.DataGridView()
+        Me.BTAbrirCarpeta = New System.Windows.Forms.Button()
         Me.MSPreregistroLotes.SuspendLayout()
         CType(Me.NuSupCultivable, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NuSupTotal, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -617,11 +618,22 @@ Partial Class PreregistroLotes
         Me.DGDocumentosPropietario.Size = New System.Drawing.Size(472, 192)
         Me.DGDocumentosPropietario.TabIndex = 61
         '
+        'BTAbrirCarpeta
+        '
+        Me.BTAbrirCarpeta.BackgroundImage = CType(resources.GetObject("BTAbrirCarpeta.BackgroundImage"), System.Drawing.Image)
+        Me.BTAbrirCarpeta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BTAbrirCarpeta.Location = New System.Drawing.Point(736, 488)
+        Me.BTAbrirCarpeta.Name = "BTAbrirCarpeta"
+        Me.BTAbrirCarpeta.Size = New System.Drawing.Size(28, 25)
+        Me.BTAbrirCarpeta.TabIndex = 62
+        Me.BTAbrirCarpeta.UseVisualStyleBackColor = True
+        '
         'PreregistroLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(945, 762)
+        Me.Controls.Add(Me.BTAbrirCarpeta)
         Me.Controls.Add(Me.DGDocumentosPropietario)
         Me.Controls.Add(Me.TBNoLote)
         Me.Controls.Add(Me.TBVolumen)
@@ -735,4 +747,5 @@ Partial Class PreregistroLotes
     Friend WithEvents TBNoLote As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents DGDocumentosPropietario As DataGridView
+    Friend WithEvents BTAbrirCarpeta As Button
 End Class

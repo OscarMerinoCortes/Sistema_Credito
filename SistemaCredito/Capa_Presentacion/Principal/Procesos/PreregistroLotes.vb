@@ -116,33 +116,36 @@ Public Class PreregistroLotes
         tabla = VGTabla
         'If index > 0 Then
         TBIdPreregistroLotes.Text = tabla.Rows(index).Item("IdPreregistroLote")
-            CBNombreCliente.SelectedValue = tabla.Rows(index).Item("IdPropietario")
-            CBIdEstado.Text = tabla.Rows(index).Item("Estado")
-            CBColonia.SelectedValue = tabla.Rows(index).Item("IdColonia")
-            NuSupTotal.Value = tabla.Rows(index).Item("SuperficieTotal")
-            NuSupCultivable.Value = tabla.Rows(index).Item("SuperficieSembrar")
-            TBVolumen.Text = tabla.Rows(index).Item("Volumen")
-            TBNGrados.Text = tabla.Rows(index).Item("Latitud_Grados")
-            TBNHoras.Text = tabla.Rows(index).Item("Latitud_Horas")
-            TBNMinutos.Text = tabla.Rows(index).Item("Latitud_Minutos")
-            TBWGrados.Text = tabla.Rows(index).Item("Longitud_Grados")
-            TBWHoras.Text = tabla.Rows(index).Item("Longitud_Horas")
-            TBWMinutos.Text = tabla.Rows(index).Item("Longitud_Minutos")
-            TBNumeroRPP.Text = tabla.Rows(index).Item("Numero_RPP")
-            TBFolioRPP.Text = tabla.Rows(index).Item("Folio_RPP")
-            TBLibroRPP.Text = tabla.Rows(index).Item("Libro_RPP")
-            DTRpp.Value = tabla.Rows(index).Item("Fecha_RPP")
-            TBTitulo.Text = tabla.Rows(index).Item("Titulo_Agua")
-            TBRegimen.Text = tabla.Rows(index).Item("Regimen_Hidrico")
+        CBNombreCliente.SelectedValue = tabla.Rows(index).Item("IdPropietario")
+        CBIdEstado.Text = tabla.Rows(index).Item("Estado")
+        CBColonia.SelectedValue = tabla.Rows(index).Item("IdColonia")
+        NuSupTotal.Value = tabla.Rows(index).Item("SuperficieTotal")
+        NuSupCultivable.Value = tabla.Rows(index).Item("SuperficieSembrar")
+        TBVolumen.Text = tabla.Rows(index).Item("Volumen")
+        TBNGrados.Text = tabla.Rows(index).Item("Latitud_Grados")
+        TBNHoras.Text = tabla.Rows(index).Item("Latitud_Horas")
+        TBNMinutos.Text = tabla.Rows(index).Item("Latitud_Minutos")
+        TBWGrados.Text = tabla.Rows(index).Item("Longitud_Grados")
+        TBWHoras.Text = tabla.Rows(index).Item("Longitud_Horas")
+        TBWMinutos.Text = tabla.Rows(index).Item("Longitud_Minutos")
+        TBNumeroRPP.Text = tabla.Rows(index).Item("Numero_RPP")
+        TBFolioRPP.Text = tabla.Rows(index).Item("Folio_RPP")
+        TBLibroRPP.Text = tabla.Rows(index).Item("Libro_RPP")
+        DTRpp.Value = tabla.Rows(index).Item("Fecha_RPP")
+        TBTitulo.Text = tabla.Rows(index).Item("Titulo_Agua")
+        TBRegimen.Text = tabla.Rows(index).Item("Regimen_Hidrico")
         DtTitulo.Value = tabla.Rows(index).Item("Fecha_Titulo_Agua")
         TBNoLote.Text = tabla.Rows(index).Item("Nombre_Lote")
         EntidadPreregistroLotes.IdPreregistroLote = TBIdPreregistroLotes.Text
         EntidadPreregistroLotes.ConsultaDocumentosPreregistroLotes = 2
         NegocioPreregistroLotes.Consultar(EntidadPreregistroLotes)
-            tabla = EntidadPreregistroLotes.TablaDocumentosPropietario
-            DGDocumentosPropietario.DataSource = tabla
-            DGDocumentosPropietario.Columns(0).Visible = False
+        tabla = EntidadPreregistroLotes.TablaDocumentosPropietario
+        DGDocumentosPropietario.DataSource = tabla
+        DGDocumentosPropietario.Columns(0).Visible = False
         'End If
+    End Sub
+    Private Sub BTAbrirCarpeta_Click(sender As Object, e As EventArgs) Handles BTAbrirCarpeta.Click
+
     End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
@@ -211,10 +214,10 @@ Public Class PreregistroLotes
     Private Sub DGDocumentosPropietario_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGDocumentosPropietario.CellContentClick
         Dim i As Integer
         i = DGDocumentosPropietario.CurrentRow.Index
-        If DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = 0 Then
-            DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = 1
-        ElseIf DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = 1 Then
-            DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = 0
+        If DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = False Then
+            DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = True
+        ElseIf DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = True Then
+            DGDocumentosPropietario.Rows(i).Cells("Estatus").Value = False
         End If
     End Sub
     Private Sub LlenarCombos()

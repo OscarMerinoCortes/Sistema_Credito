@@ -12,7 +12,7 @@
         TablaCultivos = EntidadPreregistro.TablaDocumentosRegistrados
         CBCultivos.DataSource = TablaCultivos
         CBCultivos.DisplayMember = "Cultivo"
-        CBCultivos.ValueMember = "Id"
+        CBCultivos.ValueMember = "IdCultivo"
         '-----------------------------------------------------------------------------------
         NegocioPreregistro.ConsultarClientes(EntidadPreregistro)
         TablaClientes = EntidadPreregistro.TablaDatosDelCliente
