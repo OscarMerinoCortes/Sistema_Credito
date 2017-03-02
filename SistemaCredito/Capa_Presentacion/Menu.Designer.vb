@@ -32,8 +32,8 @@ Partial Class Menu
         Me.AsignacionDeLotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContratosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UtileriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UbicacionDeDocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UbicacionDeDocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -97,18 +97,18 @@ Partial Class Menu
         Me.UtileriasToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.UtileriasToolStripMenuItem.Text = "Utilerias"
         '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
         'UbicacionDeDocumentosToolStripMenuItem
         '
         Me.UbicacionDeDocumentosToolStripMenuItem.Image = CType(resources.GetObject("UbicacionDeDocumentosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.UbicacionDeDocumentosToolStripMenuItem.Name = "UbicacionDeDocumentosToolStripMenuItem"
         Me.UbicacionDeDocumentosToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.UbicacionDeDocumentosToolStripMenuItem.Text = "Ubicacion de Documentos"
-        '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
-        Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'Menu
         '

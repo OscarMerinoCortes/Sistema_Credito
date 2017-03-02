@@ -32,14 +32,12 @@ Partial Class UbicacionDocumentos
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TBNombreRaiz = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BTUbicacion = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuardarActualizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TBIdUbicacion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.BTUbicacion = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -83,6 +81,8 @@ Partial Class UbicacionDocumentos
         '
         'TBPersonas
         '
+        Me.TBPersonas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TBPersonas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBPersonas.Location = New System.Drawing.Point(362, 77)
         Me.TBPersonas.Name = "TBPersonas"
         Me.TBPersonas.Size = New System.Drawing.Size(281, 20)
@@ -90,6 +90,8 @@ Partial Class UbicacionDocumentos
         '
         'TBLotes
         '
+        Me.TBLotes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TBLotes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBLotes.Location = New System.Drawing.Point(362, 109)
         Me.TBLotes.Name = "TBLotes"
         Me.TBLotes.Size = New System.Drawing.Size(281, 20)
@@ -113,6 +115,8 @@ Partial Class UbicacionDocumentos
         '
         'TBNombreRaiz
         '
+        Me.TBNombreRaiz.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TBNombreRaiz.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TBNombreRaiz.Location = New System.Drawing.Point(362, 40)
         Me.TBNombreRaiz.Name = "TBNombreRaiz"
         Me.TBNombreRaiz.Size = New System.Drawing.Size(281, 20)
@@ -128,42 +132,20 @@ Partial Class UbicacionDocumentos
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Nombre para Carpeta Raiz"
         '
-        'BTUbicacion
-        '
-        Me.BTUbicacion.BackgroundImage = CType(resources.GetObject("BTUbicacion.BackgroundImage"), System.Drawing.Image)
-        Me.BTUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BTUbicacion.Location = New System.Drawing.Point(624, 51)
-        Me.BTUbicacion.Name = "BTUbicacion"
-        Me.BTUbicacion.Size = New System.Drawing.Size(30, 30)
-        Me.BTUbicacion.TabIndex = 2
-        Me.BTUbicacion.UseVisualStyleBackColor = True
-        '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.GuardarActualizarToolStripMenuItem, Me.ConsultarToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GuardarActualizarToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(691, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'NuevoToolStripMenuItem
-        '
-        Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.NuevoToolStripMenuItem.Text = "Nuevo"
-        '
         'GuardarActualizarToolStripMenuItem
         '
         Me.GuardarActualizarToolStripMenuItem.Name = "GuardarActualizarToolStripMenuItem"
         Me.GuardarActualizarToolStripMenuItem.Size = New System.Drawing.Size(124, 20)
         Me.GuardarActualizarToolStripMenuItem.Text = "Guardar / Actualizar"
-        '
-        'ConsultarToolStripMenuItem
-        '
-        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
-        Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'SalirToolStripMenuItem
         '
@@ -177,6 +159,7 @@ Partial Class UbicacionDocumentos
         Me.TBIdUbicacion.Name = "TBIdUbicacion"
         Me.TBIdUbicacion.Size = New System.Drawing.Size(100, 20)
         Me.TBIdUbicacion.TabIndex = 5
+        Me.TBIdUbicacion.Text = "1"
         Me.TBIdUbicacion.Visible = False
         '
         'Label5
@@ -190,6 +173,16 @@ Partial Class UbicacionDocumentos
         Me.Label5.Text = "ID"
         Me.Label5.Visible = False
         '
+        'BTUbicacion
+        '
+        Me.BTUbicacion.BackgroundImage = CType(resources.GetObject("BTUbicacion.BackgroundImage"), System.Drawing.Image)
+        Me.BTUbicacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BTUbicacion.Location = New System.Drawing.Point(624, 51)
+        Me.BTUbicacion.Name = "BTUbicacion"
+        Me.BTUbicacion.Size = New System.Drawing.Size(30, 30)
+        Me.BTUbicacion.TabIndex = 2
+        Me.BTUbicacion.UseVisualStyleBackColor = True
+        '
         'UbicacionDocumentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -202,9 +195,10 @@ Partial Class UbicacionDocumentos
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TBRuta)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "UbicacionDocumentos"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ubicacion de Documentos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -224,12 +218,10 @@ Partial Class UbicacionDocumentos
     Friend WithEvents TBLotes As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents NuevoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GuardarActualizarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TBNombreRaiz As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TBIdUbicacion As TextBox
     Friend WithEvents Label5 As Label
 End Class

@@ -31,16 +31,14 @@ Public Class UbicacionDocumentos
         Dim cnn As New SqlConnection(conexionPrincipal)
         Try
             cnn.Open()
-            Select Case EntidadUbicacionDocumentos1.ConsultaUbicacion
-                Case 1
-                    Dim cmd As New SqlCommand("sp_LlenarUbicacion", cnn)
-                    cmd.CommandType = CommandType.StoredProcedure
+            Dim cmd As New SqlCommand("sp_LlenarUbicacion", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
                     cmd.Parameters.Add(New SqlClient.SqlParameter("@IdUbicacion", EntidadUbicacionDocumentos1.IdUbicacion))
                     Dim da As New SqlDataAdapter(cmd)
                     Dim dt As New DataTable
                     da.Fill(dt)
                     EntidadUbicacionDocumentos1.TablaUbicacionRegistrada = dt
-            End Select
+
         Catch ex As Exception
         Finally
             cnn.Close()
