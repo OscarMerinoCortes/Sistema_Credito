@@ -4,6 +4,7 @@ Public Class PreregistroLotes
     Public TablaDatosyLotes As New DataTable()
     Public TablaDocumentosPropietario As New DataTable()
     Public TablaClientes As New DataTable
+    Public TablaUbicacionObtenida As New DataTable
 
     Private Sub PreregistroLotes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now.Date.ToString("dd/MM/yyyy")
@@ -146,6 +147,21 @@ Public Class PreregistroLotes
     End Sub
     Private Sub BTAbrirCarpeta_Click(sender As Object, e As EventArgs) Handles BTAbrirCarpeta.Click
 
+        Dim EntidadUbicacionDocumentos As New Capa_Entidad.UbicacionDocumentos
+        Dim NegocioUbicacionDocumentos As New Capa_Negocio.UbicacionDocumentos
+        If CBNombreCliente.SelectedValue <> Nothing Then
+            Dim Index = 0
+            NegocioUbicacionDocumentos.Consultar(EntidadUbicacionDocumentos)
+            TablaUbicacionObtenida = EntidadUbicacionDocumentos.TablaUbicacionRegistrada
+            Dim Ubicacion As String = TablaUbicacionObtenida.Rows(Index).Item("Ruta") & TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaRaiz") & "\" & CBNombreCliente.SelectedValue & " " & CBNombreCliente.Text & "\" & TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaLote")
+
+            If Not Directory.Exists(Ubicacion) Then
+                Directory.CreateDirectory(Ubicacion)
+            End If
+            Process.Start("explorer.exe", Ubicacion)
+        Else
+            MsgBox("No tienes un cliente seleccionado.", MsgBoxStyle.Exclamation, "Aviso")
+        End If
     End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
