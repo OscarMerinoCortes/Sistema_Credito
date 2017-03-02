@@ -40,6 +40,14 @@ Public Class UbicacionDocumentos
                     Dim dt As New DataTable
                     da.Fill(dt)
                     EntidadUbicacionDocumentos1.TablaUbicacionRegistrada = dt
+                Case 2
+                    Dim cmd As New SqlCommand("sp_LisRutDocDet", cnn)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    'cmd.Parameters.Add(New SqlClient.SqlParameter("@IdUbicacion", EntidadUbicacionDocumentos1.IdUbicacion))
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    EntidadUbicacionDocumentos1.TablaUbicacionRegistrada = dt
             End Select
         Catch ex As Exception
         Finally

@@ -465,6 +465,11 @@ Public Class Prerregistro
         DGSocios.Columns.Insert(3, checkBoxColumn)
         DGSocios.Columns(0).Visible = False
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        CrearCarpetas()
+    End Sub
+
     Private Sub BtAgregar_Click(sender As Object, e As EventArgs) Handles BtAgregar.Click
         DGAgregados.Columns.Clear()
         DGAgregados.DataSource = Nothing
@@ -505,5 +510,22 @@ Public Class Prerregistro
         checkBoxColumn.HeaderText = ""
         checkBoxColumn.Name = "ChCol"
         DGAgregados.Columns.Insert(4, checkBoxColumn)
+    End Sub
+    Private Sub CrearCarpetas()
+        Dim EntidadUbicacion As New Capa_Entidad.UbicacionDocumentos
+        Dim NegocioUbicacion As New Capa_Negocio.UbicacionDocumentos
+        Dim tabla As New DataTable
+        Dim NombreCarpeta As String
+        NombreCarpeta = TBIdCliente.Text + " " + TBNombre.Text
+        EntidadUbicacion.ConsultaUbicacion = 2
+        NegocioUbicacion.Consultar(EntidadUbicacion)
+        tabla = EntidadUbicacion.TablaUbicacionRegistrada
+
+        If Not Directory.Exists(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & NombreCarpeta) Then
+            Directory.CreateDirectory(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta)
+            'Directory.CreateDirectory(tabla.Rows(0).Item("ruta") + tabla.Rows(0).Item("NombreCarpetaRaiz") + TBIdCliente.Text + " " + TBNombre.Text & tabla.Rows(0).Item("NombreCarpetaPersonal"))
+            'Directory.CreateDirectory(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") + TBIdCliente.Text + " " + TBNombre.Text & tabla.Rows(0).Item("NombreCarpetaLote"))
+        End If
+        Process.Start("explorer.exe", (tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz")) & (TBIdCliente.Text & " " & TBNombre.Text))
     End Sub
 End Class

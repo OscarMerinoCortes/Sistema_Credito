@@ -23,9 +23,9 @@ Partial Class Prerregistro
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Prerregistro))
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbTitle = New System.Windows.Forms.Label()
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.LbRFC = New System.Windows.Forms.Label()
@@ -60,8 +60,16 @@ Partial Class Prerregistro
         Me.LbEstadoCivil = New System.Windows.Forms.Label()
         Me.CBEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.GBDatosConyugue = New System.Windows.Forms.GroupBox()
+        Me.TBCURPConyugue = New System.Windows.Forms.TextBox()
+        Me.TBRFCConyugue = New System.Windows.Forms.TextBox()
+        Me.TBCredencialConyugue = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TPDatos = New System.Windows.Forms.TabPage()
         Me.GBSocios = New System.Windows.Forms.GroupBox()
+        Me.DGAgregados = New System.Windows.Forms.DataGridView()
+        Me.BtAgregar = New System.Windows.Forms.Button()
         Me.DGSocios = New System.Windows.Forms.DataGridView()
         Me.LbTesorero = New System.Windows.Forms.Label()
         Me.LbRepLegal = New System.Windows.Forms.Label()
@@ -71,14 +79,7 @@ Partial Class Prerregistro
         Me.CBRL = New System.Windows.Forms.ComboBox()
         Me.CBSecretario = New System.Windows.Forms.ComboBox()
         Me.CBPresidente = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TBCredencialConyugue = New System.Windows.Forms.TextBox()
-        Me.TBRFCConyugue = New System.Windows.Forms.TextBox()
-        Me.TBCURPConyugue = New System.Windows.Forms.TextBox()
-        Me.BtAgregar = New System.Windows.Forms.Button()
-        Me.DGAgregados = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MSPreregistro.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,8 +88,8 @@ Partial Class Prerregistro
         Me.GBDatosConyugue.SuspendLayout()
         Me.TPDatos.SuspendLayout()
         Me.GBSocios.SuspendLayout()
-        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGAgregados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LbTitle
@@ -213,28 +214,28 @@ Partial Class Prerregistro
         Me.DGDocumentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DGDocumentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DGDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         resources.ApplyResources(Me.DGDocumentos, "DGDocumentos")
         Me.DGDocumentos.Name = "DGDocumentos"
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DGDocumentos.RowHeadersVisible = False
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DGDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
         'LbIdEstado
@@ -281,6 +282,7 @@ Partial Class Prerregistro
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.LbEstadoCivil)
         Me.TabPage1.Controls.Add(Me.CBEstadoCivil)
         Me.TabPage1.Controls.Add(Me.GBDatosConyugue)
@@ -330,6 +332,36 @@ Partial Class Prerregistro
         Me.GBDatosConyugue.Name = "GBDatosConyugue"
         Me.GBDatosConyugue.TabStop = False
         '
+        'TBCURPConyugue
+        '
+        resources.ApplyResources(Me.TBCURPConyugue, "TBCURPConyugue")
+        Me.TBCURPConyugue.Name = "TBCURPConyugue"
+        '
+        'TBRFCConyugue
+        '
+        resources.ApplyResources(Me.TBRFCConyugue, "TBRFCConyugue")
+        Me.TBRFCConyugue.Name = "TBRFCConyugue"
+        '
+        'TBCredencialConyugue
+        '
+        resources.ApplyResources(Me.TBCredencialConyugue, "TBCredencialConyugue")
+        Me.TBCredencialConyugue.Name = "TBCredencialConyugue"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
         'TPDatos
         '
         Me.TPDatos.Controls.Add(Me.GBSocios)
@@ -353,6 +385,19 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.GBSocios, "GBSocios")
         Me.GBSocios.Name = "GBSocios"
         Me.GBSocios.TabStop = False
+        '
+        'DGAgregados
+        '
+        Me.DGAgregados.AllowUserToAddRows = False
+        Me.DGAgregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        resources.ApplyResources(Me.DGAgregados, "DGAgregados")
+        Me.DGAgregados.Name = "DGAgregados"
+        '
+        'BtAgregar
+        '
+        resources.ApplyResources(Me.BtAgregar, "BtAgregar")
+        Me.BtAgregar.Name = "BtAgregar"
+        Me.BtAgregar.UseVisualStyleBackColor = True
         '
         'DGSocios
         '
@@ -405,48 +450,11 @@ Partial Class Prerregistro
         Me.CBPresidente.FormattingEnabled = True
         Me.CBPresidente.Name = "CBPresidente"
         '
-        'Label1
+        'Button1
         '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
-        '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.Name = "Label3"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.Name = "Label4"
-        '
-        'TBCredencialConyugue
-        '
-        resources.ApplyResources(Me.TBCredencialConyugue, "TBCredencialConyugue")
-        Me.TBCredencialConyugue.Name = "TBCredencialConyugue"
-        '
-        'TBRFCConyugue
-        '
-        resources.ApplyResources(Me.TBRFCConyugue, "TBRFCConyugue")
-        Me.TBRFCConyugue.Name = "TBRFCConyugue"
-        '
-        'TBCURPConyugue
-        '
-        resources.ApplyResources(Me.TBCURPConyugue, "TBCURPConyugue")
-        Me.TBCURPConyugue.Name = "TBCURPConyugue"
-        '
-        'BtAgregar
-        '
-        resources.ApplyResources(Me.BtAgregar, "BtAgregar")
-        Me.BtAgregar.Name = "BtAgregar"
-        Me.BtAgregar.UseVisualStyleBackColor = True
-        '
-        'DGAgregados
-        '
-        Me.DGAgregados.AllowUserToAddRows = False
-        Me.DGAgregados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        resources.ApplyResources(Me.DGAgregados, "DGAgregados")
-        Me.DGAgregados.Name = "DGAgregados"
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Prerregistro
         '
@@ -473,8 +481,8 @@ Partial Class Prerregistro
         Me.TPDatos.ResumeLayout(False)
         Me.TPDatos.PerformLayout()
         Me.GBSocios.ResumeLayout(False)
-        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DGAgregados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGSocios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -533,4 +541,5 @@ Partial Class Prerregistro
     Friend WithEvents Label1 As Label
     Friend WithEvents DGAgregados As DataGridView
     Friend WithEvents BtAgregar As Button
+    Friend WithEvents Button1 As Button
 End Class
