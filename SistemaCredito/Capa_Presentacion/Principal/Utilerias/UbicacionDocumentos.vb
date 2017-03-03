@@ -5,6 +5,9 @@ Imports System.IO
 Public Class UbicacionDocumentos
     Private folderBrowserDialog1 As FolderBrowserDialog
     Public TablaUbicacionObtenida As New DataTable()
+    Private Sub UbicacionDocumentos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        consultaUbicacion()
+    End Sub
     Private Sub SeleccionaUbicacionRaiz(sender As Object, e As EventArgs) Handles BTUbicacion.Click
         Me.folderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Try
@@ -35,7 +38,7 @@ Public Class UbicacionDocumentos
 
                     'MsgBox("Total de archivos: " & CStr(nFiles.Count),
                     '                        MsgBoxStyle.Information)
-                    TBRuta.Text = folderBrowserDialog1.SelectedPath
+                    TBRuta.Text = folderBrowserDialog1.SelectedPath & "\"
                 End If
 
                 .Dispose()
@@ -56,15 +59,28 @@ Public Class UbicacionDocumentos
             EntidadUbicacionDocumentos.IdUbicacion = TBIdUbicacion.Text
         End If
         EntidadUbicacionDocumentos.Ruta = TBRuta.Text
+        EntidadUbicacionDocumentos.NombreCarpetaRaiz = TBNombreRaiz.Text
+        EntidadUbicacionDocumentos.NombreCarpetaPersonal = TBPersonas.Text
+        EntidadUbicacionDocumentos.NombreCarpetaLotes = TBLotes.Text
+        NegocioUbicacionDocumentos.Guardar(EntidadUbicacionDocumentos)
+        MsgBox("Registro guardado o editado con éxito")
 
     End Sub
-    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
-
+    Private Sub consultaUbicacion()
+        Dim EntidadUbicacionDocumentos As New Capa_Entidad.UbicacionDocumentos
+        Dim NegocioUbicacionDocumentos As New Capa_Negocio.UbicacionDocumentos
+        Dim Index = 0
+        NegocioUbicacionDocumentos.Consultar(EntidadUbicacionDocumentos)
+        TablaUbicacionObtenida = EntidadUbicacionDocumentos.TablaUbicacionRegistrada
+        TBIdUbicacion.Text = TablaUbicacionObtenida.Rows(Index).Item("IdUbicacion")
+        TBRuta.Text = TablaUbicacionObtenida.Rows(Index).Item("Ruta")
+        TBNombreRaiz.Text = TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaRaiz")
+        TBPersonas.Text = TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaPersonal")
+        TBLotes.Text = TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaLote")
     End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
     End Sub
-
 
 End Class
 
