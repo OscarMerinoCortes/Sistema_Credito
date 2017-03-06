@@ -80,6 +80,8 @@ Public Class Prerregistro
         EntidadPreregistro.TablaSocios = TablaSocios
         NegocioPreregistro.Guardar(EntidadPreregistro)
         MsgBox("Registro guardado o editado con éxito")
+        TBIdCliente.Text = EntidadPreregistro.IdCliente
+        CrearCarpetas()
         Limpiar()
         ActualizarPersonaFisica()
         ConsultarDocumentos()
@@ -152,6 +154,7 @@ Public Class Prerregistro
             Next
             DGAgregados.Columns(0).Visible = False
         End If
+        BtnCarpetas.Visible = True
     End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
@@ -213,7 +216,8 @@ Public Class Prerregistro
         CBSecretario.SelectedValue = -1
         CBRL.SelectedValue = -1
         CBTesorero.SelectedValue = -1
-        DGAgregados.Columns.Clear
+        DGAgregados.Columns.Clear()
+        BtnCarpetas.Visible = False
     End Sub
     Private Sub CargarComboBoxs()
         Dim dt1 As DataTable = New DataTable("Tabla")
@@ -465,8 +469,7 @@ Public Class Prerregistro
         DGSocios.Columns.Insert(3, checkBoxColumn)
         DGSocios.Columns(0).Visible = False
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnCarpetas.Click
         CrearCarpetas()
     End Sub
 
@@ -520,12 +523,10 @@ Public Class Prerregistro
         EntidadUbicacion.ConsultaUbicacion = 2
         NegocioUbicacion.Consultar(EntidadUbicacion)
         tabla = EntidadUbicacion.TablaUbicacionRegistrada
-
-        If Not Directory.Exists(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & NombreCarpeta) Then
-            Directory.CreateDirectory(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta)
-            'Directory.CreateDirectory(tabla.Rows(0).Item("ruta") + tabla.Rows(0).Item("NombreCarpetaRaiz") + TBIdCliente.Text + " " + TBNombre.Text & tabla.Rows(0).Item("NombreCarpetaPersonal"))
-            'Directory.CreateDirectory(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") + TBIdCliente.Text + " " + TBNombre.Text & tabla.Rows(0).Item("NombreCarpetaLote"))
+        If Not Directory.Exists(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta) Then
+            Directory.CreateDirectory(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaPersonal"))
+            Directory.CreateDirectory(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaLote"))
         End If
-        Process.Start("explorer.exe", (tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz")) & (TBIdCliente.Text & " " & TBNombre.Text))
+        Process.Start("explorer.exe", (tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta))
     End Sub
 End Class
