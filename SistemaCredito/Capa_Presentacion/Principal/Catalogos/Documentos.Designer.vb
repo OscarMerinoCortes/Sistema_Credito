@@ -177,6 +177,7 @@ Partial Class Documentos
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Documentos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alta de Documentos"
         Me.MSDocumentos.ResumeLayout(False)
         Me.MSDocumentos.PerformLayout()

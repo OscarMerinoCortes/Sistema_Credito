@@ -68,11 +68,11 @@ Public Class Prerregistro
         EntidadPreregistro.TipoPersona = CBTipoPersona.Text
         EntidadPreregistro.RFC = TBRFC.Text
         EntidadPreregistro.CURP = TBCURP.Text
-        EntidadPreregistro.Domicilio = TBDomicilio.Text
+        EntidadPreregistro.Domicilio = TBCalle.Text
         EntidadPreregistro.Telefono = TBTelefono.Text
         EntidadPreregistro.Correo = TBCorreo.Text
         EntidadPreregistro.IdEstado = CBIdEstado.SelectedValue
-        EntidadPreregistro.CredencialConyugue = TBCredencialConyugue.Text
+        'EntidadPreregistro.CredencialConyugue = TBCredencialConyugue.Text
         EntidadPreregistro.RFCConyugue = TBRFCConyugue.Text
         EntidadPreregistro.CURPConyugue = TBCURPConyugue.Text
         EntidadPreregistro.EstadoCivil = CBEstadoCivil.Text
@@ -106,13 +106,13 @@ Public Class Prerregistro
         PBFoto.Image = Image.FromStream(MSFoto)
         TBRFC.Text = TablaConsulta.Rows(index).Item("RFC")
         TBCURP.Text = TablaConsulta.Rows(index).Item("CURP")
-        TBDomicilio.Text = TablaConsulta.Rows(index).Item("Domicilio")
+        TBCalle.Text = TablaConsulta.Rows(index).Item("Domicilio")
         TBTelefono.Text = TablaConsulta.Rows(index).Item("Telefono")
         TBCorreo.Text = TablaConsulta.Rows(index).Item("Correo")
         CBIdEstado.SelectedValue = TablaConsulta.Rows(index).Item("Estado")
         TBFecha.Text = TablaConsulta.Rows(index).Item("Fecha")
         CBEstadoCivil.Text = TablaConsulta.Rows(index).Item("EstadoCivil")
-        TBCredencialConyugue.Text = TablaConsulta.Rows(index).Item("CredencialConyugue")
+        'TBCredencialConyugue.Text = TablaConsulta.Rows(index).Item("CredencialConyugue")
         TBRFCConyugue.Text = TablaConsulta.Rows(index).Item("RfcConyugue")
         TBCURPConyugue.Text = TablaConsulta.Rows(index).Item("CurpConyugue")
         EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
@@ -143,7 +143,7 @@ Public Class Prerregistro
                 End If
                 If row("IdCargo") = 4 Then
                     CBTesorero.SelectedValue = CInt(row("IdPersona"))
-                    Vtesorero = CInt(row("IdDatosAdicionales"))
+                    VTesorero = CInt(row("IdDatosAdicionales"))
                 End If
                 If row("IdCargo") = 5 Then
                     DGAgregados.Columns.Clear()
@@ -203,11 +203,11 @@ Public Class Prerregistro
         TBNombre.Text = ""
         TBRFC.Text = ""
         TBCURP.Text = ""
-        TBDomicilio.Text = ""
+        TBCalle.Text = ""
         TBTelefono.Text = ""
         TBCorreo.Text = ""
         PBFoto.Image = Nothing
-        TBCredencialConyugue.Text = ""
+        'TBCredencialConyugue.Text = ""
         TBRFCConyugue.Text = ""
         TBCURPConyugue.Text = ""
         CBEstadoCivil.SelectedValue = -1

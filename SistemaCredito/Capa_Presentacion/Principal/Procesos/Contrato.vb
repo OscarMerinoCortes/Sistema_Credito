@@ -7,17 +7,17 @@ Public Class Contrato
     Public EntidadPreregistro As New Capa_Entidad.Preregistro
     Public NegocioPreregistro As New Capa_Negocio.Preregistro
     Private Sub Contrato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GBDatosContrato.Visible = False
+        GBDatos.Visible = False
     End Sub
     Private Sub TBCantidad_TextChanged(sender As Object, e As PreviewKeyDownEventArgs) Handles TBImporte.PreviewKeyDown
         If e.KeyCode = Keys.Enter Then
             RTBImporteLetra.Text = Letras(TBImporte.Text)
         End If
+        RTBImporteLetra.Text = RTBImporteLetra.Text.ToUpper()
     End Sub
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Close()
     End Sub
-
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
 
     End Sub
@@ -25,7 +25,7 @@ Public Class Contrato
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
 
     End Sub
-    Private Sub BtBuscar_Click(sender As Object, e As EventArgs) Handles BtBuscar.Click
+    Private Sub BtBuscar_Click(sender As Object, e As EventArgs)
 
     End Sub
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
@@ -48,7 +48,7 @@ Public Class Contrato
             NegocioPreregistro.Consultar(EntidadPreregistro)
             tabla = EntidadPreregistro.TablaDocumentosRegistrados
             ConsultarDocumentos()
-            GBDatosContrato.Visible = True
+            GBDatos.Visible = True
         End If
     End Sub
     Private Sub ConsultarDocumentos()
@@ -57,12 +57,8 @@ Public Class Contrato
         Dim TablaDocumentos2 As New DataTable
         If CBTipoPersona.Text = "FISICA" Then
             TipoPersona = "F"
-            LbRepresentanteL.Visible = False
-            TBRepresentanteLegal.Visible = False
         Else
             TipoPersona = "M"
-            LbRepresentanteL.Visible = True
-            TBRepresentanteLegal.Visible = True
         End If
         EntidadPreregistro.TipoPersona = TipoPersona
         EntidadPreregistro.ConsultaDocumentos = 1
