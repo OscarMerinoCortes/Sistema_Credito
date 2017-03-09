@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ConsultaLotesParaAsignacion
+Partial Class ConsultaClientesAsignarLotes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,16 +22,13 @@ Partial Class ConsultaLotesParaAsignacion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaLotesParaAsignacion))
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DGConsultaSeleccionLote = New System.Windows.Forms.DataGridView()
         Me.BTNBuscar = New System.Windows.Forms.Button()
         Me.TBNombre = New System.Windows.Forms.TextBox()
         Me.LbNombre = New System.Windows.Forms.Label()
-        Me.BTCancelar = New System.Windows.Forms.Button()
-        Me.BTSeleccionar = New System.Windows.Forms.Button()
         CType(Me.DGConsultaSeleccionLote, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,40 +39,40 @@ Partial Class ConsultaLotesParaAsignacion
         Me.DGConsultaSeleccionLote.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DGConsultaSeleccionLote.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DGConsultaSeleccionLote.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsultaSeleccionLote.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsultaSeleccionLote.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle19
         Me.DGConsultaSeleccionLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGConsultaSeleccionLote.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.DGConsultaSeleccionLote.Location = New System.Drawing.Point(12, 38)
         Me.DGConsultaSeleccionLote.Name = "DGConsultaSeleccionLote"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGConsultaSeleccionLote.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGConsultaSeleccionLote.RowHeadersDefaultCellStyle = DataGridViewCellStyle20
         Me.DGConsultaSeleccionLote.RowHeadersVisible = False
         Me.DGConsultaSeleccionLote.RowHeadersWidth = 40
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGConsultaSeleccionLote.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DGConsultaSeleccionLote.RowsDefaultCellStyle = DataGridViewCellStyle21
         Me.DGConsultaSeleccionLote.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGConsultaSeleccionLote.Size = New System.Drawing.Size(610, 308)
-        Me.DGConsultaSeleccionLote.TabIndex = 15
+        Me.DGConsultaSeleccionLote.TabIndex = 19
         '
         'BTNBuscar
         '
         Me.BTNBuscar.Location = New System.Drawing.Point(323, 9)
         Me.BTNBuscar.Name = "BTNBuscar"
         Me.BTNBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BTNBuscar.TabIndex = 14
+        Me.BTNBuscar.TabIndex = 18
         Me.BTNBuscar.Text = "Buscar"
         Me.BTNBuscar.UseVisualStyleBackColor = True
         '
@@ -84,7 +81,7 @@ Partial Class ConsultaLotesParaAsignacion
         Me.TBNombre.Location = New System.Drawing.Point(62, 9)
         Me.TBNombre.Name = "TBNombre"
         Me.TBNombre.Size = New System.Drawing.Size(255, 20)
-        Me.TBNombre.TabIndex = 13
+        Me.TBNombre.TabIndex = 17
         '
         'LbNombre
         '
@@ -92,42 +89,21 @@ Partial Class ConsultaLotesParaAsignacion
         Me.LbNombre.Location = New System.Drawing.Point(12, 9)
         Me.LbNombre.Name = "LbNombre"
         Me.LbNombre.Size = New System.Drawing.Size(44, 13)
-        Me.LbNombre.TabIndex = 12
+        Me.LbNombre.TabIndex = 16
         Me.LbNombre.Text = "Nombre"
         '
-        'BTCancelar
-        '
-        Me.BTCancelar.Location = New System.Drawing.Point(430, 352)
-        Me.BTCancelar.Name = "BTCancelar"
-        Me.BTCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.BTCancelar.TabIndex = 16
-        Me.BTCancelar.Text = "Cancelar"
-        Me.BTCancelar.UseVisualStyleBackColor = True
-        '
-        'BTSeleccionar
-        '
-        Me.BTSeleccionar.Location = New System.Drawing.Point(547, 353)
-        Me.BTSeleccionar.Name = "BTSeleccionar"
-        Me.BTSeleccionar.Size = New System.Drawing.Size(75, 23)
-        Me.BTSeleccionar.TabIndex = 16
-        Me.BTSeleccionar.Text = "Seleccionar"
-        Me.BTSeleccionar.UseVisualStyleBackColor = True
-        '
-        'ConsultaLotesParaAsignacion
+        'ConsultaClientesAsignarLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(636, 387)
-        Me.Controls.Add(Me.BTSeleccionar)
-        Me.Controls.Add(Me.BTCancelar)
+        Me.ClientSize = New System.Drawing.Size(636, 359)
         Me.Controls.Add(Me.DGConsultaSeleccionLote)
         Me.Controls.Add(Me.BTNBuscar)
         Me.Controls.Add(Me.TBNombre)
         Me.Controls.Add(Me.LbNombre)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "ConsultaLotesParaAsignacion"
+        Me.Name = "ConsultaClientesAsignarLotes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Consulta"
+        Me.Text = "Clientes "
         CType(Me.DGConsultaSeleccionLote, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -138,6 +114,4 @@ Partial Class ConsultaLotesParaAsignacion
     Friend WithEvents BTNBuscar As Button
     Friend WithEvents TBNombre As TextBox
     Friend WithEvents LbNombre As Label
-    Friend WithEvents BTCancelar As Button
-    Friend WithEvents BTSeleccionar As Button
 End Class

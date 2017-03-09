@@ -10,4 +10,7 @@
     'Modulo Consultar PreregistroLote--------------------------
     Public VGTabla As DataTable
     Public VGIndexConsultar As Integer
+
+    'Modulo AsignacionLotes-------------------------------------
+    Public VGTablaSeleccionLotes As DataTable
 End Module
