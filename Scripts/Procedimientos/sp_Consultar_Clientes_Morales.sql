@@ -4,7 +4,8 @@ declare @DatosAdicionales int = 0
 select
      @DatosAdicionales as IdDatosAdicionales,
      [IdCliente] as IdPersona,
-     [Nombre] as Nombre	
+     [Nombre]+' '+SegundoNombre+' '+ApellidoPaterno+' '+ApellidoMaterno as Nombre	
 from dbo.Cre_Preregistro_Cliente_Encabezado
-where IdEstado = 1
+where IdEstatus = 1
 and   IdTipoPersona = 'FISICA'
+

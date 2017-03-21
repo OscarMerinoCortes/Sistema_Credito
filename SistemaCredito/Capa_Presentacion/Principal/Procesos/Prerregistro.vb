@@ -271,7 +271,7 @@ Public Class Prerregistro
         CBSexo.SelectedValue = 1
         TBEdad.Text = ""
         'Datos del conyugue
-        CBConyugue.SelectedValue = 1
+        CBConyugue.SelectedValue = -1
         CBEstadoMatrimonioCony.SelectedValue = 1
         CBMunicipioMatrimonioCony.SelectedValue = 1
         'Adicionales
@@ -338,6 +338,15 @@ Public Class Prerregistro
         CBTesorero.DisplayMember = "Nombre"
         CBTesorero.SelectedValue = 1
         PropiedadesDGSocios()
+
+        Dim tabla5 As New DataTable
+        EntidadPreregistro.ConsultaDocumentos = 3
+        NegocioPreregistro.Consultar(EntidadPreregistro)
+        tabla5 = EntidadPreregistro.TablaDocumentosRegistrados
+        CBConyugue.DataSource = tabla4
+        CBConyugue.ValueMember = "IdPersona"
+        CBConyugue.DisplayMember = "Nombre"
+        CBConyugue.SelectedValue = -1
         '--ESTADO CIVIL---------------
         Dim dt2 As DataTable = New DataTable("Tabla")
         dt2.Columns.Add("IdEstadoCivil")
