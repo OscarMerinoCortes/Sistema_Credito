@@ -47,6 +47,7 @@ Public Class Prerregistro
         Dim arrFilename() As String = Split(Text, "\")
         Array.Reverse(arrFilename)
         Dim ms As New MemoryStream
+        '---Datos del cliente
         If PBFoto.Image Is Nothing Then
             MessageBox.Show("Inserte una imagen", "Aviso")
             Exit Sub
@@ -63,21 +64,42 @@ Public Class Prerregistro
             EntidadPreregistro.IdCliente = TBIdCliente.Text
         End If
         EntidadPreregistro.Foto = arrImage
+        EntidadPreregistro.TipoPersona = CBTipoPersona.Text
         EntidadPreregistro.Fecha = TBFecha.Text
         EntidadPreregistro.Nombre = TBNombre.Text
-        EntidadPreregistro.TipoPersona = CBTipoPersona.Text
-        EntidadPreregistro.RFC = TBRFC.Text
-        EntidadPreregistro.CURP = TBCURP.Text
-        EntidadPreregistro.Domicilio = TBCalle.Text
         EntidadPreregistro.Telefono = TBTelefono.Text
         EntidadPreregistro.Correo = TBCorreo.Text
-        EntidadPreregistro.IdEstado = CBIdEstado.SelectedValue
-        'EntidadPreregistro.CredencialConyugue = TBCredencialConyugue.Text
-        EntidadPreregistro.RFCConyugue = TBRFCConyugue.Text
-        EntidadPreregistro.CURPConyugue = TBCURPConyugue.Text
-        EntidadPreregistro.EstadoCivil = CBEstadoCivil.Text
+        EntidadPreregistro.RFC = TBRFC.Text
+        EntidadPreregistro.CURP = TBCURP.Text
+        EntidadPreregistro.IdEstatus = CBIdEstatus.SelectedValue
+        EntidadPreregistro.IdEstadoCivil = IIf(CBEstadoCivil.SelectedValue = Nothing, 0, CBEstadoCivil.SelectedValue)
+        EntidadPreregistro.ImporteSolicitado = IIf(TBImporte.Text = Nothing, 0, TBImporte.Text)
+        EntidadPreregistro.ImporteLetra = TBImporteLetra.Text
+        EntidadPreregistro.IdTipoCambio = CBTipoCambio.SelectedValue
+        EntidadPreregistro.ActividadHabitual = TBActividad.Text
+        EntidadPreregistro.Calle = TBCalle.Text
+        EntidadPreregistro.Colonia = TBColonia.Text
+        EntidadPreregistro.Numero = TBNumero.Text
+        EntidadPreregistro.IdEstado = CBEstado.SelectedValue
+        EntidadPreregistro.IdMunicipio = CBMunicipio.SelectedValue
+        EntidadPreregistro.Poblacion = TBPoblacion.Text
+        EntidadPreregistro.CP = IIf(TBCP.Text = Nothing, 0, TBCP.Text)
+        EntidadPreregistro.SegundoNombre = TBSegNombre.Text
+        EntidadPreregistro.ApellidoPaterno = TBApePaterno.Text
+        EntidadPreregistro.ApellidoMaterno = TBApeMaterno.Text
+        EntidadPreregistro.IdSexo = CBSexo.SelectedValue
+        EntidadPreregistro.Edad = TBEdad.Text
+        EntidadPreregistro.IdNacionalidadNacimiento = CBNacionalidadNac.SelectedValue
+        EntidadPreregistro.FechaNacimiento = DTPFechaNacimiento.Text
+        EntidadPreregistro.IdEstadoNacimiento = CBEstadoNac.SelectedValue
+        EntidadPreregistro.IdMunicipioNacimiento = CBMunicipioNac.SelectedValue
+        EntidadPreregistro.CIdConyugue = CBConyugue.SelectedValue
+        EntidadPreregistro.CFechaMatrimonio = DTPFechaMatrimonioCony.Text
+        EntidadPreregistro.CIdEstadoMatrimonio = CBEstadoMatrimonioCony.SelectedValue
+        EntidadPreregistro.CIdMunicipioMatrimonio = CBMunicipioMatrimonioCony.SelectedValue
         EntidadPreregistro.TablaDocumentosAgregados = TablaDocumentosObtenidos
         EntidadPreregistro.TablaSocios = TablaSocios
+        '---------------------------------------------------------------------------------
         NegocioPreregistro.Guardar(EntidadPreregistro)
         MsgBox("Registro guardado o editado con éxito")
         TBIdCliente.Text = EntidadPreregistro.IdCliente
@@ -99,22 +121,45 @@ Public Class Prerregistro
             Exit Sub
         End If
         TBIdCliente.Text = TablaConsulta.Rows(index).Item("IdCliente")
-        TBNombre.Text = TablaConsulta.Rows(index).Item("Nombre")
-        CBTipoPersona.Text = TablaConsulta.Rows(index).Item("TipoPersona")
         foto = CType(TablaConsulta.Rows(index).Item("Foto"), Byte())
         Dim MSFoto As New MemoryStream(foto)
         PBFoto.Image = Image.FromStream(MSFoto)
-        TBRFC.Text = TablaConsulta.Rows(index).Item("RFC")
-        TBCURP.Text = TablaConsulta.Rows(index).Item("CURP")
-        TBCalle.Text = TablaConsulta.Rows(index).Item("Domicilio")
+        CBTipoPersona.Text = TablaConsulta.Rows(index).Item("IdTipoPersona")
+        TBNombre.Text = TablaConsulta.Rows(index).Item("Nombre")
+        TBSegNombre.Text = TablaConsulta.Rows(index).Item("SegundoNombre")
+        TBApePaterno.Text = TablaConsulta.Rows(index).Item("ApellidoPaterno")
+        TBApeMaterno.Text = TablaConsulta.Rows(index).Item("ApellidoMaterno")
+        CBSexo.SelectedValue = TablaConsulta.Rows(index).Item("IdSexo")
+        TBEdad.Text = TablaConsulta.Rows(index).Item("Edad")
+        DTPFechaNacimiento.Text = TablaConsulta.Rows(index).Item("FechaNacimiento")
+        CBEstadoNac.SelectedValue = TablaConsulta.Rows(index).Item("IdEstadoNacimiento")
+        MunicipioNacimiento()
+        CBMunicipioNac.SelectedValue = TablaConsulta.Rows(index).Item("IdMunicipioNacimiento")
+        CBNacionalidadNac.SelectedValue = TablaConsulta.Rows(index).Item("IdNacionalidad")
         TBTelefono.Text = TablaConsulta.Rows(index).Item("Telefono")
         TBCorreo.Text = TablaConsulta.Rows(index).Item("Correo")
-        CBIdEstado.SelectedValue = TablaConsulta.Rows(index).Item("Estado")
+        TBRFC.Text = TablaConsulta.Rows(index).Item("RFC")
+        TBCURP.Text = TablaConsulta.Rows(index).Item("CURP")
+        CBIdEstatus.SelectedValue = TablaConsulta.Rows(index).Item("IdEstatus")
+        CBEstadoCivil.SelectedValue = TablaConsulta.Rows(index).Item("IdEstadoCivil")
+        TBImporte.Text = TablaConsulta.Rows(index).Item("ImporteSolicitado")
+        TBImporteLetra.Text = TablaConsulta.Rows(index).Item("ImporteLetra")
+        CBTipoCambio.SelectedValue = TablaConsulta.Rows(index).Item("IdTipoCambio")
+        TBActividad.Text = TablaConsulta.Rows(index).Item("ActividadHabitual")
+        TBCalle.Text = TablaConsulta.Rows(index).Item("Calle")
+        TBColonia.Text = TablaConsulta.Rows(index).Item("Colonia")
+        TBNumero.Text = TablaConsulta.Rows(index).Item("Numero")
+        CBEstado.SelectedValue = TablaConsulta.Rows(index).Item("IdEstado")
+        Municipio()
+        CBMunicipio.SelectedValue = TablaConsulta.Rows(index).Item("IdMunicipio")
+        TBPoblacion.Text = TablaConsulta.Rows(index).Item("Poblacion")
+        TBCP.Text = TablaConsulta.Rows(index).Item("CodigoPostal")
+        CBConyugue.SelectedValue = TablaConsulta.Rows(index).Item("IdConyugue")
+        DTPFechaMatrimonioCony.Text = TablaConsulta.Rows(index).Item("FechaMatrimonio")
+        CBEstadoMatrimonioCony.SelectedValue = TablaConsulta.Rows(index).Item("IdEstadoMatrimonio")
+        MunicipioMatrimonio()
+        CBMunicipioMatrimonioCony.SelectedValue = TablaConsulta.Rows(index).Item("IdMunicipioMatrimonio")
         TBFecha.Text = TablaConsulta.Rows(index).Item("Fecha")
-        CBEstadoCivil.Text = TablaConsulta.Rows(index).Item("EstadoCivil")
-        'TBCredencialConyugue.Text = TablaConsulta.Rows(index).Item("CredencialConyugue")
-        TBRFCConyugue.Text = TablaConsulta.Rows(index).Item("RfcConyugue")
-        TBCURPConyugue.Text = TablaConsulta.Rows(index).Item("CurpConyugue")
         EntidadPreregistro.IdCliente = TablaConsulta.Rows(index).Item("IdCliente")
         EntidadPreregistro.ConsultaDocumentos = 2
         NegocioPreregistro.Consultar(EntidadPreregistro)
@@ -166,14 +211,9 @@ Public Class Prerregistro
         If CBTipoPersona.Text = "FISICA" Then
             TipoPersona = "F"
             DesHabilitarCamposAdicionales()
-            LbEstadoCivil.Visible = True
-            CBEstadoCivil.Visible = True
         Else
             TipoPersona = "M"
             HabilitarCamposAdicionales()
-            LbEstadoCivil.Visible = False
-            CBEstadoCivil.Visible = False
-            GBDatosConyugue.Visible = False
         End If
         EntidadPreregistro.TipoPersona = TipoPersona
         EntidadPreregistro.ConsultaDocumentos = 1
@@ -181,6 +221,7 @@ Public Class Prerregistro
         TablaDocumentos2 = EntidadPreregistro.TablaDocumentos
         DGDocumentos.DataSource = TablaDocumentos2
         DGDocumentos.Columns(0).Visible = False
+        DGDocumentos.Columns(2).Width = 150
     End Sub
     Private Sub CBTipoPersona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBTipoPersona.SelectedIndexChanged
         ConsultarDocumentos()
@@ -199,23 +240,45 @@ Public Class Prerregistro
         Next
     End Sub
     Private Sub Limpiar()
+        'Datos generales de la persona
+        PBFoto.Image = Nothing
         TBIdCliente.Text = ""
+        CBTipoPersona.Enabled = True
+        CBTipoPersona.SelectedValue = 1
         TBNombre.Text = ""
-        TBRFC.Text = ""
-        TBCURP.Text = ""
-        TBCalle.Text = ""
         TBTelefono.Text = ""
         TBCorreo.Text = ""
-        PBFoto.Image = Nothing
-        'TBCredencialConyugue.Text = ""
-        TBRFCConyugue.Text = ""
-        TBCURPConyugue.Text = ""
-        CBEstadoCivil.SelectedValue = -1
-        CBTipoPersona.Enabled = True
-        CBPresidente.SelectedValue = -1
-        CBSecretario.SelectedValue = -1
-        CBRL.SelectedValue = -1
-        CBTesorero.SelectedValue = -1
+        TBRFC.Text = ""
+        TBCURP.Text = ""
+        CBIdEstatus.SelectedValue = 1
+        CBEstadoCivil.SelectedValue = 1
+        TBImporte.Text = ""
+        TBImporteLetra.Text = ""
+        TBActividad.Text = ""
+        TBCalle.Text = ""
+        TBColonia.Text = ""
+        TBNumero.Text = ""
+        CBEstado.SelectedValue = 1
+        CBMunicipio.SelectedValue = 1
+        TBPoblacion.Text = ""
+        TBCP.Text = ""
+        CBEstadoNac.SelectedValue = 1
+        CBMunicipioNac.SelectedValue = 1
+        CBNacionalidadNac.SelectedValue = 1
+        TBSegNombre.Text = ""
+        TBApePaterno.Text = ""
+        TBApeMaterno.Text = ""
+        CBSexo.SelectedValue = 1
+        TBEdad.Text = ""
+        'Datos del conyugue
+        CBConyugue.SelectedValue = 1
+        CBEstadoMatrimonioCony.SelectedValue = 1
+        CBMunicipioMatrimonioCony.SelectedValue = 1
+        'Adicionales
+        CBPresidente.SelectedValue = 1
+        CBSecretario.SelectedValue = 1
+        CBRL.SelectedValue = 1
+        CBTesorero.SelectedValue = 1
         DGAgregados.Columns.Clear()
         BtnCarpetas.Visible = False
     End Sub
@@ -224,33 +287,29 @@ Public Class Prerregistro
         dt1.Columns.Add("IdDocumento")
         dt1.Columns.Add("Descripcion")
         Dim dr As DataRow
-
         dr = dt1.NewRow()
         dr("IdDocumento") = 2
         dr("Descripcion") = "INACTIVO"
         dt1.Rows.Add(dr)
-
         dr = dt1.NewRow()
         dr("IdDocumento") = 1
         dr("Descripcion") = "ACTIVO"
         dt1.Rows.Add(dr)
-
-        CBIdEstado.DataSource = dt1
-        CBIdEstado.ValueMember = "IdDocumento"
-        CBIdEstado.DisplayMember = "Descripcion"
-        CBIdEstado.SelectedValue = 1
-        '---------
+        CBIdEstatus.DataSource = dt1
+        CBIdEstatus.ValueMember = "IdDocumento"
+        CBIdEstatus.DisplayMember = "Descripcion"
+        CBIdEstatus.SelectedValue = 1
+        '----------------------------------------------------
         Dim tabla As New DataTable
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
         Dim NegocioPreregistro As New Capa_Negocio.Preregistro
         EntidadPreregistro.ConsultaDocumentos = 3
         NegocioPreregistro.Consultar(EntidadPreregistro)
         tabla = EntidadPreregistro.TablaDocumentosRegistrados
-
         CBPresidente.DataSource = tabla
         CBPresidente.ValueMember = "IdPersona"
         CBPresidente.DisplayMember = "Nombre"
-        CBPresidente.SelectedValue = -1
+        CBPresidente.SelectedValue = 1
 
         Dim tabla2 As New DataTable
         EntidadPreregistro.ConsultaDocumentos = 3
@@ -259,7 +318,7 @@ Public Class Prerregistro
         CBSecretario.DataSource = tabla2
         CBSecretario.ValueMember = "IdPersona"
         CBSecretario.DisplayMember = "Nombre"
-        CBSecretario.SelectedValue = -1
+        CBSecretario.SelectedValue = 1
 
         Dim tabla3 As New DataTable
         EntidadPreregistro.ConsultaDocumentos = 3
@@ -268,7 +327,7 @@ Public Class Prerregistro
         CBRL.DataSource = tabla3
         CBRL.ValueMember = "IdPersona"
         CBRL.DisplayMember = "Nombre"
-        CBRL.SelectedValue = -1
+        CBRL.SelectedValue = 1
 
         Dim tabla4 As New DataTable
         EntidadPreregistro.ConsultaDocumentos = 3
@@ -277,8 +336,7 @@ Public Class Prerregistro
         CBTesorero.DataSource = tabla4
         CBTesorero.ValueMember = "IdPersona"
         CBTesorero.DisplayMember = "Nombre"
-        CBTesorero.SelectedValue = -1
-
+        CBTesorero.SelectedValue = 1
         PropiedadesDGSocios()
         '--ESTADO CIVIL---------------
         Dim dt2 As DataTable = New DataTable("Tabla")
@@ -297,7 +355,6 @@ Public Class Prerregistro
         dr2("IdEstadoCivil") = 3
         dr2("Descripcion") = "BIENES SEPARADOS"
         dt2.Rows.Add(dr2)
-
         CBEstadoCivil.DataSource = dt2
         CBEstadoCivil.ValueMember = "IdEstadoCivil"
         CBEstadoCivil.DisplayMember = "Descripcion"
@@ -311,16 +368,99 @@ Public Class Prerregistro
         dr3("IdTipoPersona") = 1
         dr3("Descripcion") = "FISICA"
         dt3.Rows.Add(dr3)
-
         dr3 = dt3.NewRow()
         dr3("IdTipoPersona") = 2
         dr3("Descripcion") = "MORAL"
         dt3.Rows.Add(dr3)
-
         CBTipoPersona.DataSource = dt3
         CBTipoPersona.ValueMember = "IdTipoPersona"
         CBTipoPersona.DisplayMember = "Descripcion"
         CBTipoPersona.SelectedValue = 1
+        '---------------------------------------Estados
+        Dim TablaEstados As New DataTable
+        Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+        Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+        EntidadLocalizacion.IdConsulta = 1
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBEstado.DataSource = TablaEstados
+        CBEstado.ValueMember = "IdEstado"
+        CBEstado.DisplayMember = "Estado"
+        CBEstado.SelectedValue = 1
+        '--Municipio---       
+        Municipio()
+        '---------------------------------------Estados de la Republica para el combo de Lugar de Nacimiento              
+        EntidadLocalizacion.IdConsulta = 1
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBEstadoNac.DataSource = TablaEstados
+        CBEstadoNac.ValueMember = "IdEstado"
+        CBEstadoNac.DisplayMember = "Estado"
+        CBEstadoNac.SelectedValue = 1
+        '---Municipios        
+        MunicipioNacimiento()
+        '---------------------------------------Estados de la Republica para el combo de Lugar de Matrimonio       
+        EntidadLocalizacion.IdConsulta = 1
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBEstadoMatrimonioCony.DataSource = TablaEstados
+        CBEstadoMatrimonioCony.ValueMember = "IdEstado"
+        CBEstadoMatrimonioCony.DisplayMember = "Estado"
+        CBEstadoMatrimonioCony.SelectedValue = 1
+        '---Municipios        
+        MunicipioMatrimonio()
+        '------------------------------------------------Nacionalidad
+        Dim TablaNacionalidad As DataTable = New DataTable("Tabla")
+        TablaNacionalidad.Columns.Add("IdNacionalidad")
+        TablaNacionalidad.Columns.Add("Nacionalidad")
+        Dim row As DataRow
+        row = TablaNacionalidad.NewRow()
+        row("IdNacionalidad") = 1
+        row("Nacionalidad") = "MEXICANA"
+        TablaNacionalidad.Rows.Add(row)
+        row = TablaNacionalidad.NewRow()
+        row("IdNacionalidad") = 2
+        row("Nacionalidad") = "ESTADOUNIDENSE"
+        TablaNacionalidad.Rows.Add(row)
+        CBNacionalidadNac.DataSource = TablaNacionalidad
+        CBNacionalidadNac.ValueMember = "IdNacionalidad"
+        CBNacionalidadNac.DisplayMember = "Nacionalidad"
+        CBNacionalidadNac.SelectedValue = 1
+        '------------------------------------------------Sexo
+        Dim TablaSexo As DataTable = New DataTable("Tabla")
+        TablaSexo.Columns.Add("IdSexo")
+        TablaSexo.Columns.Add("Sexo")
+        Dim rowS As DataRow
+        rowS = TablaSexo.NewRow()
+        rowS("IdSexo") = 1
+        rowS("Sexo") = "MASCULINO"
+        TablaSexo.Rows.Add(rowS)
+        rowS = TablaSexo.NewRow()
+        rowS("IdSexo") = 2
+        rowS("Sexo") = "FEMENINO"
+        TablaSexo.Rows.Add(rowS)
+
+        CBSexo.DataSource = TablaSexo
+        CBSexo.ValueMember = "IdSexo"
+        CBSexo.DisplayMember = "Sexo"
+        CBSexo.SelectedValue = 1
+        ''''''''---------------------------Tipo de Cambio
+        Dim TipoCambio As DataTable = New DataTable("Tabla")
+        TipoCambio.Columns.Add("IdTipoCambio")
+        TipoCambio.Columns.Add("Cambio")
+        Dim RowTC As DataRow
+        RowTC = TipoCambio.NewRow()
+        RowTC("IdTipoCambio") = 1
+        RowTC("Cambio") = "MXN"
+        TipoCambio.Rows.Add(RowTC)
+        RowTC = TipoCambio.NewRow()
+        RowTC("IdTipoCambio") = 2
+        RowTC("Cambio") = "DLLS"
+        TipoCambio.Rows.Add(RowTC)
+        CBTipoCambio.DataSource = TipoCambio
+        CBTipoCambio.ValueMember = "IdTipoCambio"
+        CBTipoCambio.DisplayMember = "Cambio"
+        CBTipoCambio.SelectedValue = 1
     End Sub
 
     Private Sub DGDocumentos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGDocumentos.CellContentClick
@@ -339,6 +479,11 @@ Public Class Prerregistro
         CBTesorero.Enabled = True
         GBSocios.Enabled = True
         BtAgregar.Enabled = True
+        LbEstadoCivil.Visible = False
+        CBEstadoCivil.Visible = False
+        GBFecMatConyugue.Enabled = False
+        GBFechaNacimiento.Enabled = False
+        GBDatosGenerales.Enabled = False
     End Sub
     Private Sub DesHabilitarCamposAdicionales()
         CBPresidente.Enabled = False
@@ -347,6 +492,12 @@ Public Class Prerregistro
         CBTesorero.Enabled = False
         GBSocios.Enabled = False
         BtAgregar.Enabled = False
+        LbEstadoCivil.Visible = True
+        CBEstadoCivil.Visible = True
+        GBFecMatConyugue.Enabled = True
+        GBFechaNacimiento.Enabled = True
+        GBDatosGenerales.Enabled = True
+        CBEstadoCivil.SelectedValue = -1
     End Sub
     Private Sub AgregarSocios()
         Dim index As Integer
@@ -407,9 +558,9 @@ Public Class Prerregistro
 
     Private Sub CBEstadoCivil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBEstadoCivil.SelectedIndexChanged
         If CBEstadoCivil.Text = "SOCIEDAD CONYUGAL" Or CBEstadoCivil.Text = "BIENES SEPARADOS" Then
-            GBDatosConyugue.Visible = True
+            'GBDatosConyugue.Visible = True
         Else
-            GBDatosConyugue.Visible = False
+            'GBDatosConyugue.Visible = False
         End If
     End Sub
     Private Sub ActualizarPersonaFisica()
@@ -453,7 +604,6 @@ Public Class Prerregistro
         CBTesorero.ValueMember = "IdPersona"
         CBTesorero.DisplayMember = "Nombre"
         CBTesorero.SelectedValue = -1
-
         PropiedadesDGSocios()
     End Sub
     Private Sub PropiedadesDGSocios()
@@ -472,7 +622,69 @@ Public Class Prerregistro
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnCarpetas.Click
         CrearCarpetas()
     End Sub
+    Private Sub CBEstado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBEstado.SelectionChangeCommitted
+        '---------------------------------------Estados y municipios
+        Dim TablaEstados As New DataTable
+        Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+        Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+        EntidadLocalizacion.IdConsulta = 2
+        EntidadLocalizacion.IdEstado = CBEstado.SelectedValue
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBMunicipio.DataSource = TablaEstados
+        CBMunicipio.ValueMember = "IdMunicipio"
+        CBMunicipio.DisplayMember = "Municipio"
+        CBMunicipio.SelectedValue = -1
+    End Sub
+    Private Sub CBEstadoNac_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBEstadoNac.SelectionChangeCommitted
+        '---------------------------------------Estados y municipios
+        Dim TablaEstados As New DataTable
+        Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+        Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+        EntidadLocalizacion.IdConsulta = 2
+        EntidadLocalizacion.IdEstado = CBEstadoNac.SelectedValue
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBMunicipioNac.DataSource = TablaEstados
+        CBMunicipioNac.ValueMember = "IdMunicipio"
+        CBMunicipioNac.DisplayMember = "Municipio"
+        CBMunicipioNac.SelectedValue = -1
+    End Sub
 
+    'Private Sub CBEstadoNacCony_SelectedIndexChanged(sender As Object, e As EventArgs)
+    '    '---------------------------------------Estados y municipios
+    '    Dim TablaEstados As New DataTable
+    '    Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+    '    Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+    '    EntidadLocalizacion.IdConsulta = 2
+    '    EntidadLocalizacion.IdEstado = CBEstadoNacCony.SelectedValue
+    '    NegocioLocalizacion.Consultar(EntidadLocalizacion)
+    '    TablaEstados = EntidadLocalizacion.TablaConsulta
+    '    CBMunicipioNacCony.DataSource = TablaEstados
+    '    CBMunicipioNacCony.ValueMember = "IdMunicipio"
+    '    CBMunicipioNacCony.DisplayMember = "Municipio"
+    '    CBMunicipioNacCony.SelectedValue = -1
+    'End Sub
+    Private Sub CBEstadoMatrimonioCony_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBEstadoMatrimonioCony.SelectionChangeCommitted
+        '---------------------------------------Estados y municipios
+        Dim TablaEstados As New DataTable
+        Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+        Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+        EntidadLocalizacion.IdConsulta = 2
+        EntidadLocalizacion.IdEstado = CBEstadoMatrimonioCony.SelectedValue
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBMunicipioMatrimonioCony.DataSource = TablaEstados
+        CBMunicipioMatrimonioCony.ValueMember = "IdMunicipio"
+        CBMunicipioMatrimonioCony.DisplayMember = "Municipio"
+        CBMunicipioMatrimonioCony.SelectedValue = -1
+    End Sub
+    Private Sub TBImporte_TextChanged(sender As Object, e As PreviewKeyDownEventArgs) Handles TBImporte.PreviewKeyDown
+        If e.KeyCode = Keys.Enter Then
+            TBImporteLetra.Text = Letras(TBImporte.Text)
+        End If
+        TBImporteLetra.Text = TBImporteLetra.Text.ToUpper()
+    End Sub
     Private Sub BtAgregar_Click(sender As Object, e As EventArgs) Handles BtAgregar.Click
         DGAgregados.Columns.Clear()
         DGAgregados.DataSource = Nothing
@@ -528,5 +740,44 @@ Public Class Prerregistro
             Directory.CreateDirectory(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaLote"))
         End If
         Process.Start("explorer.exe", (tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta))
+    End Sub
+    Private Sub Municipio()
+        Dim TablaEstados As New DataTable
+        Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+        Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+        EntidadLocalizacion.IdConsulta = 2
+        EntidadLocalizacion.IdEstado = CBEstado.SelectedValue
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBMunicipio.DataSource = TablaEstados
+        CBMunicipio.ValueMember = "IdMunicipio"
+        CBMunicipio.DisplayMember = "Municipio"
+        CBMunicipio.SelectedValue = 1
+    End Sub
+    Private Sub MunicipioNacimiento()
+        Dim TablaEstados As New DataTable
+        Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+        Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+        EntidadLocalizacion.IdConsulta = 2
+        EntidadLocalizacion.IdEstado = CBEstadoNac.SelectedValue
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBMunicipioNac.DataSource = TablaEstados
+        CBMunicipioNac.ValueMember = "IdMunicipio"
+        CBMunicipioNac.DisplayMember = "Municipio"
+        CBMunicipioNac.SelectedValue = 1
+    End Sub
+    Private Sub MunicipioMatrimonio()
+        Dim TablaEstados As New DataTable
+        Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
+        Dim NegocioLocalizacion As New Capa_Negocio.Localizacion
+        EntidadLocalizacion.IdConsulta = 2
+        EntidadLocalizacion.IdEstado = CBEstadoMatrimonioCony.SelectedValue
+        NegocioLocalizacion.Consultar(EntidadLocalizacion)
+        TablaEstados = EntidadLocalizacion.TablaConsulta
+        CBMunicipioMatrimonioCony.DataSource = TablaEstados
+        CBMunicipioMatrimonioCony.ValueMember = "IdMunicipio"
+        CBMunicipioMatrimonioCony.DisplayMember = "Municipio"
+        CBMunicipioMatrimonioCony.SelectedValue = 1
     End Sub
 End Class

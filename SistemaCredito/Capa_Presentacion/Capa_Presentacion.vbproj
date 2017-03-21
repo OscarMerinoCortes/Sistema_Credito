@@ -84,6 +84,12 @@
     <Compile Include="Principal\Catalogos\Imagen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Principal\Consultas\ConsultaClientesAsignarLotes.Designer.vb">
+      <DependentUpon>ConsultaClientesAsignarLotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Consultas\ConsultaClientesAsignarLotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\Consultas\ConsultaLotesParaAsignacion.Designer.vb">
       <DependentUpon>ConsultaLotesParaAsignacion.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Catalogos\Imagen.resx">
       <DependentUpon>Imagen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Consultas\ConsultaClientesAsignarLotes.resx">
+      <DependentUpon>ConsultaClientesAsignarLotes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Consultas\ConsultaLotesParaAsignacion.resx">
       <DependentUpon>ConsultaLotesParaAsignacion.vb</DependentUpon>
