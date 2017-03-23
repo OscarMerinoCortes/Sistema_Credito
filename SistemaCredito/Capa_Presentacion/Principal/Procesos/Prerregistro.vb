@@ -101,12 +101,14 @@ Public Class Prerregistro
         EntidadPreregistro.TablaSocios = TablaSocios
         '---------------------------------------------------------------------------------
         NegocioPreregistro.Guardar(EntidadPreregistro)
+        NegocioPreregistro.llenarExcel(EntidadPreregistro)
         MsgBox("Registro guardado o editado con éxito")
         TBIdCliente.Text = EntidadPreregistro.IdCliente
         CrearCarpetas()
         Limpiar()
         ActualizarPersonaFisica()
         ConsultarDocumentos()
+
     End Sub
 
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click

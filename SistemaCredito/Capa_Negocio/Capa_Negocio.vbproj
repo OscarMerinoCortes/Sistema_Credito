@@ -66,6 +66,7 @@
     <Compile Include="Catalogos\Documentos.vb" />
     <Compile Include="Catalogos\Localizacion.vb" />
     <Compile Include="Procesos\AsignacionLotes.vb" />
+    <Compile Include="Procesos\CargaExcel.vb" />
     <Compile Include="Procesos\PreregistroLotes.vb" />
     <Compile Include="Procesos\Preregistro.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

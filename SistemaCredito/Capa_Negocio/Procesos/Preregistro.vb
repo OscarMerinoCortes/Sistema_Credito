@@ -17,4 +17,5 @@
         EntidadPreregistro1 = EntidadPreregistro
         DatosPreregistro.ConsultarClientes(EntidadPreregistro)
     End Sub
+
 End Class

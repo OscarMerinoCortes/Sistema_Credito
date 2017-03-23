@@ -143,4 +143,5 @@ Public Class Preregistro
             EntidadPreregistro = EntidadPreregistro1
         End Try
     End Sub
+
 End Class
