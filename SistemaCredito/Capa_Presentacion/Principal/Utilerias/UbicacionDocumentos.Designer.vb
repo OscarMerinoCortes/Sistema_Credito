@@ -25,21 +25,24 @@ Partial Class UbicacionDocumentos
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UbicacionDocumentos))
         Me.TBRuta = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBPersonas = New System.Windows.Forms.TextBox()
-        Me.TBLotes = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TBNombreRaiz = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.GuardarActualizarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TBIdUbicacion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.BTUbicacion = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TBPersonas = New System.Windows.Forms.TextBox()
+        Me.TBNombreRaiz = New System.Windows.Forms.TextBox()
+        Me.TBLotes = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TBRutaSolicitud = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BTUbicacionSolicitud = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TBRuta
@@ -58,79 +61,6 @@ Partial Class UbicacionDocumentos
         Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Ruta"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(37, 80)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(293, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nombre para Carpeta de Documentos de Personas"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(37, 112)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(272, 13)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Nombre para Carpeta de Documentos de Lotes"
-        '
-        'TBPersonas
-        '
-        Me.TBPersonas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBPersonas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBPersonas.Location = New System.Drawing.Point(362, 77)
-        Me.TBPersonas.Name = "TBPersonas"
-        Me.TBPersonas.Size = New System.Drawing.Size(281, 20)
-        Me.TBPersonas.TabIndex = 0
-        '
-        'TBLotes
-        '
-        Me.TBLotes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBLotes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBLotes.Location = New System.Drawing.Point(362, 109)
-        Me.TBLotes.Name = "TBLotes"
-        Me.TBLotes.Size = New System.Drawing.Size(281, 20)
-        Me.TBLotes.TabIndex = 0
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TBLotes)
-        Me.GroupBox1.Controls.Add(Me.TBNombreRaiz)
-        Me.GroupBox1.Controls.Add(Me.TBPersonas)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 104)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(667, 150)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Nombra las carpetas de Documentos"
-        '
-        'TBNombreRaiz
-        '
-        Me.TBNombreRaiz.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBNombreRaiz.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBNombreRaiz.Location = New System.Drawing.Point(362, 40)
-        Me.TBNombreRaiz.Name = "TBNombreRaiz"
-        Me.TBNombreRaiz.Size = New System.Drawing.Size(281, 20)
-        Me.TBNombreRaiz.TabIndex = 0
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(37, 43)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(156, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Nombre para Carpeta Raiz"
         '
         'MenuStrip1
         '
@@ -183,16 +113,119 @@ Partial Class UbicacionDocumentos
         Me.BTUbicacion.TabIndex = 2
         Me.BTUbicacion.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(37, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(293, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Nombre para Carpeta de Documentos de Personas"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(37, 43)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(156, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Nombre para Carpeta Raiz"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(37, 112)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(272, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Nombre para Carpeta de Documentos de Lotes"
+        '
+        'TBPersonas
+        '
+        Me.TBPersonas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TBPersonas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBPersonas.Location = New System.Drawing.Point(362, 77)
+        Me.TBPersonas.Name = "TBPersonas"
+        Me.TBPersonas.Size = New System.Drawing.Size(281, 20)
+        Me.TBPersonas.TabIndex = 0
+        '
+        'TBNombreRaiz
+        '
+        Me.TBNombreRaiz.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TBNombreRaiz.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBNombreRaiz.Location = New System.Drawing.Point(362, 40)
+        Me.TBNombreRaiz.Name = "TBNombreRaiz"
+        Me.TBNombreRaiz.Size = New System.Drawing.Size(281, 20)
+        Me.TBNombreRaiz.TabIndex = 0
+        '
+        'TBLotes
+        '
+        Me.TBLotes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TBLotes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TBLotes.Location = New System.Drawing.Point(362, 109)
+        Me.TBLotes.Name = "TBLotes"
+        Me.TBLotes.Size = New System.Drawing.Size(281, 20)
+        Me.TBLotes.TabIndex = 0
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TBLotes)
+        Me.GroupBox1.Controls.Add(Me.TBNombreRaiz)
+        Me.GroupBox1.Controls.Add(Me.TBPersonas)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 148)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(667, 150)
+        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Nombra las carpetas de Documentos"
+        '
+        'TBRutaSolicitud
+        '
+        Me.TBRutaSolicitud.Location = New System.Drawing.Point(253, 93)
+        Me.TBRutaSolicitud.Name = "TBRutaSolicitud"
+        Me.TBRutaSolicitud.Size = New System.Drawing.Size(366, 20)
+        Me.TBRutaSolicitud.TabIndex = 0
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(13, 96)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(234, 13)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "Ruta de Formato de Solicitud de Credito"
+        '
+        'BTUbicacionSolicitud
+        '
+        Me.BTUbicacionSolicitud.BackgroundImage = CType(resources.GetObject("BTUbicacionSolicitud.BackgroundImage"), System.Drawing.Image)
+        Me.BTUbicacionSolicitud.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BTUbicacionSolicitud.Location = New System.Drawing.Point(625, 87)
+        Me.BTUbicacionSolicitud.Name = "BTUbicacionSolicitud"
+        Me.BTUbicacionSolicitud.Size = New System.Drawing.Size(30, 30)
+        Me.BTUbicacionSolicitud.TabIndex = 2
+        Me.BTUbicacionSolicitud.UseVisualStyleBackColor = True
+        '
         'UbicacionDocumentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(691, 266)
+        Me.ClientSize = New System.Drawing.Size(691, 310)
         Me.Controls.Add(Me.TBIdUbicacion)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.BTUbicacionSolicitud)
         Me.Controls.Add(Me.BTUbicacion)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TBRutaSolicitud)
         Me.Controls.Add(Me.TBRuta)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -200,10 +233,10 @@ Partial Class UbicacionDocumentos
         Me.Name = "UbicacionDocumentos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ubicacion de Documentos"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -212,16 +245,19 @@ Partial Class UbicacionDocumentos
     Friend WithEvents TBRuta As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents BTUbicacion As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TBPersonas As TextBox
-    Friend WithEvents TBLotes As TextBox
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents GuardarActualizarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TBNombreRaiz As TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents TBIdUbicacion As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TBPersonas As TextBox
+    Friend WithEvents TBNombreRaiz As TextBox
+    Friend WithEvents TBLotes As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents TBRutaSolicitud As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents BTUbicacionSolicitud As Button
 End Class

@@ -48,7 +48,46 @@ Public Class UbicacionDocumentos
             MsgBox(oe.Message, MsgBoxStyle.Critical)
         End Try
     End Sub
+    Private Sub SeleccionaUbicacionSolicitud(sender As Object, e As EventArgs) Handles BTUbicacionSolicitud.Click
+        Me.folderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog
+        Try
+            ' Configuración del FolderBrowserDialog
+            With folderBrowserDialog1
 
+                .Reset() ' resetea
+
+                ' leyenda
+                .Description = " Seleccionar una carpeta "
+                ' Path " Mis documentos "
+                .SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+
+                ' deshabilita el botón " crear nueva carpeta "
+                .ShowNewFolderButton = True
+
+                '.RootFolder = Environment.SpecialFolder.Desktop
+                '.RootFolder = Environment.SpecialFolder.StartMenu
+
+                Dim ret As DialogResult = .ShowDialog ' abre el diálogo
+
+                ' si se presionó el botón aceptar ...
+                If ret = DialogResult.OK Then
+
+                    'Dim nFiles As ObjectModel.ReadOnlyCollection(Of String)
+
+                    'nFiles = My.Computer.FileSystem.GetFiles(.SelectedPath)
+
+                    'MsgBox("Total de archivos: " & CStr(nFiles.Count),
+                    '                        MsgBoxStyle.Information)
+                    TBRutaSolicitud.Text = folderBrowserDialog1.SelectedPath & "\SOLICITUD DE  CREDITO.xlsx"
+                End If
+
+                .Dispose()
+
+            End With
+        Catch oe As Exception
+            MsgBox(oe.Message, MsgBoxStyle.Critical)
+        End Try
+    End Sub
     Private Sub GuardarActualizarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarActualizarToolStripMenuItem.Click
         Dim EntidadUbicacionDocumentos As New Capa_Entidad.UbicacionDocumentos
         Dim NegocioUbicacionDocumentos As New Capa_Negocio.UbicacionDocumentos
@@ -59,6 +98,7 @@ Public Class UbicacionDocumentos
             EntidadUbicacionDocumentos.IdUbicacion = TBIdUbicacion.Text
         End If
         EntidadUbicacionDocumentos.Ruta = TBRuta.Text
+        EntidadUbicacionDocumentos.RutaSolicitud = TBRutaSolicitud.Text
         EntidadUbicacionDocumentos.NombreCarpetaRaiz = TBNombreRaiz.Text
         EntidadUbicacionDocumentos.NombreCarpetaPersonal = TBPersonas.Text
         EntidadUbicacionDocumentos.NombreCarpetaLotes = TBLotes.Text
@@ -74,6 +114,7 @@ Public Class UbicacionDocumentos
         TablaUbicacionObtenida = EntidadUbicacionDocumentos.TablaUbicacionRegistrada
         TBIdUbicacion.Text = TablaUbicacionObtenida.Rows(Index).Item("IdUbicacion")
         TBRuta.Text = TablaUbicacionObtenida.Rows(Index).Item("Ruta")
+        TBRutaSolicitud.Text = TablaUbicacionObtenida.Rows(Index).Item("RutaSolicitudCredito")
         TBNombreRaiz.Text = TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaRaiz")
         TBPersonas.Text = TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaPersonal")
         TBLotes.Text = TablaUbicacionObtenida.Rows(Index).Item("NombreCarpetaLote")

@@ -11,6 +11,7 @@ Public Class UbicacionDocumentos
             cmdGuardar.CommandType = CommandType.StoredProcedure
             cmdGuardar.Parameters.Add(New SqlParameter("@IdUbicacion", EntidadUbicacionDocumentos1.IdUbicacion))
             cmdGuardar.Parameters.Add(New SqlParameter("@Ruta", EntidadUbicacionDocumentos1.Ruta))
+            cmdGuardar.Parameters.Add(New SqlParameter("@RutaSolicitudCredito", EntidadUbicacionDocumentos1.RutaSolicitud))
             cmdGuardar.Parameters.Add(New SqlParameter("@NombreCarpetaRaiz", EntidadUbicacionDocumentos1.NombreCarpetaRaiz))
             cmdGuardar.Parameters.Add(New SqlParameter("@NombreCarpetaPersonal", EntidadUbicacionDocumentos1.NombreCarpetaPersonal))
             cmdGuardar.Parameters.Add(New SqlParameter("@NombreCarpetaLote", EntidadUbicacionDocumentos1.NombreCarpetaLotes))
