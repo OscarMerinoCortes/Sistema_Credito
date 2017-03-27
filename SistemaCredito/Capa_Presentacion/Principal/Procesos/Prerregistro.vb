@@ -114,6 +114,8 @@ Public Class Prerregistro
         EntidadPreregistro.TablaSocios = TablaSocios
         '---------------------------------------------------------------------------------
         NegocioPreregistro.Guardar(EntidadPreregistro)
+
+
         TBIdCliente.Text = EntidadPreregistro.IdCliente
         CrearCarpetas()
         LlenarExcel()

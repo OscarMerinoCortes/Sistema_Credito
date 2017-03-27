@@ -17,6 +17,9 @@ AND   IdCliente = @IdCliente
 AND   a.IdTipoDocumento = b.IdTipoDocumento
 
 
+select*from [dbo].[Cre_Preregistro_Cliente_Detalle]
+
+
 
 
 
