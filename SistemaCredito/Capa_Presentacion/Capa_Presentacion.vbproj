@@ -234,6 +234,8 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="SOLICITUD DE  CREDITO.xlsx" />
+    <None Include="SOLICITUD DE  CREDITO.xlt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Datos\Capa_Datos.vbproj">

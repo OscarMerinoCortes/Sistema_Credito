@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports Microsoft.Office.Interop
 Public Class Prerregistro
     Public TipoPersona As String
     Public TablaDocumentosObtenidos As New DataTable()
@@ -8,6 +9,7 @@ Public Class Prerregistro
     '--------------------------------------------------------Persona Morales
     Public TablaSocios As New DataTable
     Public VPresidente, VSecretario, VRL, VTesorero As Integer
+    Dim tabla5 As New DataTable
 
     Private Sub Prerregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now
@@ -73,6 +75,9 @@ Public Class Prerregistro
         EntidadPreregistro.CURP = TBCURP.Text
         EntidadPreregistro.IdEstatus = CBIdEstatus.SelectedValue
         EntidadPreregistro.IdEstadoCivil = IIf(CBEstadoCivil.SelectedValue = Nothing, 0, CBEstadoCivil.SelectedValue)
+        EntidadPreregistro.EstadoCivil = CBEstadoCivil.Text
+        EntidadPreregistro.IdRegimen = CBRegimen.SelectedValue
+        EntidadPreregistro.Regimen = CBRegimen.Text
         EntidadPreregistro.ImporteSolicitado = IIf(TBImporte.Text = Nothing, 0, TBImporte.Text)
         EntidadPreregistro.ImporteLetra = TBImporteLetra.Text
         EntidadPreregistro.IdTipoCambio = CBTipoCambio.SelectedValue
@@ -81,34 +86,42 @@ Public Class Prerregistro
         EntidadPreregistro.Colonia = TBColonia.Text
         EntidadPreregistro.Numero = TBNumero.Text
         EntidadPreregistro.IdEstado = CBEstado.SelectedValue
+        EntidadPreregistro.Estado = CBEstado.Text
         EntidadPreregistro.IdMunicipio = CBMunicipio.SelectedValue
+        EntidadPreregistro.Municipio = CBMunicipio.Text
         EntidadPreregistro.Poblacion = TBPoblacion.Text
         EntidadPreregistro.CP = IIf(TBCP.Text = Nothing, 0, TBCP.Text)
         EntidadPreregistro.SegundoNombre = TBSegNombre.Text
         EntidadPreregistro.ApellidoPaterno = TBApePaterno.Text
         EntidadPreregistro.ApellidoMaterno = TBApeMaterno.Text
         EntidadPreregistro.IdSexo = CBSexo.SelectedValue
+        EntidadPreregistro.Sexo = CBSexo.Text
         EntidadPreregistro.Edad = TBEdad.Text
         EntidadPreregistro.IdNacionalidadNacimiento = CBNacionalidadNac.SelectedValue
+        EntidadPreregistro.Nacionalidad = CBNacionalidadNac.Text
         EntidadPreregistro.FechaNacimiento = DTPFechaNacimiento.Text
         EntidadPreregistro.IdEstadoNacimiento = CBEstadoNac.SelectedValue
+        EntidadPreregistro.EstadoNacimiento = CBEstadoNac.Text
         EntidadPreregistro.IdMunicipioNacimiento = CBMunicipioNac.SelectedValue
+        EntidadPreregistro.MunicipioNacimiento = CBMunicipioNac.Text
         EntidadPreregistro.CIdConyugue = CBConyugue.SelectedValue
         EntidadPreregistro.CFechaMatrimonio = DTPFechaMatrimonioCony.Text
         EntidadPreregistro.CIdEstadoMatrimonio = CBEstadoMatrimonioCony.SelectedValue
+        EntidadPreregistro.EstadoMatrimonio = CBEstadoMatrimonioCony.Text
         EntidadPreregistro.CIdMunicipioMatrimonio = CBMunicipioMatrimonioCony.SelectedValue
+        EntidadPreregistro.MunicipioMatrimonio = CBMunicipioMatrimonioCony.Text
         EntidadPreregistro.TablaDocumentosAgregados = TablaDocumentosObtenidos
         EntidadPreregistro.TablaSocios = TablaSocios
         '---------------------------------------------------------------------------------
         NegocioPreregistro.Guardar(EntidadPreregistro)
-        NegocioPreregistro.llenarExcel(EntidadPreregistro)
-        MsgBox("Registro guardado o editado con éxito")
         TBIdCliente.Text = EntidadPreregistro.IdCliente
         CrearCarpetas()
+        LlenarExcel()
         Limpiar()
         ActualizarPersonaFisica()
         ConsultarDocumentos()
-
+        CargaConyugue()
+        MsgBox("Registro guardado o editado con éxito")
     End Sub
 
     Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
@@ -340,12 +353,11 @@ Public Class Prerregistro
         CBTesorero.DisplayMember = "Nombre"
         CBTesorero.SelectedValue = 1
         PropiedadesDGSocios()
-
-        Dim tabla5 As New DataTable
+        '..Conyugue-------------------------------------        
         EntidadPreregistro.ConsultaDocumentos = 3
         NegocioPreregistro.Consultar(EntidadPreregistro)
         tabla5 = EntidadPreregistro.TablaDocumentosRegistrados
-        CBConyugue.DataSource = tabla4
+        CBConyugue.DataSource = tabla5
         CBConyugue.ValueMember = "IdPersona"
         CBConyugue.DisplayMember = "Nombre"
         CBConyugue.SelectedValue = -1
@@ -356,15 +368,27 @@ Public Class Prerregistro
         Dim dr2 As DataRow
         dr2 = dt2.NewRow()
         dr2("IdEstadoCivil") = 1
-        dr2("Descripcion") = "SOLTERO"
+        dr2("Descripcion") = "SOLTERO(A)"
         dt2.Rows.Add(dr2)
         dr2 = dt2.NewRow()
         dr2("IdEstadoCivil") = 2
-        dr2("Descripcion") = "SOCIEDAD CONYUGAL"
+        dr2("Descripcion") = "CASADO(A)"
         dt2.Rows.Add(dr2)
         dr2 = dt2.NewRow()
         dr2("IdEstadoCivil") = 3
-        dr2("Descripcion") = "BIENES SEPARADOS"
+        dr2("Descripcion") = "VIUDO(A)"
+        dt2.Rows.Add(dr2)
+        dr2 = dt2.NewRow()
+        dr2("IdEstadoCivil") = 4
+        dr2("Descripcion") = "DIVORCIADO(A)"
+        dt2.Rows.Add(dr2)
+        dr2 = dt2.NewRow()
+        dr2("IdEstadoCivil") = 5
+        dr2("Descripcion") = "UNION LIBRE"
+        dt2.Rows.Add(dr2)
+        dr2 = dt2.NewRow()
+        dr2("IdEstadoCivil") = 6
+        dr2("Descripcion") = "NO APLICA"
         dt2.Rows.Add(dr2)
         CBEstadoCivil.DataSource = dt2
         CBEstadoCivil.ValueMember = "IdEstadoCivil"
@@ -387,6 +411,27 @@ Public Class Prerregistro
         CBTipoPersona.ValueMember = "IdTipoPersona"
         CBTipoPersona.DisplayMember = "Descripcion"
         CBTipoPersona.SelectedValue = 1
+        '---------------------------------------Regimen
+        Dim dt4 As DataTable = New DataTable("Tabla")
+        dt4.Columns.Add("IdRegimen")
+        dt4.Columns.Add("Descripcion")
+        Dim dr4 As DataRow
+        dr4 = dt4.NewRow()
+        dr4("IdRegimen") = 1
+        dr4("Descripcion") = "SOCIEDAD CONYUGAL"
+        dt4.Rows.Add(dr4)
+        dr4 = dt4.NewRow()
+        dr4("IdRegimen") = 2
+        dr4("Descripcion") = "SEPARACION DE BIENES"
+        dt4.Rows.Add(dr4)
+        dr4 = dt4.NewRow()
+        dr4("IdRegimen") = 3
+        dr4("Descripcion") = "NO APLICA"
+        dt4.Rows.Add(dr4)
+        CBRegimen.DataSource = dt4
+        CBRegimen.ValueMember = "IdRegimen"
+        CBRegimen.DisplayMember = "Descripcion"
+        CBRegimen.SelectedValue = -1
         '---------------------------------------Estados
         Dim TablaEstados As New DataTable
         Dim EntidadLocalizacion As New Capa_Entidad.Localizacion
@@ -568,10 +613,12 @@ Public Class Prerregistro
     End Sub
 
     Private Sub CBEstadoCivil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBEstadoCivil.SelectedIndexChanged
-        If CBEstadoCivil.Text = "SOCIEDAD CONYUGAL" Or CBEstadoCivil.Text = "BIENES SEPARADOS" Then
-            'GBDatosConyugue.Visible = True
+        If CBEstadoCivil.Text = "CASADO(A)" Then
+            LbRegimen.Visible = True
+            CBRegimen.Visible = True
         Else
-            'GBDatosConyugue.Visible = False
+            LbRegimen.Visible = False
+            CBRegimen.Visible = False
         End If
     End Sub
     Private Sub ActualizarPersonaFisica()
@@ -742,7 +789,7 @@ Public Class Prerregistro
         Dim NegocioUbicacion As New Capa_Negocio.UbicacionDocumentos
         Dim tabla As New DataTable
         Dim NombreCarpeta As String
-        NombreCarpeta = TBIdCliente.Text + " " + TBNombre.Text
+        NombreCarpeta = TBIdCliente.Text + " " + TBNombre.Text + " " + TBSegNombre.Text + " " + TBApePaterno.Text + " " + TBApeMaterno.Text
         EntidadUbicacion.ConsultaUbicacion = 2
         NegocioUbicacion.Consultar(EntidadUbicacion)
         tabla = EntidadUbicacion.TablaUbicacionRegistrada
@@ -790,5 +837,125 @@ Public Class Prerregistro
         CBMunicipioMatrimonioCony.ValueMember = "IdMunicipio"
         CBMunicipioMatrimonioCony.DisplayMember = "Municipio"
         CBMunicipioMatrimonioCony.SelectedValue = 1
+    End Sub
+    Private Sub LlenarExcel()
+        Dim NombreCompleto As String
+        Dim xlsApp As Excel.Application
+        Dim xlsLibro As Excel.Workbook
+        Dim xlsHoja As Excel.Worksheet
+        NombreCompleto = TBIdCliente.Text + " " + TBNombre.Text + " " + TBSegNombre.Text + " " + TBApePaterno.Text + " " + TBApeMaterno.Text
+        Dim Ruta As String = Replace(My.Computer.FileSystem.CurrentDirectory, "bin\Debug", "")
+        Dim Archivo1 As String = Ruta + "SOLICITUD DE  CREDITO.xlsx"
+        Dim RutaGuardado As String = "\\192.168.10.29\Scanner\CREDITO SOFOM 2017" + "\" + NombreCompleto + "\" + "SOLICITUD DE  CREDITO.xlsx"
+        xlsApp = New Excel.Application()
+        xlsLibro = xlsApp.Workbooks.Open(Archivo1, True, True, , "")
+        xlsHoja = xlsApp.Worksheets("Cuestionario")
+        xlsHoja.Range("E4").Value = Now.Date.Day
+        xlsHoja.Range("G4").Value = MesEnLetra(Now.ToString("MM"))
+        xlsHoja.Range("J4").Value = Now.Date.Year
+        xlsHoja.Range("J2").Value = TBIdCliente.Text
+        xlsHoja.Range("C6").Value = TBNombre.Text
+        xlsHoja.Range("D6").Value = TBSegNombre.Text
+        xlsHoja.Range("G6").Value = TBApePaterno.Text
+        xlsHoja.Range("H6").Value = TBApeMaterno.Text
+        xlsHoja.Range("C8").Value = CBSexo.Text
+        xlsHoja.Range("E8").Value = TBEdad.Text
+        xlsHoja.Range("H8").Value = CBNacionalidadNac.Text
+        xlsHoja.Range("C10").Value = TBRFC.Text
+        xlsHoja.Range("G10").Value = TBCURP.Text
+        xlsHoja.Range("E12").Value = Format(DTPFechaNacimiento.Value.Day)
+        xlsHoja.Range("G12").Value = MesEnLetra(Format(DTPFechaNacimiento.Value.Month))
+        xlsHoja.Range("J12").Value = Format(DTPFechaNacimiento.Value.Year)
+        xlsHoja.Range("F22").Value = TBTelefono.Text
+        xlsHoja.Range("G24").Value = TBImporte.Text + " " + CBTipoCambio.Text
+        xlsHoja.Range("B25").Value = TBImporteLetra.Text + " " + CBTipoCambio.Text
+        xlsHoja.Range("F27").Value = TBActividad.Text
+        xlsHoja.Range("C18").Value = TBCalle.Text
+        xlsHoja.Range("G18").Value = TBColonia.Text
+        xlsHoja.Range("J18").Value = TBNumero.Text
+        xlsHoja.Range("B20").Value = TBPoblacion.Text
+        xlsHoja.Range("D20").Value = CBMunicipio.Text
+        xlsHoja.Range("G20").Value = CBEstado.Text
+        xlsHoja.Range("E14").Value = UCase(CBMunicipioNac.Text + ", " + CBEstadoNac.Text)
+        xlsHoja.Range("J20").Value = TBCP.Text
+        xlsHoja.Range("C16").Value = CBEstadoCivil.Text
+        xlsHoja.Range("G16").Value = CBRegimen.Text
+        xlsHoja.Range("B91").Value = TBNombre.Text + " " + TBSegNombre.Text + " " + TBApePaterno.Text + " " + TBApeMaterno.Text
+        'Datos del Conyugue------------------------------------------------------------------
+        Dim index As Integer
+        index = CBConyugue.SelectedIndex
+        If CBConyugue.SelectedIndex <> -1 Then
+            xlsHoja.Range("C29").Value = tabla5.Rows(index).Item("PrimerNombre")
+            xlsHoja.Range("D29").Value = tabla5.Rows(index).Item("SegundoNombre")
+            xlsHoja.Range("G29").Value = tabla5.Rows(index).Item("ApellidoPaterno")
+            xlsHoja.Range("H29").Value = tabla5.Rows(index).Item("ApellidoMaterno")
+            xlsHoja.Range("C31").Value = tabla5.Rows(index).Item("RFC")
+            xlsHoja.Range("G31").Value = tabla5.Rows(index).Item("CURP")
+            xlsHoja.Range("E33").Value = tabla5.Rows(index).Item("Dia")
+            xlsHoja.Range("G33").Value = MesEnLetra(Format(tabla5.Rows(index).Item("Mes")))
+            xlsHoja.Range("J33").Value = tabla5.Rows(index).Item("Anio")
+            xlsHoja.Range("C35").Value = tabla5.Rows(index).Item("EstadoNacimiento") + " " + tabla5.Rows(index).Item("MunicipioNacimiento")
+            xlsHoja.Range("H35").Value = tabla5.Rows(index).Item("Nacionalidad")
+            xlsHoja.Range("E37").Value = tabla5.Rows(index).Item("DiaMatrimonio")
+            xlsHoja.Range("G37").Value = tabla5.Rows(index).Item("MesMatrimonio")
+            xlsHoja.Range("J37").Value = tabla5.Rows(index).Item("AnioMatrimonio")
+            xlsHoja.Range("C39").Value = tabla5.Rows(index).Item("MunicipioMatrimonio") + " " + tabla5.Rows(index).Item("EstadoMatrimonio")
+        End If
+        'La siguiente instruccion indica donde guardaremos la informacion y con true confirmamos que queremos guardar
+        xlsLibro.Close(SaveChanges:=True, Filename:=RutaGuardado)
+        xlsApp.Quit()
+        xlsHoja = Nothing
+        xlsLibro = Nothing
+        xlsApp = Nothing
+    End Sub
+    Public Function MesEnLetra(ByVal Mes As Integer) As String
+        Dim MesLetra As String = ""
+        If Mes = 1 Then
+            MesLetra = "ENERO"
+        End If
+        If Mes = 2 Then
+            MesLetra = "FEBRERO"
+        End If
+        If Mes = 3 Then
+            MesLetra = "MARZO"
+        End If
+        If Mes = 4 Then
+            MesLetra = "ABRIL"
+        End If
+        If Mes = 5 Then
+            MesLetra = "MAYO"
+        End If
+        If Mes = 6 Then
+            MesLetra = "JUNIO"
+        End If
+        If Mes = 7 Then
+            MesLetra = "JULIO"
+        End If
+        If Mes = 8 Then
+            MesLetra = "AGOSTO"
+        End If
+        If Mes = 9 Then
+            MesLetra = "SEPTIEMBRE"
+        End If
+        If Mes = 10 Then
+            MesLetra = "OCTUBRE"
+        End If
+        If Mes = 11 Then
+            MesLetra = "NOVIEMBRE"
+        End If
+        If Mes = 12 Then
+            MesLetra = "DICIEMBRE"
+        End If
+        Return MesLetra
+    End Function
+    Private Sub CargaConyugue()
+        '..Conyugue-------------------------------------        
+        EntidadPreregistro.ConsultaDocumentos = 3
+        NegocioPreregistro.Consultar(EntidadPreregistro)
+        tabla5 = EntidadPreregistro.TablaDocumentosRegistrados
+        CBConyugue.DataSource = tabla5
+        CBConyugue.ValueMember = "IdPersona"
+        CBConyugue.DisplayMember = "Nombre"
+        CBConyugue.SelectedValue = -1
     End Sub
 End Class

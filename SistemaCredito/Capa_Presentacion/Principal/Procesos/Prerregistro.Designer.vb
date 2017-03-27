@@ -23,9 +23,9 @@ Partial Class Prerregistro
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Prerregistro))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbTitle = New System.Windows.Forms.Label()
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.LbRFC = New System.Windows.Forms.Label()
@@ -58,6 +58,15 @@ Partial Class Prerregistro
         Me.TPDatosRegistroPersonas = New System.Windows.Forms.TabPage()
         Me.LbTipoCambio = New System.Windows.Forms.Label()
         Me.CBTipoCambio = New System.Windows.Forms.ComboBox()
+        Me.GBFecMatConyugue = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CBConyugue = New System.Windows.Forms.ComboBox()
+        Me.CBMunicipioMatrimonioCony = New System.Windows.Forms.ComboBox()
+        Me.CBEstadoMatrimonioCony = New System.Windows.Forms.ComboBox()
+        Me.LbMunicipioMatrimonioCony = New System.Windows.Forms.Label()
+        Me.LbEstadoMatrimonioCony = New System.Windows.Forms.Label()
+        Me.DTPFechaMatrimonioCony = New System.Windows.Forms.DateTimePicker()
+        Me.LbFechaMatrimonioCony = New System.Windows.Forms.Label()
         Me.LbActividad = New System.Windows.Forms.Label()
         Me.TBActividad = New System.Windows.Forms.TextBox()
         Me.TBImporteLetra = New System.Windows.Forms.TextBox()
@@ -65,9 +74,7 @@ Partial Class Prerregistro
         Me.TBImporte = New System.Windows.Forms.TextBox()
         Me.LbImporte = New System.Windows.Forms.Label()
         Me.GBFechaNacimiento = New System.Windows.Forms.GroupBox()
-        Me.CBNacionalidadNac = New System.Windows.Forms.ComboBox()
         Me.CBMunicipioNac = New System.Windows.Forms.ComboBox()
-        Me.LbNacionalidad = New System.Windows.Forms.Label()
         Me.CBEstadoNac = New System.Windows.Forms.ComboBox()
         Me.LbMunicipioNac = New System.Windows.Forms.Label()
         Me.LbEstadoNac = New System.Windows.Forms.Label()
@@ -88,6 +95,8 @@ Partial Class Prerregistro
         Me.LbColonia = New System.Windows.Forms.Label()
         Me.LbCalle = New System.Windows.Forms.Label()
         Me.GBDatosGenerales = New System.Windows.Forms.GroupBox()
+        Me.CBNacionalidadNac = New System.Windows.Forms.ComboBox()
+        Me.LbNacionalidad = New System.Windows.Forms.Label()
         Me.LbEdad = New System.Windows.Forms.Label()
         Me.CBSexo = New System.Windows.Forms.ComboBox()
         Me.TBEdad = New System.Windows.Forms.TextBox()
@@ -100,13 +109,6 @@ Partial Class Prerregistro
         Me.TBApeMaterno = New System.Windows.Forms.TextBox()
         Me.LbEstadoCivil = New System.Windows.Forms.Label()
         Me.CBEstadoCivil = New System.Windows.Forms.ComboBox()
-        Me.GBFecMatConyugue = New System.Windows.Forms.GroupBox()
-        Me.CBMunicipioMatrimonioCony = New System.Windows.Forms.ComboBox()
-        Me.CBEstadoMatrimonioCony = New System.Windows.Forms.ComboBox()
-        Me.LbMunicipioMatrimonioCony = New System.Windows.Forms.Label()
-        Me.LbEstadoMatrimonioCony = New System.Windows.Forms.Label()
-        Me.DTPFechaMatrimonioCony = New System.Windows.Forms.DateTimePicker()
-        Me.LbFechaMatrimonioCony = New System.Windows.Forms.Label()
         Me.TPDatos = New System.Windows.Forms.TabPage()
         Me.GBSocios = New System.Windows.Forms.GroupBox()
         Me.DGAgregados = New System.Windows.Forms.DataGridView()
@@ -121,17 +123,17 @@ Partial Class Prerregistro
         Me.CBSecretario = New System.Windows.Forms.ComboBox()
         Me.CBPresidente = New System.Windows.Forms.ComboBox()
         Me.BtnCarpetas = New System.Windows.Forms.Button()
-        Me.CBConyugue = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LbRegimen = New System.Windows.Forms.Label()
+        Me.CBRegimen = New System.Windows.Forms.ComboBox()
         Me.MSPreregistro.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TCRegistro.SuspendLayout()
         Me.TPDatosRegistroPersonas.SuspendLayout()
+        Me.GBFecMatConyugue.SuspendLayout()
         Me.GBFechaNacimiento.SuspendLayout()
         Me.GBDomicilio.SuspendLayout()
         Me.GBDatosGenerales.SuspendLayout()
-        Me.GBFecMatConyugue.SuspendLayout()
         Me.TPDatos.SuspendLayout()
         Me.GBSocios.SuspendLayout()
         CType(Me.DGAgregados, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -260,28 +262,28 @@ Partial Class Prerregistro
         Me.DGDocumentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DGDocumentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DGDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         resources.ApplyResources(Me.DGDocumentos, "DGDocumentos")
         Me.DGDocumentos.Name = "DGDocumentos"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DGDocumentos.RowHeadersVisible = False
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DGDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
         'LbIdEstado
@@ -323,6 +325,8 @@ Partial Class Prerregistro
         '
         'TPDatosRegistroPersonas
         '
+        Me.TPDatosRegistroPersonas.Controls.Add(Me.CBRegimen)
+        Me.TPDatosRegistroPersonas.Controls.Add(Me.LbRegimen)
         Me.TPDatosRegistroPersonas.Controls.Add(Me.LbTipoCambio)
         Me.TPDatosRegistroPersonas.Controls.Add(Me.CBTipoCambio)
         Me.TPDatosRegistroPersonas.Controls.Add(Me.GBFecMatConyugue)
@@ -369,6 +373,63 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.CBTipoCambio, "CBTipoCambio")
         Me.CBTipoCambio.Name = "CBTipoCambio"
         '
+        'GBFecMatConyugue
+        '
+        Me.GBFecMatConyugue.Controls.Add(Me.Label1)
+        Me.GBFecMatConyugue.Controls.Add(Me.CBConyugue)
+        Me.GBFecMatConyugue.Controls.Add(Me.CBMunicipioMatrimonioCony)
+        Me.GBFecMatConyugue.Controls.Add(Me.CBEstadoMatrimonioCony)
+        Me.GBFecMatConyugue.Controls.Add(Me.LbMunicipioMatrimonioCony)
+        Me.GBFecMatConyugue.Controls.Add(Me.LbEstadoMatrimonioCony)
+        Me.GBFecMatConyugue.Controls.Add(Me.DTPFechaMatrimonioCony)
+        Me.GBFecMatConyugue.Controls.Add(Me.LbFechaMatrimonioCony)
+        resources.ApplyResources(Me.GBFecMatConyugue, "GBFecMatConyugue")
+        Me.GBFecMatConyugue.Name = "GBFecMatConyugue"
+        Me.GBFecMatConyugue.TabStop = False
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
+        '
+        'CBConyugue
+        '
+        Me.CBConyugue.FormattingEnabled = True
+        resources.ApplyResources(Me.CBConyugue, "CBConyugue")
+        Me.CBConyugue.Name = "CBConyugue"
+        '
+        'CBMunicipioMatrimonioCony
+        '
+        Me.CBMunicipioMatrimonioCony.FormattingEnabled = True
+        resources.ApplyResources(Me.CBMunicipioMatrimonioCony, "CBMunicipioMatrimonioCony")
+        Me.CBMunicipioMatrimonioCony.Name = "CBMunicipioMatrimonioCony"
+        '
+        'CBEstadoMatrimonioCony
+        '
+        Me.CBEstadoMatrimonioCony.FormattingEnabled = True
+        resources.ApplyResources(Me.CBEstadoMatrimonioCony, "CBEstadoMatrimonioCony")
+        Me.CBEstadoMatrimonioCony.Name = "CBEstadoMatrimonioCony"
+        '
+        'LbMunicipioMatrimonioCony
+        '
+        resources.ApplyResources(Me.LbMunicipioMatrimonioCony, "LbMunicipioMatrimonioCony")
+        Me.LbMunicipioMatrimonioCony.Name = "LbMunicipioMatrimonioCony"
+        '
+        'LbEstadoMatrimonioCony
+        '
+        resources.ApplyResources(Me.LbEstadoMatrimonioCony, "LbEstadoMatrimonioCony")
+        Me.LbEstadoMatrimonioCony.Name = "LbEstadoMatrimonioCony"
+        '
+        'DTPFechaMatrimonioCony
+        '
+        resources.ApplyResources(Me.DTPFechaMatrimonioCony, "DTPFechaMatrimonioCony")
+        Me.DTPFechaMatrimonioCony.Name = "DTPFechaMatrimonioCony"
+        '
+        'LbFechaMatrimonioCony
+        '
+        resources.ApplyResources(Me.LbFechaMatrimonioCony, "LbFechaMatrimonioCony")
+        Me.LbFechaMatrimonioCony.Name = "LbFechaMatrimonioCony"
+        '
         'LbActividad
         '
         resources.ApplyResources(Me.LbActividad, "LbActividad")
@@ -411,22 +472,11 @@ Partial Class Prerregistro
         Me.GBFechaNacimiento.Name = "GBFechaNacimiento"
         Me.GBFechaNacimiento.TabStop = False
         '
-        'CBNacionalidadNac
-        '
-        Me.CBNacionalidadNac.FormattingEnabled = True
-        resources.ApplyResources(Me.CBNacionalidadNac, "CBNacionalidadNac")
-        Me.CBNacionalidadNac.Name = "CBNacionalidadNac"
-        '
         'CBMunicipioNac
         '
         Me.CBMunicipioNac.FormattingEnabled = True
         resources.ApplyResources(Me.CBMunicipioNac, "CBMunicipioNac")
         Me.CBMunicipioNac.Name = "CBMunicipioNac"
-        '
-        'LbNacionalidad
-        '
-        resources.ApplyResources(Me.LbNacionalidad, "LbNacionalidad")
-        Me.LbNacionalidad.Name = "LbNacionalidad"
         '
         'CBEstadoNac
         '
@@ -563,6 +613,17 @@ Partial Class Prerregistro
         Me.GBDatosGenerales.Name = "GBDatosGenerales"
         Me.GBDatosGenerales.TabStop = False
         '
+        'CBNacionalidadNac
+        '
+        Me.CBNacionalidadNac.FormattingEnabled = True
+        resources.ApplyResources(Me.CBNacionalidadNac, "CBNacionalidadNac")
+        Me.CBNacionalidadNac.Name = "CBNacionalidadNac"
+        '
+        'LbNacionalidad
+        '
+        resources.ApplyResources(Me.LbNacionalidad, "LbNacionalidad")
+        Me.LbNacionalidad.Name = "LbNacionalidad"
+        '
         'LbEdad
         '
         resources.ApplyResources(Me.LbEdad, "LbEdad")
@@ -596,6 +657,7 @@ Partial Class Prerregistro
         '
         'TBSegNombre
         '
+        Me.TBSegNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         resources.ApplyResources(Me.TBSegNombre, "TBSegNombre")
         Me.TBSegNombre.Name = "TBSegNombre"
         '
@@ -606,11 +668,13 @@ Partial Class Prerregistro
         '
         'TBApePaterno
         '
+        Me.TBApePaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         resources.ApplyResources(Me.TBApePaterno, "TBApePaterno")
         Me.TBApePaterno.Name = "TBApePaterno"
         '
         'TBApeMaterno
         '
+        Me.TBApeMaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         resources.ApplyResources(Me.TBApeMaterno, "TBApeMaterno")
         Me.TBApeMaterno.Name = "TBApeMaterno"
         '
@@ -624,52 +688,6 @@ Partial Class Prerregistro
         Me.CBEstadoCivil.FormattingEnabled = True
         resources.ApplyResources(Me.CBEstadoCivil, "CBEstadoCivil")
         Me.CBEstadoCivil.Name = "CBEstadoCivil"
-        '
-        'GBFecMatConyugue
-        '
-        Me.GBFecMatConyugue.Controls.Add(Me.Label1)
-        Me.GBFecMatConyugue.Controls.Add(Me.CBConyugue)
-        Me.GBFecMatConyugue.Controls.Add(Me.CBMunicipioMatrimonioCony)
-        Me.GBFecMatConyugue.Controls.Add(Me.CBEstadoMatrimonioCony)
-        Me.GBFecMatConyugue.Controls.Add(Me.LbMunicipioMatrimonioCony)
-        Me.GBFecMatConyugue.Controls.Add(Me.LbEstadoMatrimonioCony)
-        Me.GBFecMatConyugue.Controls.Add(Me.DTPFechaMatrimonioCony)
-        Me.GBFecMatConyugue.Controls.Add(Me.LbFechaMatrimonioCony)
-        resources.ApplyResources(Me.GBFecMatConyugue, "GBFecMatConyugue")
-        Me.GBFecMatConyugue.Name = "GBFecMatConyugue"
-        Me.GBFecMatConyugue.TabStop = False
-        '
-        'CBMunicipioMatrimonioCony
-        '
-        Me.CBMunicipioMatrimonioCony.FormattingEnabled = True
-        resources.ApplyResources(Me.CBMunicipioMatrimonioCony, "CBMunicipioMatrimonioCony")
-        Me.CBMunicipioMatrimonioCony.Name = "CBMunicipioMatrimonioCony"
-        '
-        'CBEstadoMatrimonioCony
-        '
-        Me.CBEstadoMatrimonioCony.FormattingEnabled = True
-        resources.ApplyResources(Me.CBEstadoMatrimonioCony, "CBEstadoMatrimonioCony")
-        Me.CBEstadoMatrimonioCony.Name = "CBEstadoMatrimonioCony"
-        '
-        'LbMunicipioMatrimonioCony
-        '
-        resources.ApplyResources(Me.LbMunicipioMatrimonioCony, "LbMunicipioMatrimonioCony")
-        Me.LbMunicipioMatrimonioCony.Name = "LbMunicipioMatrimonioCony"
-        '
-        'LbEstadoMatrimonioCony
-        '
-        resources.ApplyResources(Me.LbEstadoMatrimonioCony, "LbEstadoMatrimonioCony")
-        Me.LbEstadoMatrimonioCony.Name = "LbEstadoMatrimonioCony"
-        '
-        'DTPFechaMatrimonioCony
-        '
-        resources.ApplyResources(Me.DTPFechaMatrimonioCony, "DTPFechaMatrimonioCony")
-        Me.DTPFechaMatrimonioCony.Name = "DTPFechaMatrimonioCony"
-        '
-        'LbFechaMatrimonioCony
-        '
-        resources.ApplyResources(Me.LbFechaMatrimonioCony, "LbFechaMatrimonioCony")
-        Me.LbFechaMatrimonioCony.Name = "LbFechaMatrimonioCony"
         '
         'TPDatos
         '
@@ -765,16 +783,16 @@ Partial Class Prerregistro
         Me.BtnCarpetas.Name = "BtnCarpetas"
         Me.BtnCarpetas.UseVisualStyleBackColor = True
         '
-        'CBConyugue
+        'LbRegimen
         '
-        Me.CBConyugue.FormattingEnabled = True
-        resources.ApplyResources(Me.CBConyugue, "CBConyugue")
-        Me.CBConyugue.Name = "CBConyugue"
+        resources.ApplyResources(Me.LbRegimen, "LbRegimen")
+        Me.LbRegimen.Name = "LbRegimen"
         '
-        'Label1
+        'CBRegimen
         '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
+        Me.CBRegimen.FormattingEnabled = True
+        resources.ApplyResources(Me.CBRegimen, "CBRegimen")
+        Me.CBRegimen.Name = "CBRegimen"
         '
         'Prerregistro
         '
@@ -797,14 +815,14 @@ Partial Class Prerregistro
         Me.TCRegistro.ResumeLayout(False)
         Me.TPDatosRegistroPersonas.ResumeLayout(False)
         Me.TPDatosRegistroPersonas.PerformLayout()
+        Me.GBFecMatConyugue.ResumeLayout(False)
+        Me.GBFecMatConyugue.PerformLayout()
         Me.GBFechaNacimiento.ResumeLayout(False)
         Me.GBFechaNacimiento.PerformLayout()
         Me.GBDomicilio.ResumeLayout(False)
         Me.GBDomicilio.PerformLayout()
         Me.GBDatosGenerales.ResumeLayout(False)
         Me.GBDatosGenerales.PerformLayout()
-        Me.GBFecMatConyugue.ResumeLayout(False)
-        Me.GBFecMatConyugue.PerformLayout()
         Me.TPDatos.ResumeLayout(False)
         Me.TPDatos.PerformLayout()
         Me.GBSocios.ResumeLayout(False)
@@ -912,4 +930,6 @@ Partial Class Prerregistro
     Friend WithEvents CBTipoCambio As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents CBConyugue As ComboBox
+    Friend WithEvents CBRegimen As ComboBox
+    Friend WithEvents LbRegimen As Label
 End Class
