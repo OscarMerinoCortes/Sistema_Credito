@@ -56,6 +56,8 @@ Partial Class Prerregistro
         Me.TBCalle = New System.Windows.Forms.TextBox()
         Me.TCRegistro = New System.Windows.Forms.TabControl()
         Me.TPDatosRegistroPersonas = New System.Windows.Forms.TabPage()
+        Me.CBRegimen = New System.Windows.Forms.ComboBox()
+        Me.LbRegimen = New System.Windows.Forms.Label()
         Me.LbTipoCambio = New System.Windows.Forms.Label()
         Me.CBTipoCambio = New System.Windows.Forms.ComboBox()
         Me.GBFecMatConyugue = New System.Windows.Forms.GroupBox()
@@ -123,8 +125,6 @@ Partial Class Prerregistro
         Me.CBSecretario = New System.Windows.Forms.ComboBox()
         Me.CBPresidente = New System.Windows.Forms.ComboBox()
         Me.BtnCarpetas = New System.Windows.Forms.Button()
-        Me.LbRegimen = New System.Windows.Forms.Label()
-        Me.CBRegimen = New System.Windows.Forms.ComboBox()
         Me.MSPreregistro.SuspendLayout()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DGDocumentos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -361,6 +361,17 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.TPDatosRegistroPersonas, "TPDatosRegistroPersonas")
         Me.TPDatosRegistroPersonas.Name = "TPDatosRegistroPersonas"
         Me.TPDatosRegistroPersonas.UseVisualStyleBackColor = True
+        '
+        'CBRegimen
+        '
+        Me.CBRegimen.FormattingEnabled = True
+        resources.ApplyResources(Me.CBRegimen, "CBRegimen")
+        Me.CBRegimen.Name = "CBRegimen"
+        '
+        'LbRegimen
+        '
+        resources.ApplyResources(Me.LbRegimen, "LbRegimen")
+        Me.LbRegimen.Name = "LbRegimen"
         '
         'LbTipoCambio
         '
@@ -782,17 +793,6 @@ Partial Class Prerregistro
         resources.ApplyResources(Me.BtnCarpetas, "BtnCarpetas")
         Me.BtnCarpetas.Name = "BtnCarpetas"
         Me.BtnCarpetas.UseVisualStyleBackColor = True
-        '
-        'LbRegimen
-        '
-        resources.ApplyResources(Me.LbRegimen, "LbRegimen")
-        Me.LbRegimen.Name = "LbRegimen"
-        '
-        'CBRegimen
-        '
-        Me.CBRegimen.FormattingEnabled = True
-        resources.ApplyResources(Me.CBRegimen, "CBRegimen")
-        Me.CBRegimen.Name = "CBRegimen"
         '
         'Prerregistro
         '

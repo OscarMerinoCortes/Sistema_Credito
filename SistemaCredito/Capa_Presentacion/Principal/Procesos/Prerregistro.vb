@@ -10,6 +10,8 @@ Public Class Prerregistro
     Public TablaSocios As New DataTable
     Public VPresidente, VSecretario, VRL, VTesorero As Integer
     Dim tabla5 As New DataTable
+    Dim EntidadUbicacion As New Capa_Entidad.UbicacionDocumentos
+    Dim NegocioUbicacion As New Capa_Negocio.UbicacionDocumentos
 
     Private Sub Prerregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now
@@ -787,8 +789,6 @@ Public Class Prerregistro
         DGAgregados.Columns.Insert(4, checkBoxColumn)
     End Sub
     Private Sub CrearCarpetas()
-        Dim EntidadUbicacion As New Capa_Entidad.UbicacionDocumentos
-        Dim NegocioUbicacion As New Capa_Negocio.UbicacionDocumentos
         Dim tabla As New DataTable
         Dim NombreCarpeta As String
         NombreCarpeta = TBIdCliente.Text + " " + TBNombre.Text + " " + TBSegNombre.Text + " " + TBApePaterno.Text + " " + TBApeMaterno.Text
@@ -841,16 +841,20 @@ Public Class Prerregistro
         CBMunicipioMatrimonioCony.SelectedValue = 1
     End Sub
     Private Sub LlenarExcel()
+        Dim tabla As New DataTable
+        EntidadUbicacion.ConsultaUbicacion = 2
+        NegocioUbicacion.Consultar(EntidadUbicacion)
+        tabla = EntidadUbicacion.TablaUbicacionRegistrada
         Dim NombreCompleto As String
         Dim xlsApp As Excel.Application
         Dim xlsLibro As Excel.Workbook
         Dim xlsHoja As Excel.Worksheet
         NombreCompleto = TBIdCliente.Text + " " + TBNombre.Text + " " + TBSegNombre.Text + " " + TBApePaterno.Text + " " + TBApeMaterno.Text
-        Dim Ruta As String = Replace(My.Computer.FileSystem.CurrentDirectory, "bin\Debug", "")
-        Dim Archivo1 As String = Ruta + "SOLICITUD DE  CREDITO.xlsx"
-        Dim RutaGuardado As String = "\\192.168.10.29\Scanner\CREDITO SOFOM 2017" + "\" + NombreCompleto + "\" + "SOLICITUD DE  CREDITO.xlsx"
+        Dim Ruta As String = Replace(My.Computer.FileSystem.CurrentDirectory, tabla.Rows(0).Item("RutaSolicitudCredito"), "")
+        'Dim Archivo1 As String = Ruta + "SOLICITUD DE  CREDITO.xlsx"
+        Dim RutaGuardado As String = tabla.Rows(0).Item("Ruta") + tabla.Rows(0).Item("NombreCarpetaRaiz") + "\" + NombreCompleto + "\" + "SOLICITUD DE  CREDITO.xlsx"
         xlsApp = New Excel.Application()
-        xlsLibro = xlsApp.Workbooks.Open(Archivo1, True, True, , "")
+        xlsLibro = xlsApp.Workbooks.Open(Ruta, True, True, , "")
         xlsHoja = xlsApp.Worksheets("Cuestionario")
         xlsHoja.Range("E4").Value = Now.Date.Day
         xlsHoja.Range("G4").Value = MesEnLetra(Now.ToString("MM"))
