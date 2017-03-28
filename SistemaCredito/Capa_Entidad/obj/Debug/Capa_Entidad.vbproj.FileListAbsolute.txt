@@ -7,15 +7,6 @@ C:\Users\Oscar Merino\Desktop\Sistema_Algodon\Algodon_ANH\Capa_Entidad\obj\Debug
 C:\Users\Oscar Merino\Desktop\Sistema_Algodon\Algodon_ANH\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\Oscar Merino\Desktop\Sistema_Algodon\Algodon_ANH\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 C:\Users\Oscar Merino\Desktop\Sistema_Algodon\Algodon_ANH\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.dll
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.xml
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.vbprojResolveAssemblyReference.cache
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.dll
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.xml
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
 C:\Users\Oscar Merino\Desktop\Sistema Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.xml
@@ -34,3 +25,12 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Cap
 C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.vbprojResolveAssemblyReference.cache
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Entidad\obj\Debug\Capa_Entidad.pdb

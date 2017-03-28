@@ -875,12 +875,12 @@ Public Class Prerregistro
         xlsHoja.Range("F22").Value = TBTelefono.Text
         xlsHoja.Range("G24").Value = TBImporte.Text + " " + CBTipoCambio.Text
         xlsHoja.Range("B25").Value = TBImporteLetra.Text + " " + CBTipoCambio.Text
-        xlsHoja.Range("F27").Value = TBActividad.Text
+        xlsHoja.Range("F27").Value = UCase(TBActividad.Text)
         xlsHoja.Range("C18").Value = TBCalle.Text
         xlsHoja.Range("G18").Value = TBColonia.Text
         xlsHoja.Range("J18").Value = TBNumero.Text
-        xlsHoja.Range("B20").Value = TBPoblacion.Text
-        xlsHoja.Range("D20").Value = CBMunicipio.Text
+        xlsHoja.Range("B20").Value = UCase(TBPoblacion.Text)
+        xlsHoja.Range("D20").Value = UCase(CBMunicipio.Text)
         xlsHoja.Range("G20").Value = CBEstado.Text
         xlsHoja.Range("E14").Value = UCase(CBMunicipioNac.Text + ", " + CBEstadoNac.Text)
         xlsHoja.Range("J20").Value = TBCP.Text
