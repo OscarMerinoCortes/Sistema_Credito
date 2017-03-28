@@ -46,3 +46,4 @@ C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Cap
 C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.dll
 C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.xml
 C:\Users\Oscar Merino\Desktop\Sistema Credito\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Datos\obj\Debug\Capa_Datos.vbproj.ResolveComReference.cache

@@ -6,6 +6,14 @@ CREDITO
 </name>
 </assembly>
 <members>
+<member name="M:CREDITO.ConsultaLotesParaAsignacion.DataGridViewToDataTable(System.Windows.Forms.DataGridView)">
+ <summary>
+ Devuelve un objeto DataTable con la estructura de columnas
+ existentes en el control DataGridView especificado.
+ </summary>
+ <param name="dgv">Referencia a un control DataGridView válido.</param>
+ 
+</member>
 <member name="T:CREDITO.My.Resources.Resources">
 <summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
