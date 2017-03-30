@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Catalogos\Documentos.vb" />
     <Compile Include="Catalogos\Localizacion.vb" />
+    <Compile Include="Catalogos\TipoUsuario.vb" />
+    <Compile Include="Catalogos\Usuario.vb" />
     <Compile Include="Procesos\AsignacionLotes.vb" />
     <Compile Include="Procesos\PreregistroLotes.vb" />
     <Compile Include="Procesos\Preregistro.vb" />

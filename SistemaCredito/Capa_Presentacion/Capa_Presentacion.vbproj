@@ -116,6 +116,18 @@
     <Compile Include="Principal\Catalogos\Imagen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Principal\Catalogos\TipoUsuario.Designer.vb">
+      <DependentUpon>TipoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Catalogos\TipoUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\Catalogos\Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Catalogos\Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\Consultas\ConsultaClientesAsignarLotes.Designer.vb">
       <DependentUpon>ConsultaClientesAsignarLotes.vb</DependentUpon>
     </Compile>
@@ -172,10 +184,10 @@
     <Compile Include="Principal\Procesos\Prerregistro.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.vb">
-      <DependentUpon>Menu.vb</DependentUpon>
+    <Compile Include="MenuOpciones.Designer.vb">
+      <DependentUpon>MenuOpciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="Menu.vb">
+    <Compile Include="MenuOpciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -199,6 +211,12 @@
     <Compile Include="Principal\Utilerias\UbicacionDocumentos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VariablesGlobales.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +225,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Catalogos\Imagen.resx">
       <DependentUpon>Imagen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Catalogos\TipoUsuario.resx">
+      <DependentUpon>TipoUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Catalogos\Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Consultas\ConsultaClientesAsignarLotes.resx">
       <DependentUpon>ConsultaClientesAsignarLotes.vb</DependentUpon>
@@ -241,8 +265,8 @@
     <EmbeddedResource Include="Principal\Procesos\Prerregistro.resx">
       <DependentUpon>Prerregistro.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.vb</DependentUpon>
+    <EmbeddedResource Include="MenuOpciones.resx">
+      <DependentUpon>MenuOpciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -252,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Utilerias\UbicacionDocumentos.resx">
       <DependentUpon>UbicacionDocumentos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -287,9 +314,11 @@
     <Content Include="Iconos\Buscar.ico" />
     <Content Include="Iconos\Carpeta.ico" />
     <Content Include="Iconos\CarpetaDocumentos.ico" />
+    <Content Include="Iconos\login.ico" />
     <Content Include="Iconos\MenuPrincipal.ico" />
     <Content Include="Iconos\Preregistro.ico" />
     <Content Include="Iconos\user.ico" />
+    <Content Include="Iconos\Usuarios.ico" />
     <Content Include="Imagenes\AgregarPersona.png" />
     <Content Include="Imagenes\user.ico" />
     <Content Include="Imagenes\user.png" />

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Menu
+Partial Class MenuOpciones
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class Menu
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuOpciones))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.CatálogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,7 +33,9 @@ Partial Class Menu
         Me.ContratosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UtileriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AltaDeUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UbicacionDeDocumentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TipoDeUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,7 +50,7 @@ Partial Class Menu
         '
         'CatálogosToolStripMenuItem
         '
-        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentosToolStripMenuItem})
+        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentosToolStripMenuItem, Me.AltaDeUsuariosToolStripMenuItem, Me.TipoDeUsuarioToolStripMenuItem})
         Me.CatálogosToolStripMenuItem.Name = "CatálogosToolStripMenuItem"
         Me.CatálogosToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.CatálogosToolStripMenuItem.Text = "Catalogos"
@@ -103,12 +105,24 @@ Partial Class Menu
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
+        'AltaDeUsuariosToolStripMenuItem
+        '
+        Me.AltaDeUsuariosToolStripMenuItem.Name = "AltaDeUsuariosToolStripMenuItem"
+        Me.AltaDeUsuariosToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.AltaDeUsuariosToolStripMenuItem.Text = "Alta de Usuarios"
+        '
         'UbicacionDeDocumentosToolStripMenuItem
         '
         Me.UbicacionDeDocumentosToolStripMenuItem.Image = CType(resources.GetObject("UbicacionDeDocumentosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.UbicacionDeDocumentosToolStripMenuItem.Name = "UbicacionDeDocumentosToolStripMenuItem"
         Me.UbicacionDeDocumentosToolStripMenuItem.Size = New System.Drawing.Size(214, 22)
         Me.UbicacionDeDocumentosToolStripMenuItem.Text = "Ubicacion de Documentos"
+        '
+        'TipoDeUsuarioToolStripMenuItem
+        '
+        Me.TipoDeUsuarioToolStripMenuItem.Name = "TipoDeUsuarioToolStripMenuItem"
+        Me.TipoDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.TipoDeUsuarioToolStripMenuItem.Text = "Tipo de Usuario"
         '
         'Menu
         '
@@ -139,4 +153,6 @@ Partial Class Menu
     Friend WithEvents ContratosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UtileriasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UbicacionDeDocumentosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AltaDeUsuariosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TipoDeUsuarioToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -12,7 +12,6 @@ Public Class Prerregistro
     Dim tabla5 As New DataTable
     Dim EntidadUbicacion As New Capa_Entidad.UbicacionDocumentos
     Dim NegocioUbicacion As New Capa_Negocio.UbicacionDocumentos
-
     Private Sub Prerregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TBFecha.Text = Now
         OFDPreregistro.Filter = "Todos(*.Jpg, *.Png, *.Gif, *.Tiff, *.Jpeg, *.Bmp)|*.Jpg; *.Png; *.Gif; *.Tiff; *.Jpeg; *.Bmp"
