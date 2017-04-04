@@ -558,6 +558,18 @@ Public Class Prerregistro
         GBDatosGenerales.Enabled = True
         CBEstadoCivil.SelectedValue = -1
     End Sub
+    Private Sub HabilitarCamposMatrimonio()
+        GBFecMatConyugue.Enabled = True
+        CBConyugue.SelectedIndex = 1
+        CBEstadoMatrimonioCony.SelectedIndex = 1
+        CBMunicipioMatrimonioCony.SelectedIndex = 1
+    End Sub
+    Private Sub DesHabilitarCamposMatrimonio()
+        GBFecMatConyugue.Enabled = False
+        CBConyugue.SelectedIndex = -1
+        CBEstadoMatrimonioCony.SelectedIndex = -1
+        CBMunicipioMatrimonioCony.SelectedIndex = -1
+    End Sub
     Private Sub AgregarSocios()
         Dim index As Integer
         Dim rengloninsertar As DataRow
@@ -619,7 +631,12 @@ Public Class Prerregistro
         If CBEstadoCivil.Text = "CASADO(A)" Then
             LbRegimen.Visible = True
             CBRegimen.Visible = True
-        Else
+            HabilitarCamposMatrimonio()
+        ElseIf CBEstadoCivil.Text = "SOLTERO(A)" Or CBEstadoCivil.Text = "NO APLICA" Then
+            LbRegimen.Visible = False
+            CBRegimen.Visible = False
+            DesHabilitarCamposMatrimonio()
+        ElseIf CBEstadoCivil.Text <> "CASADO(A)" Then
             LbRegimen.Visible = False
             CBRegimen.Visible = False
         End If
