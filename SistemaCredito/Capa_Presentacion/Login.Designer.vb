@@ -29,6 +29,7 @@ Partial Class Login
         Me.TbPassword = New System.Windows.Forms.TextBox()
         Me.BtnLogin = New System.Windows.Forms.Button()
         Me.LbMensaje = New System.Windows.Forms.Label()
+        Me.LLCambiarContrasenia = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'LbUsername
@@ -79,16 +80,26 @@ Partial Class Login
         Me.LbMensaje.AutoSize = True
         Me.LbMensaje.Location = New System.Drawing.Point(13, 75)
         Me.LbMensaje.Name = "LbMensaje"
-        Me.LbMensaje.Size = New System.Drawing.Size(171, 13)
+        Me.LbMensaje.Size = New System.Drawing.Size(11, 13)
         Me.LbMensaje.TabIndex = 5
-        Me.LbMensaje.Text = "*Contraseña y/o usuario incorrecto"
-        Me.LbMensaje.Visible = False
+        Me.LbMensaje.Text = "*"
+        '
+        'LLCambiarContrasenia
+        '
+        Me.LLCambiarContrasenia.AutoSize = True
+        Me.LLCambiarContrasenia.Location = New System.Drawing.Point(171, 101)
+        Me.LLCambiarContrasenia.Name = "LLCambiarContrasenia"
+        Me.LLCambiarContrasenia.Size = New System.Drawing.Size(101, 13)
+        Me.LLCambiarContrasenia.TabIndex = 6
+        Me.LLCambiarContrasenia.TabStop = True
+        Me.LLCambiarContrasenia.Text = "Cambiar contraseña"
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 111)
+        Me.ClientSize = New System.Drawing.Size(284, 123)
+        Me.Controls.Add(Me.LLCambiarContrasenia)
         Me.Controls.Add(Me.LbMensaje)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.TbPassword)
@@ -110,4 +121,5 @@ Partial Class Login
     Friend WithEvents TbPassword As TextBox
     Friend WithEvents BtnLogin As Button
     Friend WithEvents LbMensaje As Label
+    Friend WithEvents LLCambiarContrasenia As LinkLabel
 End Class

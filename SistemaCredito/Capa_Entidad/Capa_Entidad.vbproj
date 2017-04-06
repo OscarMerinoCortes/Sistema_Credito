@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\CambiarPassword.vb" />
     <Compile Include="Catalogos\Documentos.vb" />
     <Compile Include="Catalogos\Localizacion.vb" />
     <Compile Include="Catalogos\TipoUsuario.vb" />

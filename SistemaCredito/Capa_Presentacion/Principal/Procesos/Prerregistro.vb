@@ -215,7 +215,7 @@ Public Class Prerregistro
                     DGAgregados.Rows.Add(row("IdDatosAdicionales"), row("IdPersona"), row("Nombre"), "", row("ChCol"))
                 End If
             Next
-            DGAgregados.Columns(0).Visible = False
+            'DGAgregados.Columns(0).Visible = False
         End If
         BtnCarpetas.Visible = True
     End Sub
@@ -849,7 +849,7 @@ Public Class Prerregistro
         Dim xlsLibro As Excel.Workbook
         Dim xlsHoja As Excel.Worksheet
         NombreCompleto = TBIdCliente.Text + " " + TBNombre.Text + " " + TBSegNombre.Text + " " + TBApePaterno.Text + " " + TBApeMaterno.Text
-        Dim Ruta As String = Replace(My.Computer.FileSystem.CurrentDirectory, tabla.Rows(0).Item("RutaSolicitudCredito"), "")
+        Dim Ruta As String = tabla.Rows(0).Item("RutaSolicitudCredito")
         'Dim Archivo1 As String = Ruta + "SOLICITUD DE  CREDITO.xlsx"
         Dim RutaGuardado As String = tabla.Rows(0).Item("Ruta") + tabla.Rows(0).Item("NombreCarpetaRaiz") + "\" + NombreCompleto + "\" + "SOLICITUD DE  CREDITO.xlsx"
         xlsApp = New Excel.Application()

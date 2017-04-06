@@ -34,4 +34,16 @@
     Private Sub TipoDeUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoDeUsuarioToolStripMenuItem.Click
         TipoUsuario.Show()
     End Sub
+    Private Sub DatosUsuario()
+        Dim Usuario As Object = Login.Usuario
+        Dim TipoUsuario1 As Object = Login.Tipo
+        Dim Id As Object = Login.IdUser
+        SbFecha.Text = Now
+        LbUsuario.Text = Usuario
+        LbIdUsuario.Text = Id
+        Me.LbTipoUsuario1.Text = TipoUsuario1
+    End Sub
+    Private Sub MenuOpciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DatosUsuario()
+    End Sub
 End Class

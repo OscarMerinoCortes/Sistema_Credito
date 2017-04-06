@@ -104,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Principal\Catalogos\CambiarPassword.Designer.vb">
+      <DependentUpon>CambiarPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Catalogos\CambiarPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\Catalogos\Documentos.Designer.vb">
       <DependentUpon>Documentos.vb</DependentUpon>
     </Compile>
@@ -220,6 +226,9 @@
     <Compile Include="VariablesGlobales.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Principal\Catalogos\CambiarPassword.resx">
+      <DependentUpon>CambiarPassword.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\Catalogos\Documentos.resx">
       <DependentUpon>Documentos.vb</DependentUpon>
     </EmbeddedResource>
