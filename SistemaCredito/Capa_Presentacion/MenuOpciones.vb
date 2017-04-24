@@ -1,8 +1,21 @@
-﻿Public Class MenuOpciones
-    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Close()
-    End Sub
+﻿Imports System.Data.SqlClient
+Imports System.Data.Sql
+Public Class MenuOpciones
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
+        Dim opc As DialogResult = MsgBox("¿Desea salir de esta aplicación?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Salir")
+
+        If opc = DialogResult.Yes Then
+            SqlConnection.ClearAllPools()
+            End
+        ElseIf opc = DialogResult.No Then
+            e.Cancel = True
+        End If
+    End Sub
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        SqlConnection.ClearAllPools()
+        Me.Close()
+    End Sub
     Private Sub DocumentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DocumentosToolStripMenuItem.Click
         Documentos.Show()
     End Sub
