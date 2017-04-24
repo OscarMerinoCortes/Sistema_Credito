@@ -106,8 +106,11 @@ C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\bin\Debug\Capa_Negocio.xml
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.ResolveComReference.cache
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.CambiarPassword.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Documentos.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Imagen.resources
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.TipoUsuario.resources
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Usuarios.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.ConsultaClientesAsignarLotes.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.ConsultaLotesParaAsignacion.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.ConsultaPreregistro.resources
@@ -117,9 +120,10 @@ C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Contrato.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.PreregistroLotes.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Prerregistro.resources
-C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Menu.resources
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.MenuOpciones.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Resources.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.UbicacionDocumentos.resources
+C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Login.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Prerregistro.af-ZA.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\CREDITO.Prerregistro.es-MX.resources
 C:\Users\MSISTEMAS\Desktop\PERSONAS A SERVER\Sistema_Credito\SistemaCredito\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache

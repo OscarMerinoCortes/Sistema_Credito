@@ -43,50 +43,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="23552">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="25088">
       <assemblyIdentity name="Capa_Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lwOw26hfd0rLsX26zlsvNX8mOM0pZItXtIG3bBqRfco=</dsig:DigestValue>
+        <dsig:DigestValue>nukjBRGFnvNXWvsENjv9dlN1jOdZ1X3BFhwPgCtfwVs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Entidad.dll" size="10752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Entidad.dll" size="11264">
       <assemblyIdentity name="Capa_Entidad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>L+x5MgIq3knU9Qo0E+2oBh4itySO6UzHMoHBAzu/O/I=</dsig:DigestValue>
+        <dsig:DigestValue>FC4I3w4hZbgVq8nEtqQSpAYAkUt8P7ewEeCHmi3YJj0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Negocio.dll" size="10240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Negocio.dll" size="10752">
       <assemblyIdentity name="Capa_Negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/sflhf6XrCEXRSRlv2hgq/e0W8H6fdJUY9OjK5t7roI=</dsig:DigestValue>
+        <dsig:DigestValue>q+VYhBDsfTCEmuxd3rn2jw4VHCpY5HnsQcBn44PjoVA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CREDITO.exe" size="1240536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CREDITO.exe" size="1897472">
       <assemblyIdentity name="CREDITO" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q9pDuny4OzfrATjgw0d46F4HXqFDvG5AWmejZBaAChc=</dsig:DigestValue>
+        <dsig:DigestValue>rVobVrS1ixeWg18vt0mOhix5Rumkp5CcCw9QtWtHju4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>87CS4HNv9rMKJqJyNz8R3CCQ4s719/KGBO7xucu6BXE=</dsig:DigestValue>
+        <dsig:DigestValue>PxUeRRh0Kwv3FwRkX8fyZTiVMePOjGUDmfF8ERaiBrQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xGjR96nmb91t5ibqLnSHaQKi9XfsvHSp63/vvJwP9HU=</dsig:DigestValue>
+        <dsig:DigestValue>Gc2hitEcw/aMRJM6qwYMNMQhKkaOpXFXvBjBsWMRyeo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -150,6 +150,15 @@
       <dsig:DigestValue>uf5biSc7cjWxxbloesHgrv18UVolSJNqT2DAnHJM//g=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Iconos\login.ico" size="85104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+SRVMFwD2KBJVXFPJi7pYqN9qhJVk+iD49PjIZRm3oE=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Iconos\MenuPrincipal.ico" size="83598">
     <hash>
       <dsig:Transforms>
@@ -175,6 +184,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>nLtBg9JR+wYIjzkKfLzYjZhEsdisscFdsj00Xb4LZb8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Iconos\Usuarios.ico" size="88220">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NdpZht6gh9u+93gapybii55tQpAMC7k9DOp3E6qr8NQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Imagenes\AgregarPersona.png" size="5502">
