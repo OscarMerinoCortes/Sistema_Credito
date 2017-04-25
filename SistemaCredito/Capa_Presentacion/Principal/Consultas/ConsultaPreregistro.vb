@@ -2,6 +2,7 @@
     Public TablaClientes As New DataTable
     Private Sub ConsultaPreregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DGConsultaPreregistro.DataSource = Nothing
+        TBNombre.Text = ""
     End Sub
     Private Sub Consultar()
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
