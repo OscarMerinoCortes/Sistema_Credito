@@ -27,6 +27,36 @@
         Next
         LbMensaje.Text = "*Usuario inexistente"
     End Sub
+    Private Sub TxContraseña_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TbPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Try
+                CargarUsuarios()
+                Dim Username As String
+                Dim Pass As String
+                Username = TbUsername.Text
+                Pass = TbPassword.Text
+                For Each row As DataRow In Tabla.Rows
+                    If row("Usuario") = Username And row("Pass") = Pass Then
+                        _Usuario = row("Usuario")
+                        _TipoUsuario = row("TipoUsuario")
+                        _IdUsuario = row("IdTipoUsuario")
+                        Hide()
+                        MenuOpciones.Show()
+                        Exit Sub
+                    ElseIf row("Usuario") <> Username And row("Pass") = Pass Then
+                        LbMensaje.Text = "*Nombre de usuario incorrecto"
+                        Exit Sub
+                    ElseIf row("Usuario") = Username And row("Pass") <> Pass Then
+                        LbMensaje.Text = "*Contraseña incorrecta"
+                        Exit Sub
+                    End If
+                Next
+                LbMensaje.Text = "*Usuario inexistente"
+            Catch ex As Exception
+                MsgBox(ex.ToString)
+            End Try
+        End If
+    End Sub
     Private Sub CargarUsuarios()
         Dim EntidadUsuario As New Capa_Entidad.Usuario
         Dim NegocioUsuario As New Capa_Negocio.Usuario
