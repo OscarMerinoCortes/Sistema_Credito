@@ -1,7 +1,9 @@
 ﻿Module VariablesGlobales
     'Modulo ConsultarPreregistro--------------------------
-    Public VGTablaDatosDelCliente As DataTable
+    Public VGIdCliente As Integer
     Public VGIndex As Integer
+    Public VGTablaConsulta As DataTable
+    Public VGTablaDatosDelCliente As DataTable
 
     'Modulo ConsultaDocumentos----------------------------
     Public VGTablaDatosDocumentos As DataTable

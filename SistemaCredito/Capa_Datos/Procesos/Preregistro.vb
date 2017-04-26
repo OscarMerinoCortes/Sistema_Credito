@@ -128,6 +128,14 @@ Public Class Preregistro
                     Dim dt As New DataTable
                     da.Fill(dt)
                     EntidadPreregistro1.TablaDatosAdicionales = dt
+                Case 5 '----------------------------------------------------------------
+                    Dim cmd As New SqlCommand("sp_LisCliPorId", cnn)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.Add(New SqlClient.SqlParameter("@IdCliente", EntidadPreregistro1.IdCliente))
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    EntidadPreregistro1.TablaDatosAdicionales = dt
             End Select
         Catch ex As Exception
         Finally

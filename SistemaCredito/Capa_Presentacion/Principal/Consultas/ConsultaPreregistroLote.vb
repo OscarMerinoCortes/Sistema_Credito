@@ -35,7 +35,6 @@
         ElseIf DGConsultaPreregistroLote.CurrentRow IsNot Nothing Then
             Dim index As Integer
             index = DGConsultaPreregistroLote.CurrentRow.Index
-            VGIndex = index
             VGTabla = TablaPreregistroLote
             Close()
         End If
