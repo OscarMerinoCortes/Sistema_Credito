@@ -136,7 +136,7 @@ Public Class Prerregistro
         EntidadPreregistro.ConsultaDocumentos = 5
         NegocioPreregistro.Consultar(EntidadPreregistro)
         TablaConsulta = EntidadPreregistro.TablaDatosAdicionales
-        If TablaConsulta Is Nothing Then
+        If TablaConsulta.Rows.Count = 0 Then
             MsgBox("No se encontro ningun registro")
             Exit Sub
         Else
