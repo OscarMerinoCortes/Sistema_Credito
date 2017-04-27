@@ -17,14 +17,14 @@
     <PublishUrl>\\192.168.10.29\Scanner\Miguel\CREDITO A SERVER\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -158,12 +158,6 @@
     <Compile Include="Principal\Consultas\ConsultaPreregistroLote.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\Consultas\ConsultaUbicacionDocumentos.Designer.vb">
-      <DependentUpon>ConsultaUbicacionDocumentos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Principal\Consultas\ConsultaUbicacionDocumentos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Principal\Procesos\aletras.vb" />
     <Compile Include="Principal\Procesos\AsignacionLotes.Designer.vb">
       <DependentUpon>AsignacionLotes.vb</DependentUpon>
@@ -252,9 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Consultas\ConsultaPreregistroLote.resx">
       <DependentUpon>ConsultaPreregistroLote.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal\Consultas\ConsultaUbicacionDocumentos.resx">
-      <DependentUpon>ConsultaUbicacionDocumentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Procesos\AsignacionLotes.resx">
       <DependentUpon>AsignacionLotes.vb</DependentUpon>
