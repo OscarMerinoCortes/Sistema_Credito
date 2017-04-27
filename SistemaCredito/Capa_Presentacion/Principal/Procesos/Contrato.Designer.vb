@@ -53,8 +53,8 @@ Partial Class Contrato
         Me.CBTipoPersona = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GBDatos = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TBIdContrato = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.s, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PBFoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -141,6 +141,8 @@ Partial Class Contrato
         '
         'CBTipoCultivo
         '
+        Me.CBTipoCultivo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBTipoCultivo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBTipoCultivo.FormattingEnabled = True
         Me.CBTipoCultivo.Items.AddRange(New Object() {"ALGODON", "MAIZ", "TRIGO"})
         Me.CBTipoCultivo.Location = New System.Drawing.Point(186, 177)
@@ -150,6 +152,8 @@ Partial Class Contrato
         '
         'CBDivisa
         '
+        Me.CBDivisa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBDivisa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBDivisa.FormattingEnabled = True
         Me.CBDivisa.Items.AddRange(New Object() {"MXN", "USD"})
         Me.CBDivisa.Location = New System.Drawing.Point(186, 150)
@@ -298,6 +302,8 @@ Partial Class Contrato
         '
         'CBTipoPersona
         '
+        Me.CBTipoPersona.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBTipoPersona.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBTipoPersona.Enabled = False
         Me.CBTipoPersona.FormattingEnabled = True
         Me.CBTipoPersona.Items.AddRange(New Object() {"FISICA", "MORAL"})
@@ -342,6 +348,14 @@ Partial Class Contrato
         Me.GBDatos.TabStop = False
         Me.GBDatos.Text = "Datos del Contrato"
         '
+        'TBIdContrato
+        '
+        Me.TBIdContrato.Enabled = False
+        Me.TBIdContrato.Location = New System.Drawing.Point(186, 20)
+        Me.TBIdContrato.Name = "TBIdContrato"
+        Me.TBIdContrato.Size = New System.Drawing.Size(100, 20)
+        Me.TBIdContrato.TabIndex = 30
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -351,14 +365,6 @@ Partial Class Contrato
         Me.Label3.Size = New System.Drawing.Size(93, 13)
         Me.Label3.TabIndex = 29
         Me.Label3.Text = "ID del Contrato"
-        '
-        'TBIdContrato
-        '
-        Me.TBIdContrato.Enabled = False
-        Me.TBIdContrato.Location = New System.Drawing.Point(186, 20)
-        Me.TBIdContrato.Name = "TBIdContrato"
-        Me.TBIdContrato.Size = New System.Drawing.Size(100, 20)
-        Me.TBIdContrato.TabIndex = 30
         '
         'Contrato
         '

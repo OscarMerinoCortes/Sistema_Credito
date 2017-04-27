@@ -209,6 +209,8 @@ Partial Class PreregistroLotes
         '
         'CBNombreCliente
         '
+        Me.CBNombreCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBNombreCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBNombreCliente.FormattingEnabled = True
         Me.CBNombreCliente.Location = New System.Drawing.Point(216, 123)
         Me.CBNombreCliente.Name = "CBNombreCliente"

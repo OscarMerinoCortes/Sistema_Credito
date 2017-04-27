@@ -23,9 +23,9 @@ Partial Class Prerregistro
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Prerregistro))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbTitle = New System.Windows.Forms.Label()
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.LbRFC = New System.Windows.Forms.Label()
@@ -245,6 +245,8 @@ Partial Class Prerregistro
         '
         'CBTipoPersona
         '
+        Me.CBTipoPersona.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBTipoPersona.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBTipoPersona.FormattingEnabled = True
         resources.ApplyResources(Me.CBTipoPersona, "CBTipoPersona")
         Me.CBTipoPersona.Name = "CBTipoPersona"
@@ -262,28 +264,28 @@ Partial Class Prerregistro
         Me.DGDocumentos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DGDocumentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DGDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         resources.ApplyResources(Me.DGDocumentos, "DGDocumentos")
         Me.DGDocumentos.Name = "DGDocumentos"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentos.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DGDocumentos.RowHeadersVisible = False
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DGDocumentos.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DGDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
         'LbIdEstado
@@ -293,6 +295,8 @@ Partial Class Prerregistro
         '
         'CBIdEstatus
         '
+        Me.CBIdEstatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBIdEstatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         resources.ApplyResources(Me.CBIdEstatus, "CBIdEstatus")
         Me.CBIdEstatus.FormattingEnabled = True
         Me.CBIdEstatus.Items.AddRange(New Object() {resources.GetString("CBIdEstatus.Items"), resources.GetString("CBIdEstatus.Items1")})
@@ -405,18 +409,24 @@ Partial Class Prerregistro
         '
         'CBConyugue
         '
+        Me.CBConyugue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBConyugue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBConyugue.FormattingEnabled = True
         resources.ApplyResources(Me.CBConyugue, "CBConyugue")
         Me.CBConyugue.Name = "CBConyugue"
         '
         'CBMunicipioMatrimonioCony
         '
+        Me.CBMunicipioMatrimonioCony.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBMunicipioMatrimonioCony.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBMunicipioMatrimonioCony.FormattingEnabled = True
         resources.ApplyResources(Me.CBMunicipioMatrimonioCony, "CBMunicipioMatrimonioCony")
         Me.CBMunicipioMatrimonioCony.Name = "CBMunicipioMatrimonioCony"
         '
         'CBEstadoMatrimonioCony
         '
+        Me.CBEstadoMatrimonioCony.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBEstadoMatrimonioCony.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBEstadoMatrimonioCony.FormattingEnabled = True
         resources.ApplyResources(Me.CBEstadoMatrimonioCony, "CBEstadoMatrimonioCony")
         Me.CBEstadoMatrimonioCony.Name = "CBEstadoMatrimonioCony"
@@ -485,12 +495,16 @@ Partial Class Prerregistro
         '
         'CBMunicipioNac
         '
+        Me.CBMunicipioNac.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBMunicipioNac.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBMunicipioNac.FormattingEnabled = True
         resources.ApplyResources(Me.CBMunicipioNac, "CBMunicipioNac")
         Me.CBMunicipioNac.Name = "CBMunicipioNac"
         '
         'CBEstadoNac
         '
+        Me.CBEstadoNac.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBEstadoNac.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBEstadoNac.FormattingEnabled = True
         resources.ApplyResources(Me.CBEstadoNac, "CBEstadoNac")
         Me.CBEstadoNac.Name = "CBEstadoNac"
@@ -537,12 +551,16 @@ Partial Class Prerregistro
         '
         'CBMunicipio
         '
+        Me.CBMunicipio.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBMunicipio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBMunicipio.FormattingEnabled = True
         resources.ApplyResources(Me.CBMunicipio, "CBMunicipio")
         Me.CBMunicipio.Name = "CBMunicipio"
         '
         'CBEstado
         '
+        Me.CBEstado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBEstado.FormattingEnabled = True
         resources.ApplyResources(Me.CBEstado, "CBEstado")
         Me.CBEstado.Name = "CBEstado"
@@ -626,6 +644,8 @@ Partial Class Prerregistro
         '
         'CBNacionalidadNac
         '
+        Me.CBNacionalidadNac.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBNacionalidadNac.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBNacionalidadNac.FormattingEnabled = True
         resources.ApplyResources(Me.CBNacionalidadNac, "CBNacionalidadNac")
         Me.CBNacionalidadNac.Name = "CBNacionalidadNac"
@@ -642,6 +662,8 @@ Partial Class Prerregistro
         '
         'CBSexo
         '
+        Me.CBSexo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBSexo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBSexo.FormattingEnabled = True
         resources.ApplyResources(Me.CBSexo, "CBSexo")
         Me.CBSexo.Name = "CBSexo"
@@ -766,24 +788,32 @@ Partial Class Prerregistro
         '
         'CBTesorero
         '
+        Me.CBTesorero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBTesorero.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         resources.ApplyResources(Me.CBTesorero, "CBTesorero")
         Me.CBTesorero.FormattingEnabled = True
         Me.CBTesorero.Name = "CBTesorero"
         '
         'CBRL
         '
+        Me.CBRL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBRL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         resources.ApplyResources(Me.CBRL, "CBRL")
         Me.CBRL.FormattingEnabled = True
         Me.CBRL.Name = "CBRL"
         '
         'CBSecretario
         '
+        Me.CBSecretario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBSecretario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         resources.ApplyResources(Me.CBSecretario, "CBSecretario")
         Me.CBSecretario.FormattingEnabled = True
         Me.CBSecretario.Name = "CBSecretario"
         '
         'CBPresidente
         '
+        Me.CBPresidente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBPresidente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         resources.ApplyResources(Me.CBPresidente, "CBPresidente")
         Me.CBPresidente.FormattingEnabled = True
         Me.CBPresidente.Name = "CBPresidente"

@@ -45,6 +45,8 @@ Partial Class AsignacionLotes
         '
         'CBClientes
         '
+        Me.CBClientes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBClientes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBClientes.FormattingEnabled = True
         Me.CBClientes.Location = New System.Drawing.Point(192, 86)
         Me.CBClientes.Name = "CBClientes"
@@ -116,6 +118,8 @@ Partial Class AsignacionLotes
         '
         'CBCultivos
         '
+        Me.CBCultivos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.CBCultivos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBCultivos.FormattingEnabled = True
         Me.CBCultivos.Location = New System.Drawing.Point(192, 113)
         Me.CBCultivos.Name = "CBCultivos"
