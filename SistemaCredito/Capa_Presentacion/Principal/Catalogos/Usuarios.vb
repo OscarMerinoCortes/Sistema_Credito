@@ -4,7 +4,6 @@
         LlenarCombos()
         ConsultarUsuarios()
     End Sub
-
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadUsuario As New Capa_Entidad.Usuario
         Dim NegocioUsuario As New Capa_Negocio.Usuario
@@ -88,6 +87,7 @@
         DGUsuarios.Columns(3).Visible = False
         DGUsuarios.Columns(4).Visible = False
         DGUsuarios.Columns(5).Visible = False
+        DGUsuarios.Columns(6).Visible = False
         DGUsuarios.Columns(1).Width = 300
         DGUsuarios.Columns(2).Width = 200
     End Sub

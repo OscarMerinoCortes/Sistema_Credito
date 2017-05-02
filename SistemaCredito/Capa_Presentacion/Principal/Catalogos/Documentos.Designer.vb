@@ -43,37 +43,37 @@ Partial Class Documentos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(10, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 13)
+        Me.Label1.Size = New System.Drawing.Size(119, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre del Documento"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(10, 94)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(82, 13)
+        Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Tipo Persona"
         '
         'TBNombreDocumento
         '
         Me.TBNombreDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBNombreDocumento.Location = New System.Drawing.Point(174, 66)
+        Me.TBNombreDocumento.Location = New System.Drawing.Point(133, 69)
         Me.TBNombreDocumento.Name = "TBNombreDocumento"
-        Me.TBNombreDocumento.Size = New System.Drawing.Size(209, 20)
+        Me.TBNombreDocumento.Size = New System.Drawing.Size(153, 20)
         Me.TBNombreDocumento.TabIndex = 1
         '
         'CBTipoPersona
         '
         Me.CBTipoPersona.FormattingEnabled = True
-        Me.CBTipoPersona.Location = New System.Drawing.Point(174, 91)
+        Me.CBTipoPersona.Location = New System.Drawing.Point(133, 94)
         Me.CBTipoPersona.Name = "CBTipoPersona"
-        Me.CBTipoPersona.Size = New System.Drawing.Size(136, 21)
+        Me.CBTipoPersona.Size = New System.Drawing.Size(153, 21)
         Me.CBTipoPersona.TabIndex = 2
         '
         'MSDocumentos
@@ -106,26 +106,26 @@ Partial Class Documentos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(10, 121)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Estatus"
         '
         'CBEstatusDocumento
         '
         Me.CBEstatusDocumento.FormattingEnabled = True
-        Me.CBEstatusDocumento.Location = New System.Drawing.Point(174, 118)
+        Me.CBEstatusDocumento.Location = New System.Drawing.Point(133, 121)
         Me.CBEstatusDocumento.Name = "CBEstatusDocumento"
-        Me.CBEstatusDocumento.Size = New System.Drawing.Size(136, 21)
+        Me.CBEstatusDocumento.Size = New System.Drawing.Size(153, 21)
         Me.CBEstatusDocumento.TabIndex = 3
         '
         'TBIdDocumento
         '
         Me.TBIdDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBIdDocumento.Enabled = False
-        Me.TBIdDocumento.Location = New System.Drawing.Point(174, 40)
+        Me.TBIdDocumento.Location = New System.Drawing.Point(133, 43)
         Me.TBIdDocumento.Name = "TBIdDocumento"
         Me.TBIdDocumento.Size = New System.Drawing.Size(80, 20)
         Me.TBIdDocumento.TabIndex = 0
@@ -133,10 +133,10 @@ Partial Class Documentos
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(10, 43)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(20, 13)
+        Me.Label4.Size = New System.Drawing.Size(18, 13)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "ID"
         '
@@ -150,21 +150,21 @@ Partial Class Documentos
         Me.DGDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGDocumentos.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DGDocumentos.Location = New System.Drawing.Point(13, 184)
+        Me.DGDocumentos.Location = New System.Drawing.Point(13, 148)
         Me.DGDocumentos.MultiSelect = False
         Me.DGDocumentos.Name = "DGDocumentos"
         Me.DGDocumentos.ReadOnly = True
         Me.DGDocumentos.RowHeadersVisible = False
         Me.DGDocumentos.RowHeadersWidth = 40
         Me.DGDocumentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGDocumentos.Size = New System.Drawing.Size(370, 151)
+        Me.DGDocumentos.Size = New System.Drawing.Size(420, 151)
         Me.DGDocumentos.TabIndex = 18
         '
         'Documentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(445, 360)
+        Me.ClientSize = New System.Drawing.Size(445, 307)
         Me.Controls.Add(Me.DGDocumentos)
         Me.Controls.Add(Me.MSDocumentos)
         Me.Controls.Add(Me.CBEstatusDocumento)

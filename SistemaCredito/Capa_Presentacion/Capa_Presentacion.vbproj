@@ -158,12 +158,6 @@
     <Compile Include="Principal\Consultas\ConsultaPreregistroLote.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\Consultas\ConsultaUbicacionDocumentos.Designer.vb">
-      <DependentUpon>ConsultaUbicacionDocumentos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Principal\Consultas\ConsultaUbicacionDocumentos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Principal\Procesos\aletras.vb" />
     <Compile Include="Principal\Procesos\AsignacionLotes.Designer.vb">
       <DependentUpon>AsignacionLotes.vb</DependentUpon>
@@ -253,9 +247,6 @@
     <EmbeddedResource Include="Principal\Consultas\ConsultaPreregistroLote.resx">
       <DependentUpon>ConsultaPreregistroLote.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal\Consultas\ConsultaUbicacionDocumentos.resx">
-      <DependentUpon>ConsultaUbicacionDocumentos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Principal\Procesos\AsignacionLotes.resx">
       <DependentUpon>AsignacionLotes.vb</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +292,8 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="SOLICITUD DE  CREDITO.xlsx" />
+    <None Include="SOLICITUD DE  CREDITO.xlt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Datos\Capa_Datos.vbproj">

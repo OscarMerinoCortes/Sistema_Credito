@@ -162,6 +162,7 @@ Partial Class Usuarios
         Me.DGUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGUsuarios.Location = New System.Drawing.Point(16, 189)
         Me.DGUsuarios.Name = "DGUsuarios"
+        Me.DGUsuarios.RowHeadersVisible = False
         Me.DGUsuarios.Size = New System.Drawing.Size(471, 150)
         Me.DGUsuarios.TabIndex = 11
         '

@@ -1,7 +1,8 @@
 ﻿Public Class ConsultaPreregistro
     Public TablaClientes As New DataTable
     Private Sub ConsultaPreregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DGConsultaPreregistro.DataSource = Nothing
+        Consultar()
+        'DGConsultaPreregistro.DataSource = Nothing
         TBNombre.Text = ""
     End Sub
     Private Sub Consultar()
@@ -12,10 +13,6 @@
         TablaClientes = EntidadPreregistro.TablaDatosDelCliente
         DGConsultaPreregistro.DataSource = TablaClientes
         FormatoDelDataGridView()
-    End Sub
-
-    Private Sub BTNBuscar_Click(sender As Object, e As EventArgs) Handles BTNBuscar.Click
-        Consultar()
     End Sub
     Private Sub FormatoDelDataGridView()
         DGConsultaPreregistro.Columns(2).HeaderText = "Seg. Nombre"
@@ -37,5 +34,8 @@
             VGIdCliente = IdCliente
             Close()
         End If
+    End Sub
+    Private Sub TBNombre_TextChanged(sender As Object, e As PreviewKeyDownEventArgs) Handles TBNombre.PreviewKeyDown
+        Consultar()
     End Sub
 End Class

@@ -43,7 +43,7 @@ Partial Class TipoUsuario
         Me.TbIdTipoUsuario.Enabled = False
         Me.TbIdTipoUsuario.Location = New System.Drawing.Point(113, 34)
         Me.TbIdTipoUsuario.Name = "TbIdTipoUsuario"
-        Me.TbIdTipoUsuario.Size = New System.Drawing.Size(121, 20)
+        Me.TbIdTipoUsuario.Size = New System.Drawing.Size(80, 20)
         Me.TbIdTipoUsuario.TabIndex = 0
         '
         'TbDescripcion
@@ -59,7 +59,7 @@ Partial Class TipoUsuario
         Me.CbIdEstatus.FormattingEnabled = True
         Me.CbIdEstatus.Location = New System.Drawing.Point(113, 86)
         Me.CbIdEstatus.Name = "CbIdEstatus"
-        Me.CbIdEstatus.Size = New System.Drawing.Size(121, 21)
+        Me.CbIdEstatus.Size = New System.Drawing.Size(152, 21)
         Me.CbIdEstatus.TabIndex = 2
         '
         'MSMenu
@@ -120,16 +120,16 @@ Partial Class TipoUsuario
         '
         Me.DGTipoUsuario.AllowUserToAddRows = False
         Me.DGTipoUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGTipoUsuario.Location = New System.Drawing.Point(17, 130)
+        Me.DGTipoUsuario.Location = New System.Drawing.Point(17, 113)
         Me.DGTipoUsuario.Name = "DGTipoUsuario"
-        Me.DGTipoUsuario.Size = New System.Drawing.Size(402, 150)
+        Me.DGTipoUsuario.Size = New System.Drawing.Size(411, 150)
         Me.DGTipoUsuario.TabIndex = 7
         '
         'TipoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(440, 292)
+        Me.ClientSize = New System.Drawing.Size(440, 278)
         Me.Controls.Add(Me.DGTipoUsuario)
         Me.Controls.Add(Me.LbIdEstatus)
         Me.Controls.Add(Me.LBDescripcion)

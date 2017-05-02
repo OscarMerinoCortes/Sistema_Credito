@@ -3,11 +3,11 @@
     Private Sub TipoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LlenarCombos()
         ConsultarListaTipoUsuarios()
+        Formato()
     End Sub
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
         Limpiar()
     End Sub
-
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadTipoUsuario As New Capa_Entidad.TipoUsuario
         Dim NegocioTipoUsuario As New Capa_Negocio.TipoUsuario
@@ -62,5 +62,11 @@
             TbDescripcion.Text = Tabla.Rows(index).Item("Descripcion")
             CbIdEstatus.SelectedValue = Tabla.Rows(index).Item("IdEstatus")
         End If
+    End Sub
+    Private Sub Formato()
+        DGTipoUsuario.Columns(0).HeaderText = "Id"
+        DGTipoUsuario.Columns(1).HeaderText = "Descripcion"
+        DGTipoUsuario.Columns(1).Width = 270
+        DGTipoUsuario.Columns(2).Visible = False
     End Sub
 End Class

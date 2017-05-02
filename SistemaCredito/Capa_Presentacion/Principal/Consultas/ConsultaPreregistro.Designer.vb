@@ -28,7 +28,6 @@ Partial Class ConsultaPreregistro
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaPreregistro))
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.TBNombre = New System.Windows.Forms.TextBox()
-        Me.BTNBuscar = New System.Windows.Forms.Button()
         Me.DGConsultaPreregistro = New System.Windows.Forms.DataGridView()
         CType(Me.DGConsultaPreregistro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,17 +45,8 @@ Partial Class ConsultaPreregistro
         '
         Me.TBNombre.Location = New System.Drawing.Point(64, 13)
         Me.TBNombre.Name = "TBNombre"
-        Me.TBNombre.Size = New System.Drawing.Size(255, 20)
+        Me.TBNombre.Size = New System.Drawing.Size(558, 20)
         Me.TBNombre.TabIndex = 2
-        '
-        'BTNBuscar
-        '
-        Me.BTNBuscar.Location = New System.Drawing.Point(325, 13)
-        Me.BTNBuscar.Name = "BTNBuscar"
-        Me.BTNBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BTNBuscar.TabIndex = 3
-        Me.BTNBuscar.Text = "Buscar"
-        Me.BTNBuscar.UseVisualStyleBackColor = True
         '
         'DGConsultaPreregistro
         '
@@ -99,7 +89,6 @@ Partial Class ConsultaPreregistro
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(634, 361)
         Me.Controls.Add(Me.DGConsultaPreregistro)
-        Me.Controls.Add(Me.BTNBuscar)
         Me.Controls.Add(Me.TBNombre)
         Me.Controls.Add(Me.LbNombre)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -113,6 +102,5 @@ Partial Class ConsultaPreregistro
     End Sub
     Friend WithEvents LbNombre As Label
     Friend WithEvents TBNombre As TextBox
-    Friend WithEvents BTNBuscar As Button
     Friend WithEvents DGConsultaPreregistro As DataGridView
 End Class
