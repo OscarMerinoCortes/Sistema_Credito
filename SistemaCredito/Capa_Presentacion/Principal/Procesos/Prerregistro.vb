@@ -811,14 +811,19 @@ Public Class Prerregistro
         Dim tabla As New DataTable
         Dim NombreCarpeta As String
         NombreCarpeta = TBIdCliente.Text + " " + TBNombre.Text + " " + TBSegNombre.Text + " " + TBApePaterno.Text + " " + TBApeMaterno.Text
+        NombreCarpeta = LTrim(RTrim(NombreCarpeta))
         EntidadUbicacion.ConsultaUbicacion = 2
         NegocioUbicacion.Consultar(EntidadUbicacion)
         tabla = EntidadUbicacion.TablaUbicacionRegistrada
         If Not Directory.Exists(tabla.Rows(0).Item("ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta) Then
-            Directory.CreateDirectory(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\\" & NombreCarpeta & "\\" & tabla.Rows(0).Item("NombreCarpetaPersonal"))
-            Directory.CreateDirectory(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\\" & NombreCarpeta & "\\" & tabla.Rows(0).Item("NombreCarpetaLote"))
+            Directory.CreateDirectory(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaPersonal"))
+            Directory.CreateDirectory(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaLote"))
+        ElseIf Not Directory.Exists(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaPersonal")) Or Directory.Exists(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaLote")) Then
+            Directory.CreateDirectory(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaPersonal"))
+            Directory.CreateDirectory(tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta & "\" & tabla.Rows(0).Item("NombreCarpetaLote"))
         End If
         Process.Start("explorer.exe", (tabla.Rows(0).Item("Ruta") & tabla.Rows(0).Item("NombreCarpetaRaiz") & "\" & NombreCarpeta))
+
     End Sub
     Private Sub Municipio()
         Dim TablaEstados As New DataTable
