@@ -274,7 +274,7 @@ Public Class PreregistroLotes
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
         Dim NegocioPreregistro As New Capa_Negocio.Preregistro
 
-        NegocioPreregistro.ConsultarClientes(EntidadPreregistro)
+        NegocioPreregistro.ConsultarClientesCombo(EntidadPreregistro)
         TablaClientes = EntidadPreregistro.TablaDatosDelCliente
         CBNombreCliente.DataSource = TablaClientes
         CBNombreCliente.DisplayMember = "Nombre"

@@ -162,5 +162,23 @@ Public Class Preregistro
             EntidadPreregistro = EntidadPreregistro1
         End Try
     End Sub
+    Public Overridable Sub ConsultarClientesCombo(ByRef EntidadPreregistro As Capa_Entidad.Preregistro)
+        Dim EntidadPreregistro1 As New Capa_Entidad.Preregistro()
+        EntidadPreregistro1 = EntidadPreregistro
+        Dim cnn As New SqlConnection(conexionPrincipal)
+        Try
+            cnn.Open()
+            Dim cmd As New SqlCommand("sp_LlenarComboClientes", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+            Dim da As New SqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            EntidadPreregistro1.TablaDatosDelCliente = dt
+        Catch ex As Exception
+        Finally
+            cnn.Close()
+            EntidadPreregistro = EntidadPreregistro1
+        End Try
+    End Sub
 
 End Class
