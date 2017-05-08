@@ -1,6 +1,7 @@
 ﻿Public Class ConsultaLotesParaAsignacion
     Public TablaPreregistroLote As DataTable
     Private Sub ConsultaLotesParaAsignacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Consultar()
     End Sub
     Private Sub PropiedadesDG()
         If DGConsultaSeleccionLote.Columns("ChCol") Is Nothing Then
@@ -44,7 +45,7 @@
         PropiedadesDG()
     End Sub
 
-    Private Sub BTNBuscar_Click(sender As Object, e As EventArgs) Handles BTNBuscar.Click
+    Private Sub BTNBuscar_Click(sender As Object, e As EventArgs) Handles TBNombre.PreviewKeyDown
         Consultar()
     End Sub
     ''' <summary>
