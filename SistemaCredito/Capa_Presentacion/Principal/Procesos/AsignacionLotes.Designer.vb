@@ -36,7 +36,7 @@ Partial Class AsignacionLotes
         Me.NUHectareas = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BTSeleccion = New System.Windows.Forms.Button()
-        Me.TBFolioLote = New System.Windows.Forms.TextBox()
+        Me.TBIdCliente = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DGLotes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MSDocumentos.SuspendLayout()
@@ -139,6 +139,7 @@ Partial Class AsignacionLotes
         'NUHectareas
         '
         Me.NUHectareas.DecimalPlaces = 3
+        Me.NUHectareas.Enabled = False
         Me.NUHectareas.Location = New System.Drawing.Point(192, 140)
         Me.NUHectareas.Maximum = New Decimal(New Integer() {-727379969, 232, 0, 0})
         Me.NUHectareas.Name = "NUHectareas"
@@ -166,12 +167,13 @@ Partial Class AsignacionLotes
         Me.BTSeleccion.Text = "..."
         Me.BTSeleccion.UseVisualStyleBackColor = True
         '
-        'TBFolioLote
+        'TBIdCliente
         '
-        Me.TBFolioLote.Location = New System.Drawing.Point(192, 60)
-        Me.TBFolioLote.Name = "TBFolioLote"
-        Me.TBFolioLote.Size = New System.Drawing.Size(100, 20)
-        Me.TBFolioLote.TabIndex = 26
+        Me.TBIdCliente.Enabled = False
+        Me.TBIdCliente.Location = New System.Drawing.Point(192, 60)
+        Me.TBIdCliente.Name = "TBIdCliente"
+        Me.TBIdCliente.Size = New System.Drawing.Size(100, 20)
+        Me.TBIdCliente.TabIndex = 26
         '
         'Label5
         '
@@ -188,7 +190,7 @@ Partial Class AsignacionLotes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 505)
-        Me.Controls.Add(Me.TBFolioLote)
+        Me.Controls.Add(Me.TBIdCliente)
         Me.Controls.Add(Me.BTSeleccion)
         Me.Controls.Add(Me.NUHectareas)
         Me.Controls.Add(Me.CBCultivos)
@@ -225,6 +227,6 @@ Partial Class AsignacionLotes
     Friend WithEvents NUHectareas As NumericUpDown
     Friend WithEvents Label3 As Label
     Friend WithEvents BTSeleccion As Button
-    Friend WithEvents TBFolioLote As TextBox
+    Friend WithEvents TBIdCliente As TextBox
     Friend WithEvents Label5 As Label
 End Class

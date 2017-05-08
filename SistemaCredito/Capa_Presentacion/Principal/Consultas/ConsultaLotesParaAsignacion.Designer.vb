@@ -27,7 +27,6 @@ Partial Class ConsultaLotesParaAsignacion
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaLotesParaAsignacion))
         Me.DGConsultaSeleccionLote = New System.Windows.Forms.DataGridView()
-        Me.BTNBuscar = New System.Windows.Forms.Button()
         Me.TBNombre = New System.Windows.Forms.TextBox()
         Me.LbNombre = New System.Windows.Forms.Label()
         Me.BTCancelar = New System.Windows.Forms.Button()
@@ -70,20 +69,11 @@ Partial Class ConsultaLotesParaAsignacion
         Me.DGConsultaSeleccionLote.Size = New System.Drawing.Size(610, 308)
         Me.DGConsultaSeleccionLote.TabIndex = 15
         '
-        'BTNBuscar
-        '
-        Me.BTNBuscar.Location = New System.Drawing.Point(323, 9)
-        Me.BTNBuscar.Name = "BTNBuscar"
-        Me.BTNBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BTNBuscar.TabIndex = 14
-        Me.BTNBuscar.Text = "Buscar"
-        Me.BTNBuscar.UseVisualStyleBackColor = True
-        '
         'TBNombre
         '
         Me.TBNombre.Location = New System.Drawing.Point(62, 9)
         Me.TBNombre.Name = "TBNombre"
-        Me.TBNombre.Size = New System.Drawing.Size(255, 20)
+        Me.TBNombre.Size = New System.Drawing.Size(560, 20)
         Me.TBNombre.TabIndex = 13
         '
         'LbNombre
@@ -121,7 +111,6 @@ Partial Class ConsultaLotesParaAsignacion
         Me.Controls.Add(Me.BTSeleccionar)
         Me.Controls.Add(Me.BTCancelar)
         Me.Controls.Add(Me.DGConsultaSeleccionLote)
-        Me.Controls.Add(Me.BTNBuscar)
         Me.Controls.Add(Me.TBNombre)
         Me.Controls.Add(Me.LbNombre)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -135,7 +124,6 @@ Partial Class ConsultaLotesParaAsignacion
     End Sub
 
     Friend WithEvents DGConsultaSeleccionLote As DataGridView
-    Friend WithEvents BTNBuscar As Button
     Friend WithEvents TBNombre As TextBox
     Friend WithEvents LbNombre As Label
     Friend WithEvents BTCancelar As Button

@@ -159,10 +159,17 @@ Partial Class Usuarios
         'DGUsuarios
         '
         Me.DGUsuarios.AllowUserToAddRows = False
-        Me.DGUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGUsuarios.AllowUserToDeleteRows = False
+        Me.DGUsuarios.AllowUserToOrderColumns = True
+        Me.DGUsuarios.AllowUserToResizeRows = False
+        Me.DGUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGUsuarios.Location = New System.Drawing.Point(16, 189)
+        Me.DGUsuarios.MultiSelect = False
         Me.DGUsuarios.Name = "DGUsuarios"
+        Me.DGUsuarios.ReadOnly = True
         Me.DGUsuarios.RowHeadersVisible = False
+        Me.DGUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.DGUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGUsuarios.Size = New System.Drawing.Size(471, 150)
         Me.DGUsuarios.TabIndex = 11
         '

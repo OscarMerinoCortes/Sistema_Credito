@@ -3,6 +3,9 @@
     Public TablaClientes As DataTable
     Private Sub AsignacionLotes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LlenaCombo()
+        TBIdCliente.Text = ""
+        CBClientes.SelectedIndex = -1
+        CBCultivos.SelectedIndex = -1
     End Sub
     Private Sub LlenaCombo()
         Dim EntidadAsignacionLotes As New Capa_Entidad.AsignacionLotes
@@ -15,7 +18,7 @@
         '-----------------------------------------------------------------------------------
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
         Dim NegocioPreregistro As New Capa_Negocio.Preregistro
-        NegocioPreregistro.ConsultarClientes(EntidadPreregistro)
+        NegocioPreregistro.ConsultarClientesCombo(EntidadPreregistro)
         TablaClientes = EntidadPreregistro.TablaDatosDelCliente
         CBClientes.DataSource = TablaClientes
         CBClientes.DisplayMember = "Nombre"
@@ -29,6 +32,9 @@
             SumaHectareasSeleccionadas()
             PropiedadesDGLotes()
         End If
+    End Sub
+    Private Sub CBClientes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBClientes.SelectionChangeCommitted
+        If CBClientes.SelectedIndex >= 0 Then TBIdCliente.Text = CBClientes.SelectedValue
     End Sub
     Private Sub PropiedadesDGLotes()
         DGLotes.Columns("Chcol").Visible = False
@@ -65,7 +71,7 @@
         NUHectareas.Value = SumaHa
     End Sub
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
-        TBFolioLote.Text = ""
+        TBIdCliente.Text = ""
         CBClientes.SelectedIndex = -1
         CBCultivos.SelectedIndex = -1
         NUHectareas.Value = 0.000
@@ -80,10 +86,10 @@
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadAsignacionLotes As New Capa_Entidad.AsignacionLotes
         Dim NegocioAsignacionLotes As New Capa_Negocio.AsignacionLotes
-        If TBFolioLote.Text Is String.Empty Then
+        If TBIdCliente.Text Is String.Empty Then
             EntidadAsignacionLotes.IdAsignacion = 0
         Else
-            EntidadAsignacionLotes.IdAsignacion = TBFolioLote.Text
+            EntidadAsignacionLotes.IdAsignacion = TBIdCliente.Text
         End If
         EntidadAsignacionLotes.IdCliente = CBClientes.SelectedValue
         EntidadAsignacionLotes.IdCultivo = CBCultivos.SelectedValue
