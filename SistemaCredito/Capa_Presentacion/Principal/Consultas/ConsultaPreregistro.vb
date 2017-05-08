@@ -1,9 +1,9 @@
 ﻿Public Class ConsultaPreregistro
     Public TablaClientes As New DataTable
     Private Sub ConsultaPreregistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TBNombre.Text = ""
         Consultar()
         'DGConsultaPreregistro.DataSource = Nothing
-        TBNombre.Text = ""
     End Sub
     Private Sub Consultar()
         Dim EntidadPreregistro As New Capa_Entidad.Preregistro
@@ -15,6 +15,7 @@
         FormatoDelDataGridView()
     End Sub
     Private Sub FormatoDelDataGridView()
+        DGConsultaPreregistro.Columns(0).HeaderText = "ID"
         DGConsultaPreregistro.Columns(2).HeaderText = "Seg. Nombre"
         DGConsultaPreregistro.Columns(3).HeaderText = "Ape. Paterno"
         DGConsultaPreregistro.Columns(4).HeaderText = "Ape. Materno"

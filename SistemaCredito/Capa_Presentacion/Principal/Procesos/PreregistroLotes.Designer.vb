@@ -22,9 +22,9 @@ Partial Class PreregistroLotes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PreregistroLotes))
         Me.LbTitle = New System.Windows.Forms.Label()
         Me.MSPreregistroLotes = New System.Windows.Forms.MenuStrip()
@@ -94,7 +94,7 @@ Partial Class PreregistroLotes
         Me.LbTitle.AutoSize = True
         Me.LbTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         Me.LbTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LbTitle.Location = New System.Drawing.Point(252, 24)
+        Me.LbTitle.Location = New System.Drawing.Point(406, 24)
         Me.LbTitle.Name = "LbTitle"
         Me.LbTitle.Size = New System.Drawing.Size(136, 13)
         Me.LbTitle.TabIndex = 1
@@ -140,22 +140,22 @@ Partial Class PreregistroLotes
         'LbNombre
         '
         Me.LbNombre.AutoSize = True
-        Me.LbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.LbNombre.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LbNombre.Location = New System.Drawing.Point(12, 126)
+        Me.LbNombre.Location = New System.Drawing.Point(23, 105)
         Me.LbNombre.Name = "LbNombre"
-        Me.LbNombre.Size = New System.Drawing.Size(135, 13)
+        Me.LbNombre.Size = New System.Drawing.Size(113, 13)
         Me.LbNombre.TabIndex = 3
         Me.LbNombre.Text = "Nombre del propietario"
         '
         'LbIdCliente
         '
         Me.LbIdCliente.AutoSize = True
-        Me.LbIdCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LbIdCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.LbIdCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LbIdCliente.Location = New System.Drawing.Point(12, 70)
+        Me.LbIdCliente.Location = New System.Drawing.Point(23, 57)
         Me.LbIdCliente.Name = "LbIdCliente"
-        Me.LbIdCliente.Size = New System.Drawing.Size(20, 13)
+        Me.LbIdCliente.Size = New System.Drawing.Size(18, 13)
         Me.LbIdCliente.TabIndex = 26
         Me.LbIdCliente.Text = "ID"
         Me.LbIdCliente.Visible = False
@@ -163,39 +163,39 @@ Partial Class PreregistroLotes
         'TBIdPreregistroLotes
         '
         Me.TBIdPreregistroLotes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBIdPreregistroLotes.Location = New System.Drawing.Point(216, 67)
+        Me.TBIdPreregistroLotes.Location = New System.Drawing.Point(227, 54)
         Me.TBIdPreregistroLotes.Name = "TBIdPreregistroLotes"
-        Me.TBIdPreregistroLotes.Size = New System.Drawing.Size(121, 20)
+        Me.TBIdPreregistroLotes.Size = New System.Drawing.Size(60, 20)
         Me.TBIdPreregistroLotes.TabIndex = 0
         Me.TBIdPreregistroLotes.Visible = False
         '
         'LbFecha
         '
         Me.LbFecha.AutoSize = True
-        Me.LbFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.LbFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.LbFecha.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LbFecha.Location = New System.Drawing.Point(485, 44)
+        Me.LbFecha.Location = New System.Drawing.Point(746, 30)
         Me.LbFecha.Name = "LbFecha"
-        Me.LbFecha.Size = New System.Drawing.Size(42, 13)
+        Me.LbFecha.Size = New System.Drawing.Size(37, 13)
         Me.LbFecha.TabIndex = 28
         Me.LbFecha.Text = "Fecha"
         '
         'TBFecha
         '
         Me.TBFecha.Enabled = False
-        Me.TBFecha.Location = New System.Drawing.Point(539, 41)
+        Me.TBFecha.Location = New System.Drawing.Point(794, 27)
         Me.TBFecha.Name = "TBFecha"
-        Me.TBFecha.Size = New System.Drawing.Size(96, 20)
+        Me.TBFecha.Size = New System.Drawing.Size(139, 20)
         Me.TBFecha.TabIndex = 29
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(12, 206)
+        Me.Label1.Location = New System.Drawing.Point(23, 185)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "Estado"
         '
@@ -204,9 +204,9 @@ Partial Class PreregistroLotes
         Me.CBIdEstado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.CBIdEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBIdEstado.FormattingEnabled = True
-        Me.CBIdEstado.Location = New System.Drawing.Point(216, 203)
+        Me.CBIdEstado.Location = New System.Drawing.Point(227, 185)
         Me.CBIdEstado.Name = "CBIdEstado"
-        Me.CBIdEstado.Size = New System.Drawing.Size(121, 21)
+        Me.CBIdEstado.Size = New System.Drawing.Size(163, 21)
         Me.CBIdEstado.TabIndex = 4
         '
         'CBNombreCliente
@@ -214,7 +214,7 @@ Partial Class PreregistroLotes
         Me.CBNombreCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.CBNombreCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBNombreCliente.FormattingEnabled = True
-        Me.CBNombreCliente.Location = New System.Drawing.Point(216, 123)
+        Me.CBNombreCliente.Location = New System.Drawing.Point(227, 105)
         Me.CBNombreCliente.Name = "CBNombreCliente"
         Me.CBNombreCliente.Size = New System.Drawing.Size(258, 21)
         Me.CBNombreCliente.TabIndex = 2
@@ -222,33 +222,33 @@ Partial Class PreregistroLotes
         'TBVolumen
         '
         Me.TBVolumen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBVolumen.Location = New System.Drawing.Point(216, 256)
+        Me.TBVolumen.Location = New System.Drawing.Point(227, 238)
         Me.TBVolumen.Name = "TBVolumen"
-        Me.TBVolumen.Size = New System.Drawing.Size(100, 20)
+        Me.TBVolumen.Size = New System.Drawing.Size(60, 20)
         Me.TBVolumen.TabIndex = 7
         '
         'NuSupCultivable
         '
-        Me.NuSupCultivable.Location = New System.Drawing.Point(539, 230)
+        Me.NuSupCultivable.Location = New System.Drawing.Point(633, 106)
         Me.NuSupCultivable.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.NuSupCultivable.Name = "NuSupCultivable"
-        Me.NuSupCultivable.Size = New System.Drawing.Size(121, 20)
+        Me.NuSupCultivable.Size = New System.Drawing.Size(175, 20)
         Me.NuSupCultivable.TabIndex = 6
         Me.NuSupCultivable.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'NuSupTotal
         '
-        Me.NuSupTotal.Location = New System.Drawing.Point(216, 230)
+        Me.NuSupTotal.Location = New System.Drawing.Point(227, 212)
         Me.NuSupTotal.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.NuSupTotal.Name = "NuSupTotal"
-        Me.NuSupTotal.Size = New System.Drawing.Size(121, 20)
+        Me.NuSupTotal.Size = New System.Drawing.Size(163, 20)
         Me.NuSupTotal.TabIndex = 5
         Me.NuSupTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'DtTitulo
         '
         Me.DtTitulo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtTitulo.Location = New System.Drawing.Point(707, 436)
+        Me.DtTitulo.Location = New System.Drawing.Point(129, 494)
         Me.DtTitulo.Name = "DtTitulo"
         Me.DtTitulo.Size = New System.Drawing.Size(102, 20)
         Me.DtTitulo.TabIndex = 12
@@ -256,37 +256,37 @@ Partial Class PreregistroLotes
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(597, 441)
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(16, 494)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(105, 13)
+        Me.Label18.Size = New System.Drawing.Size(88, 13)
         Me.Label18.TabIndex = 59
         Me.Label18.Text = "Fecha del Título:"
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(318, 441)
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(16, 468)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(97, 13)
+        Me.Label17.Size = New System.Drawing.Size(81, 13)
         Me.Label17.TabIndex = 58
         Me.Label17.Text = "Titulo del Agua:"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(103, 441)
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(16, 446)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(106, 13)
+        Me.Label16.Size = New System.Drawing.Size(90, 13)
         Me.Label16.TabIndex = 57
         Me.Label16.Text = "Régimen Hídrico:"
         '
         'TBTitulo
         '
         Me.TBTitulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBTitulo.Location = New System.Drawing.Point(421, 438)
+        Me.TBTitulo.Location = New System.Drawing.Point(129, 468)
         Me.TBTitulo.Name = "TBTitulo"
         Me.TBTitulo.Size = New System.Drawing.Size(162, 20)
         Me.TBTitulo.TabIndex = 11
@@ -294,46 +294,46 @@ Partial Class PreregistroLotes
         'TBRegimen
         '
         Me.TBRegimen.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBRegimen.Location = New System.Drawing.Point(216, 438)
+        Me.TBRegimen.Location = New System.Drawing.Point(129, 443)
         Me.TBRegimen.Name = "TBRegimen"
-        Me.TBRegimen.Size = New System.Drawing.Size(91, 20)
+        Me.TBRegimen.Size = New System.Drawing.Size(162, 20)
         Me.TBRegimen.TabIndex = 10
         '
         'TxCurp
         '
         Me.TxCurp.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxCurp.Enabled = False
-        Me.TxCurp.Location = New System.Drawing.Point(539, 150)
+        Me.TxCurp.Location = New System.Drawing.Point(633, 80)
         Me.TxCurp.Name = "TxCurp"
-        Me.TxCurp.Size = New System.Drawing.Size(308, 20)
+        Me.TxCurp.Size = New System.Drawing.Size(175, 20)
         Me.TxCurp.TabIndex = 56
         '
         'TxRfc
         '
         Me.TxRfc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxRfc.Enabled = False
-        Me.TxRfc.Location = New System.Drawing.Point(216, 150)
+        Me.TxRfc.Location = New System.Drawing.Point(227, 132)
         Me.TxRfc.Name = "TxRfc"
-        Me.TxRfc.Size = New System.Drawing.Size(201, 20)
+        Me.TxRfc.Size = New System.Drawing.Size(163, 20)
         Me.TxRfc.TabIndex = 55
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(486, 153)
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(497, 80)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(41, 13)
+        Me.Label15.Size = New System.Drawing.Size(37, 13)
         Me.Label15.TabIndex = 54
         Me.Label15.Text = "CURP"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(12, 153)
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(23, 132)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(31, 13)
+        Me.Label14.Size = New System.Drawing.Size(28, 13)
         Me.Label14.TabIndex = 53
         Me.Label14.Text = "RFC"
         '
@@ -348,9 +348,9 @@ Partial Class PreregistroLotes
         Me.GbEscrituracion.Controls.Add(Me.Label11)
         Me.GbEscrituracion.Controls.Add(Me.Label10)
         Me.GbEscrituracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbEscrituracion.Location = New System.Drawing.Point(12, 360)
+        Me.GbEscrituracion.Location = New System.Drawing.Point(14, 370)
         Me.GbEscrituracion.Name = "GbEscrituracion"
-        Me.GbEscrituracion.Size = New System.Drawing.Size(862, 72)
+        Me.GbEscrituracion.Size = New System.Drawing.Size(586, 63)
         Me.GbEscrituracion.TabIndex = 9
         Me.GbEscrituracion.TabStop = False
         Me.GbEscrituracion.Text = "Escrituración del Registro Público de la Propiedad"
@@ -358,17 +358,18 @@ Partial Class PreregistroLotes
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(556, 32)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(418, 32)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(46, 13)
+        Me.Label13.Size = New System.Drawing.Size(37, 13)
         Me.Label13.TabIndex = 7
-        Me.Label13.Text = "Fecha:"
+        Me.Label13.Text = "Fecha"
         '
         'DTRpp
         '
         Me.DTRpp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DTRpp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTRpp.Location = New System.Drawing.Point(610, 29)
+        Me.DTRpp.Location = New System.Drawing.Point(461, 29)
         Me.DTRpp.Name = "DTRpp"
         Me.DTRpp.Size = New System.Drawing.Size(102, 20)
         Me.DTRpp.TabIndex = 3
@@ -377,7 +378,7 @@ Partial Class PreregistroLotes
         '
         Me.TBNumeroRPP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBNumeroRPP.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBNumeroRPP.Location = New System.Drawing.Point(101, 29)
+        Me.TBNumeroRPP.Location = New System.Drawing.Point(84, 29)
         Me.TBNumeroRPP.Name = "TBNumeroRPP"
         Me.TBNumeroRPP.Size = New System.Drawing.Size(69, 20)
         Me.TBNumeroRPP.TabIndex = 0
@@ -386,7 +387,7 @@ Partial Class PreregistroLotes
         '
         Me.TBFolioRPP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBFolioRPP.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBFolioRPP.Location = New System.Drawing.Point(256, 29)
+        Me.TBFolioRPP.Location = New System.Drawing.Point(213, 29)
         Me.TBFolioRPP.Name = "TBFolioRPP"
         Me.TBFolioRPP.Size = New System.Drawing.Size(69, 20)
         Me.TBFolioRPP.TabIndex = 1
@@ -395,7 +396,7 @@ Partial Class PreregistroLotes
         '
         Me.TBLibroRPP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBLibroRPP.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBLibroRPP.Location = New System.Drawing.Point(443, 29)
+        Me.TBLibroRPP.Location = New System.Drawing.Point(343, 29)
         Me.TBLibroRPP.Name = "TBLibroRPP"
         Me.TBLibroRPP.Size = New System.Drawing.Size(69, 20)
         Me.TBLibroRPP.TabIndex = 2
@@ -403,29 +404,32 @@ Partial Class PreregistroLotes
         'Label12
         '
         Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(15, 32)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(77, 13)
+        Me.Label12.Size = New System.Drawing.Size(63, 13)
         Me.Label12.TabIndex = 2
-        Me.Label12.Text = "Del Número:"
+        Me.Label12.Text = "Del Número"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(187, 32)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(159, 32)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(61, 13)
+        Me.Label11.Size = New System.Drawing.Size(48, 13)
         Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Del Folio:"
+        Me.Label11.Text = "Del Folio"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(374, 32)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(288, 32)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(62, 13)
+        Me.Label10.Size = New System.Drawing.Size(49, 13)
         Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Del Libro:"
+        Me.Label10.Text = "Del Libro"
         '
         'GroupBox2
         '
@@ -438,9 +442,9 @@ Partial Class PreregistroLotes
         Me.GroupBox2.Controls.Add(Me.TBNMinutos)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 282)
+        Me.GroupBox2.Location = New System.Drawing.Point(14, 292)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(862, 72)
+        Me.GroupBox2.Size = New System.Drawing.Size(648, 72)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Coordenadas del Lote"
@@ -449,7 +453,7 @@ Partial Class PreregistroLotes
         '
         Me.TBWMinutos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBWMinutos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBWMinutos.Location = New System.Drawing.Point(634, 29)
+        Me.TBWMinutos.Location = New System.Drawing.Point(559, 26)
         Me.TBWMinutos.Name = "TBWMinutos"
         Me.TBWMinutos.Size = New System.Drawing.Size(76, 20)
         Me.TBWMinutos.TabIndex = 5
@@ -458,7 +462,7 @@ Partial Class PreregistroLotes
         '
         Me.TBWHoras.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBWHoras.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBWHoras.Location = New System.Drawing.Point(552, 29)
+        Me.TBWHoras.Location = New System.Drawing.Point(477, 26)
         Me.TBWHoras.Name = "TBWHoras"
         Me.TBWHoras.Size = New System.Drawing.Size(76, 20)
         Me.TBWHoras.TabIndex = 4
@@ -467,7 +471,7 @@ Partial Class PreregistroLotes
         '
         Me.TBWGrados.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBWGrados.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBWGrados.Location = New System.Drawing.Point(470, 29)
+        Me.TBWGrados.Location = New System.Drawing.Point(395, 26)
         Me.TBWGrados.Name = "TBWGrados"
         Me.TBWGrados.Size = New System.Drawing.Size(76, 20)
         Me.TBWGrados.TabIndex = 3
@@ -475,9 +479,10 @@ Partial Class PreregistroLotes
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(14, 32)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(6, 32)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(59, 13)
+        Me.Label8.Size = New System.Drawing.Size(50, 13)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Latitud N"
         '
@@ -485,7 +490,7 @@ Partial Class PreregistroLotes
         '
         Me.TBNGrados.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBNGrados.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBNGrados.Location = New System.Drawing.Point(80, 29)
+        Me.TBNGrados.Location = New System.Drawing.Point(72, 29)
         Me.TBNGrados.Name = "TBNGrados"
         Me.TBNGrados.Size = New System.Drawing.Size(75, 20)
         Me.TBNGrados.TabIndex = 0
@@ -494,7 +499,7 @@ Partial Class PreregistroLotes
         '
         Me.TBNHoras.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBNHoras.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBNHoras.Location = New System.Drawing.Point(161, 29)
+        Me.TBNHoras.Location = New System.Drawing.Point(153, 29)
         Me.TBNHoras.Name = "TBNHoras"
         Me.TBNHoras.Size = New System.Drawing.Size(75, 20)
         Me.TBNHoras.TabIndex = 1
@@ -503,7 +508,7 @@ Partial Class PreregistroLotes
         '
         Me.TBNMinutos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBNMinutos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBNMinutos.Location = New System.Drawing.Point(242, 29)
+        Me.TBNMinutos.Location = New System.Drawing.Point(234, 29)
         Me.TBNMinutos.Name = "TBNMinutos"
         Me.TBNMinutos.Size = New System.Drawing.Size(75, 20)
         Me.TBNMinutos.TabIndex = 2
@@ -511,9 +516,10 @@ Partial Class PreregistroLotes
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(390, 35)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(315, 32)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(72, 13)
+        Me.Label9.Size = New System.Drawing.Size(62, 13)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Longitud W"
         '
@@ -524,67 +530,67 @@ Partial Class PreregistroLotes
         Me.CBColonia.DropDownHeight = 100
         Me.CBColonia.FormattingEnabled = True
         Me.CBColonia.IntegralHeight = False
-        Me.CBColonia.Location = New System.Drawing.Point(216, 176)
+        Me.CBColonia.Location = New System.Drawing.Point(227, 158)
         Me.CBColonia.Name = "CBColonia"
-        Me.CBColonia.Size = New System.Drawing.Size(201, 21)
+        Me.CBColonia.Size = New System.Drawing.Size(163, 21)
         Me.CBColonia.TabIndex = 3
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(12, 259)
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(23, 238)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(55, 13)
+        Me.Label19.Size = New System.Drawing.Size(48, 13)
         Me.Label19.TabIndex = 47
         Me.Label19.Text = "Volumen"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(403, 232)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(497, 106)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(124, 13)
+        Me.Label7.Size = New System.Drawing.Size(103, 13)
         Me.Label7.TabIndex = 46
         Me.Label7.Text = "Superficie Cultivable"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(12, 232)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(23, 212)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(97, 13)
+        Me.Label6.Size = New System.Drawing.Size(81, 13)
         Me.Label6.TabIndex = 44
         Me.Label6.Text = "Superficie Total"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 179)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(23, 158)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 39
         Me.Label3.Text = "Colonia"
         '
         'TBNoLote
         '
         Me.TBNoLote.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBNoLote.Location = New System.Drawing.Point(216, 93)
+        Me.TBNoLote.Location = New System.Drawing.Point(227, 80)
         Me.TBNoLote.Name = "TBNoLote"
-        Me.TBNoLote.Size = New System.Drawing.Size(121, 20)
+        Me.TBNoLote.Size = New System.Drawing.Size(163, 20)
         Me.TBNoLote.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(12, 96)
+        Me.Label2.Location = New System.Drawing.Point(23, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 13)
+        Me.Label2.Size = New System.Drawing.Size(48, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "No. Lote"
         '
@@ -595,30 +601,30 @@ Partial Class PreregistroLotes
         Me.DGDocumentosPropietario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DGDocumentosPropietario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
         Me.DGDocumentosPropietario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentosPropietario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentosPropietario.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.DGDocumentosPropietario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGDocumentosPropietario.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DGDocumentosPropietario.Location = New System.Drawing.Point(241, 488)
+        Me.DGDocumentosPropietario.Location = New System.Drawing.Point(19, 520)
         Me.DGDocumentosPropietario.Name = "DGDocumentosPropietario"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGDocumentosPropietario.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGDocumentosPropietario.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DGDocumentosPropietario.RowHeadersVisible = False
         Me.DGDocumentosPropietario.RowHeadersWidth = 40
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DGDocumentosPropietario.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DGDocumentosPropietario.RowsDefaultCellStyle = DataGridViewCellStyle18
         Me.DGDocumentosPropietario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGDocumentosPropietario.Size = New System.Drawing.Size(472, 192)
         Me.DGDocumentosPropietario.TabIndex = 61
@@ -627,7 +633,7 @@ Partial Class PreregistroLotes
         '
         Me.BTAbrirCarpeta.BackgroundImage = CType(resources.GetObject("BTAbrirCarpeta.BackgroundImage"), System.Drawing.Image)
         Me.BTAbrirCarpeta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BTAbrirCarpeta.Location = New System.Drawing.Point(736, 488)
+        Me.BTAbrirCarpeta.Location = New System.Drawing.Point(500, 520)
         Me.BTAbrirCarpeta.Name = "BTAbrirCarpeta"
         Me.BTAbrirCarpeta.Size = New System.Drawing.Size(28, 25)
         Me.BTAbrirCarpeta.TabIndex = 62
@@ -637,7 +643,7 @@ Partial Class PreregistroLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(945, 762)
+        Me.ClientSize = New System.Drawing.Size(945, 722)
         Me.Controls.Add(Me.BTAbrirCarpeta)
         Me.Controls.Add(Me.DGDocumentosPropietario)
         Me.Controls.Add(Me.TBNoLote)

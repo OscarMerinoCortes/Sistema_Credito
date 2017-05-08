@@ -33,13 +33,21 @@ Public Class Contrato
         Dim foto As Byte()
         Dim tabla As New DataTable
         ConsultaPreregistro.ShowDialog()
-        index = VGIndex
-        If index > 0 Then
-            TablaConsulta = VGTablaDatosDelCliente
+        EntidadPreregistro.IdCliente = VGIdCliente
+        EntidadPreregistro.ConsultaDocumentos = 5
+        NegocioPreregistro.Consultar(EntidadPreregistro)
+        TablaConsulta = EntidadPreregistro.TablaDatosAdicionales
+        If TablaConsulta.Rows.Count = 0 Then
+            MsgBox("No se encontro ningun registro")
+            Exit Sub
+        Else
+            'index = VGIndex
+            'If index > 0 Then
+            'TablaConsulta = VGTablaDatosDelCliente
             TBIdCliente.Text = TablaConsulta.Rows(index).Item("IdCliente")
             TBNombre.Text = TablaConsulta.Rows(index).Item("Nombre")
-            CBTipoPersona.Text = TablaConsulta.Rows(index).Item("TipoPersona")
-            TBDomicilio.Text = TablaConsulta.Rows(index).Item("Domicilio")
+            CBTipoPersona.Text = TablaConsulta.Rows(index).Item("IdTipoPersona")
+            TBDomicilio.Text = TablaConsulta.Rows(index).Item("Calle") + " " + TablaConsulta.Rows(index).Item("Numero") + " " + TablaConsulta.Rows(index).Item("Colonia")
             foto = CType(TablaConsulta.Rows(index).Item("Foto"), Byte())
             Dim MSFoto As New MemoryStream(foto)
             PBFoto.Image = Image.FromStream(MSFoto)

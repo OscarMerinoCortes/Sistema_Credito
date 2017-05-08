@@ -48,7 +48,7 @@ Partial Class AsignacionLotes
         Me.CBClientes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.CBClientes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBClientes.FormattingEnabled = True
-        Me.CBClientes.Location = New System.Drawing.Point(192, 86)
+        Me.CBClientes.Location = New System.Drawing.Point(194, 60)
         Me.CBClientes.Name = "CBClientes"
         Me.CBClientes.Size = New System.Drawing.Size(240, 21)
         Me.CBClientes.TabIndex = 0
@@ -63,7 +63,7 @@ Partial Class AsignacionLotes
         Me.DGLotes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DGLotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGLotes.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DGLotes.Location = New System.Drawing.Point(12, 254)
+        Me.DGLotes.Location = New System.Drawing.Point(14, 140)
         Me.DGLotes.MultiSelect = False
         Me.DGLotes.Name = "DGLotes"
         Me.DGLotes.ReadOnly = True
@@ -109,10 +109,10 @@ Partial Class AsignacionLotes
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 89)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(11, 63)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 22
         Me.Label1.Text = "Cliente"
         '
@@ -121,7 +121,7 @@ Partial Class AsignacionLotes
         Me.CBCultivos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.CBCultivos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CBCultivos.FormattingEnabled = True
-        Me.CBCultivos.Location = New System.Drawing.Point(192, 113)
+        Me.CBCultivos.Location = New System.Drawing.Point(194, 87)
         Me.CBCultivos.Name = "CBCultivos"
         Me.CBCultivos.Size = New System.Drawing.Size(240, 21)
         Me.CBCultivos.TabIndex = 23
@@ -129,17 +129,17 @@ Partial Class AsignacionLotes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 116)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(11, 90)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 13)
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Cultivo"
         '
         'NUHectareas
         '
         Me.NUHectareas.DecimalPlaces = 3
-        Me.NUHectareas.Location = New System.Drawing.Point(192, 140)
+        Me.NUHectareas.Location = New System.Drawing.Point(194, 114)
         Me.NUHectareas.Maximum = New Decimal(New Integer() {-727379969, 232, 0, 0})
         Me.NUHectareas.Name = "NUHectareas"
         Me.NUHectareas.Size = New System.Drawing.Size(120, 20)
@@ -150,16 +150,16 @@ Partial Class AsignacionLotes
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(9, 142)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(11, 116)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.Size = New System.Drawing.Size(56, 13)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Hectareas"
         '
         'BTSeleccion
         '
-        Me.BTSeleccion.Location = New System.Drawing.Point(516, 254)
+        Me.BTSeleccion.Location = New System.Drawing.Point(517, 140)
         Me.BTSeleccion.Name = "BTSeleccion"
         Me.BTSeleccion.Size = New System.Drawing.Size(31, 23)
         Me.BTSeleccion.TabIndex = 25
@@ -168,7 +168,7 @@ Partial Class AsignacionLotes
         '
         'TBFolioLote
         '
-        Me.TBFolioLote.Location = New System.Drawing.Point(192, 60)
+        Me.TBFolioLote.Location = New System.Drawing.Point(194, 34)
         Me.TBFolioLote.Name = "TBFolioLote"
         Me.TBFolioLote.Size = New System.Drawing.Size(100, 20)
         Me.TBFolioLote.TabIndex = 26
@@ -176,10 +176,10 @@ Partial Class AsignacionLotes
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 63)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(11, 37)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(20, 13)
+        Me.Label5.Size = New System.Drawing.Size(18, 13)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "ID"
         '
@@ -187,7 +187,7 @@ Partial Class AsignacionLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 505)
+        Me.ClientSize = New System.Drawing.Size(560, 313)
         Me.Controls.Add(Me.TBFolioLote)
         Me.Controls.Add(Me.BTSeleccion)
         Me.Controls.Add(Me.NUHectareas)
@@ -202,7 +202,7 @@ Partial Class AsignacionLotes
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AsignacionLotes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AsignacionLotes"
+        Me.Text = "Asignacion Lotes"
         CType(Me.DGLotes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MSDocumentos.ResumeLayout(False)
         Me.MSDocumentos.PerformLayout()

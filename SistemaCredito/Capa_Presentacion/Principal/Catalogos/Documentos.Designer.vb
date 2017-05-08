@@ -44,7 +44,7 @@ Partial Class Documentos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(10, 69)
+        Me.Label1.Location = New System.Drawing.Point(14, 53)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(119, 13)
         Me.Label1.TabIndex = 0
@@ -54,7 +54,7 @@ Partial Class Documentos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 94)
+        Me.Label2.Location = New System.Drawing.Point(14, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
         Me.Label2.TabIndex = 0
@@ -63,7 +63,7 @@ Partial Class Documentos
         'TBNombreDocumento
         '
         Me.TBNombreDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBNombreDocumento.Location = New System.Drawing.Point(133, 69)
+        Me.TBNombreDocumento.Location = New System.Drawing.Point(137, 53)
         Me.TBNombreDocumento.Name = "TBNombreDocumento"
         Me.TBNombreDocumento.Size = New System.Drawing.Size(153, 20)
         Me.TBNombreDocumento.TabIndex = 1
@@ -71,7 +71,7 @@ Partial Class Documentos
         'CBTipoPersona
         '
         Me.CBTipoPersona.FormattingEnabled = True
-        Me.CBTipoPersona.Location = New System.Drawing.Point(133, 94)
+        Me.CBTipoPersona.Location = New System.Drawing.Point(137, 78)
         Me.CBTipoPersona.Name = "CBTipoPersona"
         Me.CBTipoPersona.Size = New System.Drawing.Size(153, 21)
         Me.CBTipoPersona.TabIndex = 2
@@ -107,7 +107,7 @@ Partial Class Documentos
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(10, 121)
+        Me.Label3.Location = New System.Drawing.Point(14, 105)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 13)
         Me.Label3.TabIndex = 0
@@ -116,7 +116,7 @@ Partial Class Documentos
         'CBEstatusDocumento
         '
         Me.CBEstatusDocumento.FormattingEnabled = True
-        Me.CBEstatusDocumento.Location = New System.Drawing.Point(133, 121)
+        Me.CBEstatusDocumento.Location = New System.Drawing.Point(137, 105)
         Me.CBEstatusDocumento.Name = "CBEstatusDocumento"
         Me.CBEstatusDocumento.Size = New System.Drawing.Size(153, 21)
         Me.CBEstatusDocumento.TabIndex = 3
@@ -125,7 +125,7 @@ Partial Class Documentos
         '
         Me.TBIdDocumento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TBIdDocumento.Enabled = False
-        Me.TBIdDocumento.Location = New System.Drawing.Point(133, 43)
+        Me.TBIdDocumento.Location = New System.Drawing.Point(137, 27)
         Me.TBIdDocumento.Name = "TBIdDocumento"
         Me.TBIdDocumento.Size = New System.Drawing.Size(80, 20)
         Me.TBIdDocumento.TabIndex = 0
@@ -134,7 +134,7 @@ Partial Class Documentos
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(10, 43)
+        Me.Label4.Location = New System.Drawing.Point(14, 27)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(18, 13)
         Me.Label4.TabIndex = 0
@@ -150,7 +150,7 @@ Partial Class Documentos
         Me.DGDocumentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DGDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGDocumentos.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DGDocumentos.Location = New System.Drawing.Point(13, 148)
+        Me.DGDocumentos.Location = New System.Drawing.Point(12, 132)
         Me.DGDocumentos.MultiSelect = False
         Me.DGDocumentos.Name = "DGDocumentos"
         Me.DGDocumentos.ReadOnly = True
@@ -164,7 +164,7 @@ Partial Class Documentos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(445, 307)
+        Me.ClientSize = New System.Drawing.Size(445, 293)
         Me.Controls.Add(Me.DGDocumentos)
         Me.Controls.Add(Me.MSDocumentos)
         Me.Controls.Add(Me.CBEstatusDocumento)
