@@ -86,13 +86,23 @@
     End Function
     Private Sub BTSeleccionar_Click(sender As Object, e As EventArgs) Handles BTSeleccionar.Click
         Try
-
-            Dim dt As DataTable = Me.DataGridViewToDataTable(Me.DGConsultaSeleccionLote)
-            VGTablaSeleccionLotes = dt
-            Close()
+            Dim BanderaSeleccion As Integer
+            Dim Contador As Integer
+            For Contador = 0 To DGConsultaSeleccionLote.RowCount - 1
+                If DGConsultaSeleccionLote.Rows(Contador).Cells("ChCol").Value = True Then
+                    BanderaSeleccion = 1
+                End If
+            Next Contador
+            If BanderaSeleccion > 0 Then
+                Dim dt As DataTable = Me.DataGridViewToDataTable(Me.DGConsultaSeleccionLote)
+                VGTablaSeleccionLotes = dt
+                Close()
+                BanderaSeleccion = 0
+            Else
+                MessageBox.Show("No hay lotes seleccionados.")
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
-
         End Try
     End Sub
     Private Sub BTCancelar_Click(sender As Object, e As EventArgs) Handles BTCancelar.Click

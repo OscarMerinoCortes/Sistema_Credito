@@ -48,6 +48,7 @@ Public Class AsignacionLotes
                     cmdGuardar.CommandType = CommandType.StoredProcedure
                 cmdGuardar.Parameters.Add(New SqlParameter("@IdSeleccion", 0))
                 cmdGuardar.Parameters.Add(New SqlParameter("@IdAsignacion", EntidadAsignacionLotes1.IdAsignacion))
+                cmdGuardar.Parameters.Add(New SqlParameter("@IdLote", row.Item("IdPreregistroLote")))
                 cmdGuardar.ExecuteNonQuery()
             Catch ex As Exception
                 Finally

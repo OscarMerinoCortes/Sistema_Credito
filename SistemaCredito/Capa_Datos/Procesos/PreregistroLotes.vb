@@ -102,4 +102,23 @@ Public Class PreregistroLotes
             EntidadPreregistroLotes = EntidadPreregistroLotes1
         End Try
     End Sub
+    Public Overridable Sub ConsultarAsignacionesLotes(ByRef EntidadPreregistroLotes As Capa_Entidad.PreregistroLotes)
+        Dim EntidadPreregistroLotes1 As New Capa_Entidad.PreregistroLotes()
+        EntidadPreregistroLotes1 = EntidadPreregistroLotes
+        Dim cnn As New SqlConnection(conexionPrincipal)
+        Try
+            cnn.Open()
+            Dim cmd As New SqlCommand("sp_LlenarPreregistroLotes", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add(New SqlClient.SqlParameter("@Nombre_lote", EntidadPreregistroLotes1.NombreLote))
+            Dim da As New SqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            da.Fill(dt)
+            EntidadPreregistroLotes1.TablaPreregistroLotes = dt
+        Catch ex As Exception
+        Finally
+            cnn.Close()
+            EntidadPreregistroLotes = EntidadPreregistroLotes1
+        End Try
+    End Sub
 End Class

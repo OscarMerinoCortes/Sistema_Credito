@@ -4,6 +4,7 @@
     Private Sub AsignacionLotes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LlenaCombo()
         TBIdCliente.Text = ""
+        TBIdAsignacion.Text = ""
         CBClientes.SelectedIndex = -1
         CBCultivos.SelectedIndex = -1
     End Sub
@@ -72,6 +73,7 @@
     End Sub
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
         TBIdCliente.Text = ""
+        TBIdAsignacion.Text = ""
         CBClientes.SelectedIndex = -1
         CBCultivos.SelectedIndex = -1
         NUHectareas.Value = 0.000
@@ -86,10 +88,10 @@
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadAsignacionLotes As New Capa_Entidad.AsignacionLotes
         Dim NegocioAsignacionLotes As New Capa_Negocio.AsignacionLotes
-        If TBIdCliente.Text Is String.Empty Then
+        If TBIdAsignacion.Text Is String.Empty Then
             EntidadAsignacionLotes.IdAsignacion = 0
         Else
-            EntidadAsignacionLotes.IdAsignacion = TBIdCliente.Text
+            EntidadAsignacionLotes.IdAsignacion = TBIdAsignacion.Text
         End If
         EntidadAsignacionLotes.IdCliente = CBClientes.SelectedValue
         EntidadAsignacionLotes.IdCultivo = CBCultivos.SelectedValue
