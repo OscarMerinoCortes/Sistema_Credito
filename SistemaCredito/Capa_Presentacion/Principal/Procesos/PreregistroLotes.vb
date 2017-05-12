@@ -65,7 +65,17 @@ Public Class PreregistroLotes
         Limpiar()
         ConsultarDocumentosPropietario()
     End Sub
-
+    Private Sub CBNombreCliente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBNombreCliente.SelectionChangeCommitted
+        Dim TablaClientes As New DataTable
+        Dim EntidadPreregistro As New Capa_Entidad.Preregistro
+        Dim NegocioPreregistro As New Capa_Negocio.Preregistro
+        EntidadPreregistro.IdCliente = CBNombreCliente.SelectedValue
+        EntidadPreregistro.ConsultaDocumentos = 5
+        NegocioPreregistro.Consultar(EntidadPreregistro)
+        TablaClientes = EntidadPreregistro.TablaDatosAdicionales
+        TbCurp.Text = TablaClientes.Rows(0).Item("CURP")
+        TbRfc.Text = TablaClientes.Rows(0).Item("rfc")
+    End Sub
     Private Sub GuardarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GuardarToolStripMenuItem.Click
         Dim EntidadPreregistroLotes As New Capa_Entidad.PreregistroLotes
         Dim NegocioPreregistroLotes As New Capa_Negocio.PreregistroLotes
@@ -181,8 +191,8 @@ Public Class PreregistroLotes
         TBNoLote.Text = ""
         CBNombreCliente.Text = ""
         CBNombreCliente.SelectedIndex = -1
-        TxCurp.Text = ""
-        TxRfc.Text = ""
+        TbCurp.Text = ""
+        TbRfc.Text = ""
         CBColonia.Text = ""
         CBColonia.SelectedIndex = -1
         CBIdEstado.Text = ""
@@ -281,4 +291,5 @@ Public Class PreregistroLotes
         CBNombreCliente.ValueMember = "IdCliente"
         CBNombreCliente.SelectedIndex = -1
     End Sub
+
 End Class

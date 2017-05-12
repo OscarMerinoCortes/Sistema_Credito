@@ -11,6 +11,11 @@
             checkBoxColumn.Name = "ChCol"
             DGConsultaSeleccionLote.Columns.Insert(0, checkBoxColumn)
         End If
+        DGConsultaSeleccionLote.Columns("Nombre_Lote").HeaderText = "Nombre de Lote"
+        DGConsultaSeleccionLote.Columns("IdColonia").HeaderText = "Colonia"
+        DGConsultaSeleccionLote.Columns("Folio_Lote").HeaderText = "ID Lote"
+        DGConsultaSeleccionLote.Columns("SuperficieRestante").HeaderText = "Superficie"
+
         DGConsultaSeleccionLote.Columns("idPreregistroLote").Visible = False
         DGConsultaSeleccionLote.Columns("IdPropietario").Visible = False
         DGConsultaSeleccionLote.Columns("Nombre").Visible = False

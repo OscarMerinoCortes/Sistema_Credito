@@ -38,6 +38,12 @@
         If CBClientes.SelectedIndex >= 0 Then TBIdCliente.Text = CBClientes.SelectedValue
     End Sub
     Private Sub PropiedadesDGLotes()
+        DGLotes.Columns("IdPreregistroLote").HeaderText = "ID Lote"
+        DGLotes.Columns("Nombre_Lote").HeaderText = "Nombre de Lote"
+        DGLotes.Columns("IdColonia").HeaderText = "Colonia"
+        DGLotes.Columns("Folio_Lote").HeaderText = "ID Lote"
+        DGLotes.Columns("SuperficieRestante").HeaderText = "Superficie"
+
         DGLotes.Columns("Chcol").Visible = False
         DGLotes.Columns("IdPropietario").Visible = False
         DGLotes.Columns("Nombre").Visible = False
